@@ -1,0 +1,21 @@
+	cluster_name	cluster_size	pattern	mean_similarity	std_similarity
+0	0	376259	: the server responded with an error 421 Service busy: Connection limit exceeded. Please try again later. Closing control connection.	0.91	0.02
+1	1	287026	Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: []	0.99	0.05
+2	2	261651	err: Communication error on send, err: [SE][][] httpg:/:/srm/: CGSI-gSOAP running on reports:	0.80	0.06
+3	7	223600	Protocol not supported or path/url invalid: root:/:1094//atlasscratchdisk/rucio/tests///	0.62	0.05
+4	3	145034	SOURCE SRM_GET_TURL error on the turl request : [SE][][SRM_FILE_UNAVAILABLE] File is.	0.93	0.03
+5	4	140256	Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [4003] Authentication to:1094 failed; all protocols have been tried.	0.88	0.03
+6	5	135286	: the server responded with an error 530 530-globus_xio: Authentication Error 530-OpenSSL Error: s3_srvr.c:: in library: SSL routines, function: certificate 530-globus_gsi_callback_module: Could not verify credential 530-globus_gsi_callback_module: The certificate: with subject: /=/=/OU=/CN=/CN=/CN=/CN=	0.83	0.02
+7	6	126516	Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [3010] Unable to //////; permission denied	0.81	0.03
+8	8	98165	reported from srm_ifce : 2 [SE][Ls][SRM_INVALID_PATH] No such file or directory	0.99	0.00
+9	9	93597	Destination file exists and overwrite is not enabled	1.00	0.00
+10	10	89908	TRANSFER Transfer canceled because the gsiftp performance marker timeout of 360 seconds has been exceeded, or all performance markers during that period indicated zero bytes transferred	1.00	0.00
+11	11	89444	[gfalt_copy_file][perform_copy][gfal_xrootd_3rd_copy][gfal_xrootd_3rd_copy_bulk] Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: []	0.99	0.03
+12	12	71375	Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [3010] Unable to /dpm//home/atlas/atlasscratchdisk/rucio/tests//;	0.86	0.01
+13	13	67316	DESTINATION error on the turl request : [SE][][SRM_FAILURE] Unable to store the request in StoRM DB	0.90	0.00
+14	17	65701	end-of-file was reached globus_xio: An end of file occurred	0.98	0.05
+15	14	63085	error on the turl request : [SE][][] <none>	0.92	0.06
+16	15	59578	TRANSFER｟*｠ timed out	1.00	0.00
+17	16	57784	DESTINATION OVERWRITE Connection timed out	1.00	0.00
+18	18	57462	: Unable to connect to: globus_xio: System error in connect: Connection globus_xio: A system call failed: Connection	0.87	0.03
+19	21	55054	Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [3012] sync - TPC open failed for src_url=root:/://atlasscratchdisk/rucio/tests///?fst.readahead=true	0.75	0.04

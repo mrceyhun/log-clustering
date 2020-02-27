@@ -1,0 +1,21 @@
+,cluster_size,pattern,mean_similarity
+0,81144,"TRANSFER Transfer canceled because the gsiftp performance marker timeout of 360 seconds has been exceeded, or all performance markers during that period indicated zero bytes transferred",1.0
+1,71853,TRANSFER globus_ftp_client: the server responded with an error All pools are full,1.0
+2,65714,TRANSFER globus_ftp_client: the server responded with an error 451 General problem: Failed to connect [2001::::]::,0.97
+3,52799,Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [],0.99
+4,45834,TRANSFER｟*｠ out,1.0
+5,43650,TRANSFER globus_ftp_client: the server responded with an error 500 Command failed. : open/create : [ERROR] Server responded with an error: [3021] Unable to get quota space - quota not defined or exhausted /eos///,0.9
+6,41683,Protocol not supported or path/url invalid: root:/:1094//atlasscratchdisk/rucio/tests//,0.62
+7,34127,"err: Communication error on send, err: [SE][][] httpg:/:/srm/managerv2: CGSI-gSOAP running on reports Error reading token data header: Connection",0.85
+8,31416,TRANSFER globus_ftp_client: the server responded with an error 500 500-Command failed. :: Unable to connect to:: 500-globus_xio: System error in connect: Connection 500-globus_xio: A system call failed: Connection 500 End.,0.97
+9,26379,: the server responded with an error 421 Service busy: Connection limit exceeded. Please try again later. Closing control connection.,0.99
+10,24693,SOURCE CHECKSUM globus_ftp_client: the server responded with an error 500 error:｟*｠ denied,1.0
+11,22993,end-of-file was reached globus_xio: An end of file occurred,0.99
+12,22580,Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [4003] Authentication to:1094 failed; all protocols have been tried.,0.88
+13,22348,Destination file exists and overwrite is not enabled,1.0
+14,22233,: Unable to connect to: globus_xio: System error in connect: Connection globus_xio: A system call failed: Connection,0.91
+15,20669,reported from srm_ifce : 2 [SE][Ls][SRM_INVALID_PATH] No such file or directory,0.99
+16,19241,Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [3010] Unable to create //atlasscratchdisk/rucio/tests//; permission denied,0.82
+17,17282,[gfalt_copy_file][perform_copy][gfal_xrootd_3rd_copy][gfal_xrootd_3rd_copy_bulk] Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [],0.99
+18,13755,Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [3010] Unable to open /dpm/nipne.ro/home/atlas/atlasscratchdisk/rucio/tests//; no delegated credentials for tpc,0.86
+19,10753,Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [3012] sync - TPC open failed for src_url=root:/:///rucio///?fst.readahead=true,0.75

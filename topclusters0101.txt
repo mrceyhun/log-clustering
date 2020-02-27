@@ -1,0 +1,21 @@
+,cluster_size,pattern,mean_similarity
+0,79615,"err: Communication error on send, err: [SE][][] httpg:/:/srm/: CGSI-gSOAP running on reports Error reading token data header: Connection",0.94
+1,60088,Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [],0.99
+2,29732,Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [4003] Authentication to:1094 failed; all protocols have been tried.,0.9
+3,29279,: the server responded with an error 500 error in: No such file or directory 500-A system call failed: No such file or directory 500 End.,0.98
+4,26537,Destination file exists and overwrite is not enabled,1.0
+5,24407,｟*｠: Unable to connect to:2811｟*｠: System error in connect: Connection｟*｠: A system call failed: Connection,0.89
+6,19802,Error reported from srm_ifce : 2 [SE][Ls][SRM_INVALID_PATH] No such file or directory,0.99
+7,18333,end-of-file was reached｟*｠: An end of file occurred,1.0
+8,18207,[gfalt_copy_file][perform_copy][gfal_xrootd_3rd_copy][gfal_xrootd_3rd_copy_bulk] Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [],0.99
+9,17760,SOURCE SRM_GET_TURL error on the turl request : [SE][][SRM_FILE_UNAVAILABLE] File is.,1.0
+10,16797,"TRANSFER Transfer canceled because the gsiftp performance marker timeout of 360 seconds has been exceeded, or all performance markers during that period indicated zero bytes transferred",1.0
+11,15907,Protocol not supported or path/url invalid: root:/:1094/dpm//home/atlas/atlasscratchdisk/rucio/tests///,0.68
+12,15783,"err: Communication error on send, err: [SE][][] httpg:/:/srm/managerv2: CGSI-gSOAP running on reports could not open connection to:",0.84
+13,14821,Protocol not supported or path/url invalid: root:/:1094//atlas/atlasscratchdisk/rucio/tests///,0.66
+14,14629,Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [] Unable to //////;,0.61
+15,14581,Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [3010] Unable to open /dpm/nipne.ro/home/atlas/atlasscratchdisk/rucio/tests//; no delegated credentials for tpc,0.86
+16,13091,: the server responded with an error 421 Service busy: Connection limit exceeded. Please try again later. Closing control connection.,0.98
+17,12665,": the server responded with an error 530 530-globus_xio: Authentication Error 530-OpenSSL Error: s3_srvr.c:: in library: SSL routines, function: certificate 530-globus_gsi_callback_module: Could not verify credential 530-globus_gsi_callback_module: The certificate: with subject: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=/CN=/CN=/CN=/CN=",0.96
+18,12409,Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [3010] Unable to create /pnfs/usatlas.bnl.gov/atlasscratchdisk/rucio/tests///; permission denied,0.85
+19,11878,Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [3010] Access denied: /pnfs/triumf.ca/data/atlas/atlasscratchdisk/rucio/tests//,0.84
