@@ -9,6 +9,9 @@ from .tokenization import Tokens
 from .ml_clusterization import MLClustering
 from .matching_clusterization import SClustering
 from .tfidf import TermsAnalysis
+import nltk
+from itertools import groupby
+from .data_preparation import Regex
 
 
 def safe_run(method):
@@ -21,8 +24,8 @@ def safe_run(method):
             self.timings[method.__name__] = round((te - ts), 4)
             return result
 
-        except Exception:
-            return None
+        except Exception as e:
+            print(e)
 
     return func_wrapper
 
@@ -69,8 +72,12 @@ class Chain(object):
         Chain of methods, providing data preparation, vectorization and clusterization
         :return:
         """
-        self.tokenization()
-        self.group_equals()
+        self.tokenization(self.df[self.target].values)
+        self.df['sequence'] = self.tokens.tokenized_cluster
+        self.df['tokenized_pattern'] = self.tokens.tokenized_pattern
+        cleaned_tokens = self.tfidf()
+        self.df['cleaned'] = self.tokens.detokenize(cleaned_tokens)
+        self.group_equals(self.df, 'cleaned')
         if self.groups.shape[0] <= self.CLUSTERING_THRESHOLD:
             self.matching_clusterization(self.groups)
         else:
@@ -81,39 +88,77 @@ class Chain(object):
 
 
     @safe_run
-    def tokenization(self):
+    def clean_regex(self):
+        regex = Regex(self.df[self.target].values)
+        regex.process()
+        self.df['cleaned'] = regex.messages_cleaned
+
+
+    @safe_run
+    def tokenization(self, messages):
         """
         Tokenization of a list of error messages.
         :return:
         """
-        self.tokens = Tokens(self.df[self.target].values)
+        self.tokens = Tokens(messages)
         self.tokens.process()
-        self.df['sequence'] = self.tokens.tokenized_cluster
-        self.df['tokenized_pattern'] = self.tokens.tokenized_pattern
-        self.tfidf = TermsAnalysis(self.tokens.tokenized_cluster, self.tokens.tokenized_pattern)
-        cleaned_tokens = self.tfidf.process()
-        self.df['cleaned'] = self.tokens.detokenize(cleaned_tokens)
-        print('Tokenization finished')
 
 
     @safe_run
-    def group_equals(self):
+    def tfidf(self):
+        """
+        Generate TF-IDF model and remove tokens with max weights
+        :return:
+        """
+        self.tfidf = TermsAnalysis(self.tokens)
+        cleaned_tokens = self.tfidf.process()
+        print('Tokenization finished')
+        return cleaned_tokens
 
-        self.groups = self.df.groupby('cleaned').apply(lambda gr:
-                                                pd.DataFrame([{'indices': gr.index.values.tolist(),
-                                                              'pattern': gr['cleaned'].values[0],
-                                                              'sequence': self.tokens.tokenize_string(
-                                                                  self.tokens.TOKENIZER_CLUSTER,
-                                                                  gr['cleaned'].values[0],
-                                                                  True
-                                                              ),
-                                                              'tokenized_pattern': self.tokens.tokenize_string(
-                                                                  self.tokens.TOKENIZER_PATTERN, gr['cleaned'].values[0]
-                                                              ),
-                                                               'cluster_size': len(gr.index.values.tolist())}]))
+
+    @safe_run
+    def group_equals(self, df, column):
+
+        self.groups = df.groupby(column).apply(func=self.regroup)
         self.groups.reset_index(drop=True, inplace=True)
 
         print('Found {} equal groups'.format(self.groups.shape[0]))
+
+
+    @safe_run
+    def regroup(self, gr):
+        """
+        tokenized_pattern - common sequence of tokens, generated based on all tokens
+        sequence - common sequence of tokens, based on cleaned tokens
+        pattern - textual log pattern, based on all tokens
+        indices - indices of the initial dataframe, corresponding to current cluster/group of log messages
+        cluster_size - number of messages in cluster/group
+
+        The difference between sequence and tokenized_pattern is that tokenized_pattern is used for the
+        reconstruction of textual pattern (detokenization), sequence - is a set of most frequent tokens
+        and can be used only for grouping/clusterization.
+        :param gr:
+        :return:
+        """
+        tokenized_pattern = self.matcher(gr['tokenized_pattern'].values)
+        sequence = self.matcher(gr['sequence'].values)
+        return pd.DataFrame([{'indices': gr.index.values.tolist(),
+                       'pattern': self.tokens.detokenize_row(
+                           self.tokens.TOKENIZER,tokenized_pattern),
+                       'sequence': sequence,
+                       'tokenized_pattern': tokenized_pattern,
+                       'cluster_size': len(gr.index.values.tolist())}])
+
+
+    @safe_run
+    def matcher(self, lines):
+        if len(lines) > 1:
+            fdist = nltk.FreqDist([i for l in lines for i in l])
+            x = [token if (fdist[token]/len(lines) >= 1) else '｟*｠' for token in lines[0]]
+            #x = [token for token in lines[0] if (fdist[token] / len(lines) >= 1)]
+            return [i[0] for i in groupby(x)]
+        else:
+            return lines[0]
 
 
 
@@ -155,9 +200,10 @@ class Chain(object):
 
     @safe_run
     def matching_clusterization(self, groups):
-        print('Matching Clusterization!')
+        print('Matching Clusterization...')
         clusters = SClustering(groups, self.tokens, self.matching_accuracy)
         self.result = clusters.matching_clusterization()
+        print('Finished with {} clusters'.format(self.result.shape[0]))
 
 
     @safe_run
