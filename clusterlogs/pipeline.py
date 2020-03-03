@@ -37,7 +37,7 @@ CLUSTERING_DEFAULTS = {"w2v_size": 300,
 
 class Chain(object):
 
-    CLUSTERING_THRESHOLD = 5000
+    CLUSTERING_THRESHOLD = 200
     MATCHING_ACCURACY = 0.8
 
     def __init__(self, df, target, cluster_settings=None, model_name='word2vec.model', mode='create',
