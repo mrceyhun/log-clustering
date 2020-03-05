@@ -1,0 +1,2 @@
+time,error_message,src_host,dst_host,cleaned,cluster_pattern
+2020-01-05 18:22:00,SOURCE CHECKSUM MISMATCH User defined checksum and source checksum do not match 33b03ebd != 9a6fc170,srm.triumf.ca,head01.aglt2.org,SOURCE CHECKSUM MISMATCH User defined checksum and source checksum do not match 33b03ebd != 9a6fc170,SOURCE CHECKSUM MISMATCH User defined checksum and source checksum do not match != 

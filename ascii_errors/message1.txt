@@ -1,0 +1,2 @@
+time|error_message|src_host|dst_host|cleaned|cluster_pattern
+2020-01-05 03:00:00|Error on XrdCl::CopyProcess::Run(): [ERROR] Server responded with an error: [3010] Write permission denied |xrootd-at1-door.pic.es|basilisk02.westgrid.ca|Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [3010] ｟*｠ permission denied|Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [3010]｟*｠ permission denied

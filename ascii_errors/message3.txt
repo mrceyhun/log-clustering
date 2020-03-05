@@ -1,0 +1,2 @@
+time,error_message,src_host,dst_host,cleaned,cluster_pattern
+2020-01-05 03:02:00,SOURCE SRM_GET_TURL error on the turl  request : [SE][PrepareToGet][SRM_FILE_UNAVAILABLE] File is unavailable. ,grid-se.physik.uni-wuppertal.de,lcg-se1.uw.computecanada.ca,SOURCE SRM_GET_TURL error on the turl request : [SE][PrepareToGet][SRM_FILE_UNAVAILABLE] File is unavailable.,SOURCE SRM_GET_TURL error on the turl request : [SE][PrepareToGet][SRM_FILE_UNAVAILABLE] File is｟*｠.

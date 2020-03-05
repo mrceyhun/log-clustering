@@ -1,395 +1,501 @@
 pattern
-: the server responded with an error 421 Service busy: Connection limit exceeded. Please try again later. Closing control connection.
-Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: []
-"err: Communication error on send, err: [SE][][] httpg:/:/srm/: CGSI-gSOAP running on reports:"
-Protocol not supported or path/url invalid: root:/:1094//atlasscratchdisk/rucio/tests///
-SOURCE SRM_GET_TURL error on the turl request : [SE][][SRM_FILE_UNAVAILABLE] File is.
-Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [4003] Authentication to:1094 failed; all protocols have been tried.
-": the server responded with an error 530 530-globus_xio: Authentication Error 530-OpenSSL Error: s3_srvr.c:: in library: SSL routines, function: certificate 530-globus_gsi_callback_module: Could not verify credential 530-globus_gsi_callback_module: The certificate: with subject: /=/=/OU=/CN=/CN=/CN=/CN="
-Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [3010] Unable to //////; permission denied
-reported from srm_ifce : 2 [SE][Ls][SRM_INVALID_PATH] No such file or directory
-Destination file exists and overwrite is not enabled
+｟*｠ globus_ftp_client: the server responded with an error 421 Service busy: Connection limit exceeded. Please try again later. Closing control connection.
+Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [｟*｠]｟*｠
+"srm-ifce err:｟*｠ on｟*｠, err: [SE][｟*｠][] httpg:/｟*｠:｟*｠/srm/｟*｠: CGSI-gSOAP running on｟*｠ reports Error reading token data｟*｠: Connection｟*｠"
+SOURCE SRM_GET_TURL error on the turl request : [SE][｟*｠][SRM_FILE_UNAVAILABLE] File is｟*｠.
+Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [4003] Authentication to｟*｠:1094 failed; all protocols have been tried.
+"globus_ftp_client: the server responded with an error 530 530-globus_xio: Authentication Error 530-OpenSSL Error: s3_srvr.c:｟*｠: in library: SSL routines, function｟*｠: certificate verify｟*｠ 530-globus_gsi_callback_module: Could not verify credential 530-globus_gsi_callback_module: The certificate has expired: Credential with subject: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=｟*｠/CN=｟*｠/CN=｟*｠/CN=｟*｠/CN=｟*｠/CN=｟*｠ has｟*｠"
+Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [3010] Unable to create /｟*｠/atlasscratchdisk/rucio/tests/｟*｠/｟*｠/｟*｠; permission denied
+Protocol not supported or path/url invalid: root:/｟*｠:1094/dpm/｟*｠/home/atlas/atlasscratchdisk/rucio/tests/｟*｠/｟*｠/｟*｠
+Error｟*｠ from srm_ifce : 2 [SE][Ls][SRM_INVALID_PATH] No such file or directory｟*｠
+[｟*｠][｟*｠][｟*｠][｟*｠] Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [｟*｠]｟*｠
+Destination file exists and overwrite is not｟*｠
 "TRANSFER Transfer canceled because the gsiftp performance marker timeout of 360 seconds has been exceeded, or all performance markers during that period indicated zero bytes transferred"
-[gfalt_copy_file][perform_copy][gfal_xrootd_3rd_copy][gfal_xrootd_3rd_copy_bulk] Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: []
-Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [3010] Unable to /dpm//home/atlas/atlasscratchdisk/rucio/tests//;
-DESTINATION error on the turl request : [SE][][SRM_FAILURE] Unable to store the request in StoRM DB
-end-of-file was reached globus_xio: An end of file occurred
-error on the turl request : [SE][][] <none>
+Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [3010] Unable to open /dpm/nipne.ro/home/atlas/atlasscratchdisk/rucio/tests/｟*｠/｟*｠; no delegated credentials for tpc
+DESTINATION｟*｠ error on the turl request : [SE][｟*｠][SRM_FAILURE] Unable to store the request in StoRM DB
+｟*｠ error on the turl request : [SE][｟*｠][｟*｠] <none>
 TRANSFER｟*｠ timed out
 DESTINATION OVERWRITE Connection timed out
-: Unable to connect to: globus_xio: System error in connect: Connection globus_xio: A system call failed: Connection
-Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [3012] sync - TPC open failed for src_url=root:/://atlasscratchdisk/rucio/tests///?fst.readahead=true
-Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [3010] Access denied: /pnfs/triumf.ca/data/atlas/atlasscratchdisk/rucio/tests//
-"DESTINATION Authentication error, reached maximum number of attempts after 1 attempts"
-DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][SRM_FAILURE] error accessing:///:
-"ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: problem sending data::"
-SOURCE CHECKSUM MISMATCH User defined checksum and source checksum do not match !=
-"ERROR: Copy failed with mode 3rd, with error:"
-: the server responded with an error 500 error in: No such file or directory 500-A system call failed: No such file or directory 500 End.
+TRANSFER an｟*｠ was reached｟*｠:｟*｠ end of file occurred
+｟*｠ globus_xio: Unable to connect to｟*｠:｟*｠ globus_xio: System error in connect: Connection｟*｠ globus_xio: A system call failed: Connection｟*｠
+Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [3010] Access denied: /pnfs/triumf.ca/data/atlas/atlasscratchdisk/rucio/tests/｟*｠/｟*｠
+Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [3012] sync - TPC open failed for src_url=root:/｟*｠:｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/atlasscratchdisk/rucio/tests/｟*｠/｟*｠/｟*｠?fst.readahead=true
+"｟*｠ Authentication error, reached maximum number of attempts after 1 attempts"
+"TRANSFER ERROR: Copy failed with mode 3rd push, with error: copy HTTP｟*｠ :｟*｠,｟*｠"
+SOURCE CHECKSUM MISMATCH User defined checksum and source checksum do not match｟*｠ !=｟*｠
+DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][SRM_FAILURE] error accessing｟*｠:/｟*｠/｟*｠/｟*｠:｟*｠
+globus_ftp_client: the server responded with an error 500｟*｠ failed :｟*｠ error in｟*｠: No such file or directory 500-A system call failed: No such file or directory 500 End.
+"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure:｟*｠: Certificate for <｟*｠> doesnt match any of the subject alternative names: [｟*｠@｟*｠]"
 globus_ftp_control: gss_init_sec_context failed globus_gsi_gssapi: Error with gss credential handle globus_credential: Valid credentials could not be found in any of the possible locations specified by the credential search order. Valid credentials could not be found in any of the possible locations specified by the credential search order. Attempt 1 globus_credential: Error reading host credential globus_sysconfig: Error with certificate filename globus_sysconfig: Error with certificate filename globus_sy
+Error on XrdCl:CopyProcess:Run(): [ERROR]｟*｠ not｟*｠:｟*｠ not｟*｠
+Protocol not supported or path/url invalid: root:/｟*｠:1094/｟*｠/｟*｠/data/atlas/atlasscratchdisk/rucio/tests/｟*｠/｟*｠/｟*｠
 ｟*｠ timed out
-"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: Failed while waiting for mover to start: Failed to enqueue mover: CacheException(rc=27;msg=Could not create mover for RemoteHttpsDataTransfer-1.1:https:/://rucio////)"
-"TRANSFER ERROR: Copy failed with mode 3rd push, with error: copy Could not get the delegation id: Could not get proxy request: fault: SOAP-ENV:Client [no subcode] End of file or no input:｟*｠ interrupted or timed out Detail: [no detail]"
-"TRANSFER ERROR: Copy failed with mode 3rd push, with error: copy Could not get the delegation id: Could not get proxy request: SOAP 1.1 fault: SOAP-ENV:Client [no subcode] Detail: connect failed in tcp_connect()"
-Error on XrdCl:CopyProcess:Run(): [ERROR]｟*｠ not supported: does not support third-party-copy
-TRANSFER globus_ftp_client: the server responded with an error 500 Command failed. : open/create : [ERROR] Server responded with an error: [3021] Unable to get quota space - quota not defined or exhausted /eos///////; Disk quota
-Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [｟*｠] []
-"TRANSFER ERROR: Copy failed with mode 3rd push, with error: copy Could not get the delegation id: Could not get proxy request: Error fault: SOAP-ENV:Server [no subcode] HTTP/1.1 Detail: <!DOCTYPE HTML PUBLIC -/IETF/DTD HTML 2.0/EN> <html><head> <title></title> </head><body> <h1></h1> <p> /gridsite-delegation on this server.</p> </body></html>"
+"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: Failed while waiting for mover to start: Failed to enqueue mover: CacheException(rc=27;msg=Could not create mover for RemoteHttpsDataTransfer-1.1:https:/｟*｠:｟*｠/｟*｠/｟*｠/rucio/｟*｠/｟*｠/｟*｠/｟*｠)"
+"TRANSFER ERROR: Copy failed with mode 3rd push, with error: copy｟*｠ Could not get the｟*｠: Could not get proxy｟*｠:｟*｠ fault: SOAP-ENV:Client [no subcode]｟*｠ or no｟*｠:｟*｠ or｟*｠ Detail: [no detail]｟*｠"
+"TRANSFER ERROR: Copy failed with mode 3rd push, with error: copy｟*｠) Could not get the delegation id: Could not get proxy request: SOAP 1.1 fault: SOAP-ENV:Client [no subcode] Detail: connect failed in tcp_connect()｟*｠"
+Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [3003] Output file /dteam:｟*｠/｟*｠/｟*｠ is already opened by 1 writer; open denied.
+Protocol not supported or path/url invalid: root:/｟*｠:1094/｟*｠/｟*｠/atlasscratchdisk/rucio/tests/｟*｠/｟*｠/｟*｠
+"TRANSFER ERROR: Copy failed with mode 3rd push, with error: copy｟*｠ Could not get the delegation id: Could not get proxy request: Error 404 fault: SOAP-ENV:Server [no subcode] HTTP/1.1 404 Not Found Detail: <!DOCTYPE HTML PUBLIC -/IETF/DTD HTML 2.0/EN> <html><head> <title>404 Not Found</title> </head><body> <h1>Not Found</h1> <p>｟*｠ /gridsite-delegation｟*｠ not｟*｠ on this server.</p> </body></html> ."
 globus_ftp_client: the server responded with an error 530 530-globus_xio_gssapi_ftp.c:globus_l_xio_gssapi_ftp_decode_adat:856: 530-Authentication Error 530-GSS Major Status: Authentication Failed 530-accept_sec_context.c:gss_accept_sec_context:198: 530-SSL handshake problems 530-globus_i_gsi_gss_utils.c:globus_i_gsi_gss_handshake:1122: 530-Unable to verify remote sides credentials 530-globus_i_gsi_gss_utils.c:globus_i_gsi_gss_handshake:1095: 530-SSL handshake problems: Couldnt do ssl handshake 5
-: System error in recv: Connection timed out globus_xio: A system call failed: Connection timed out
-DESTINATION OVERWRITE HTTP 403 : Permission refused
-SOURCE CHECKSUM globus_ftp_client: the server responded with an error 500 error:｟*｠ denied
-: the server responded with an error 550 550-GlobusError: v=1 c=PATH_NOT_FOUND 550-GridFTP-Errno: 2 550-GridFTP-Reason: System error in 550-GridFTP-Error-String: No such file or directory 550 End.
-: the server responded with an error 451 451-GlobusError: v=1 c=INTERNAL_ERROR 451-GridFTP-Errno: 451-GridFTP-Reason: System error in 451-GridFTP-Error-String: 451 End.
-[gfalt_copy_file][perform_copy][gfal_xrootd_3rd_copy][gfal_xrootd_3rd_copy_bulk] Error on XrdCl:CopyProcess:Run(): []
-"err:, err: [SE][][ETIMEDOUT] httpg:/:/srm/managerv2: User timeout over"
-Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [3003] Output file /dteam:test1/domatest/ is already opened by 1 writer; open denied.
-Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [3003] Output file /dpm/brunel.ac.uk/home/dteam/wlcg-tpc/root// is already opened by 1 writer; open denied.
-"DESTINATION SRM_PUTDONE Error on the surl srm:///data////// while putdone : [SE][PutDone][SRM_INTERNAL_ERROR] PreparedStatementCallback; SQL [UPDATE t_inodes SET inlink=inlink +?,imtime=?,ictime=?,igeneration=igeneration+1 WHERE inumber=?]; ERROR: deadlock detected; Detail: Process"
-: System error in: Connection reset by peer globus_xio: A system call failed: Connection reset by peer
-CHECKSUM [｟*｠] operation canceled by user
+｟*｠: System error in recv: Connection timed out｟*｠: A system call failed: Connection timed out
+DESTINATION OVERWRITE HTTP｟*｠ : Permission refused
+globus_ftp_client: the server responded with an error｟*｠ 550-GlobusError: v=1 c=｟*｠ 550-GridFTP-Errno:｟*｠ 550-GridFTP-Reason: System error in｟*｠ 550-GridFTP-Error-String:｟*｠ End.
+｟*｠ globus_ftp_client: the server responded with an error 500 error:｟*｠
+DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][SRM_FAILURE] error accessing｟*｠:/｟*｠/｟*｠/｟*｠: Connection closed by remote end
+"｟*｠ srm-ifce err: Communication error on send, err: [SE][｟*｠][] httpg:/｟*｠:｟*｠/srm/managerv2: CGSI-gSOAP running on｟*｠ reports could not open connection to｟*｠:｟*｠"
+TRANSFER globus_ftp_client: the server responded with an error 500｟*｠ failed. : open/create : [ERROR] Server responded with an error: [3021] Unable to get quota space - quota not defined or exhausted /eos/cms/store/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/; Disk quota｟*｠
+[gfalt_copy_file][perform_copy][gfal_xrootd_3rd_copy][gfal_xrootd_3rd_copy_bulk] Error on XrdCl:CopyProcess:Run(): [｟*｠]｟*｠
+"｟*｠ srm-ifce err: Connection timed out, err: [SE][｟*｠][ETIMEDOUT] httpg:/｟*｠:｟*｠/srm/managerv2: User timeout over"
+｟*｠ globus_ftp_client: the server responded with an error｟*｠ 451-GlobusError: v=1 c=INTERNAL_ERROR 451-GridFTP-Errno:｟*｠ 451-GridFTP-Reason: System error in name 451-GridFTP-Error-String:｟*｠ End.
+｟*｠ globus_xio: System error in｟*｠: Connection reset by peer globus_xio: A system call failed: Connection reset by peer
+｟*｠ CHECKSUM [｟*｠] operation canceled by user
 TRANSFER globus_ftp_client: the server responded with an error 500 500-Command failed. 500- : globus_ftp_control_local_pasv failed. 500-globus_xio: globus_l_xio_tcp_bind failed. 500-globus_xio: System error in bind: Address already in use 500-globus_xio: A system call failed: Address already in use 500 End.
+Protocol not supported or path/url invalid: root:/｟*｠:1094/pnfs/｟*｠/atlas/｟*｠/atlasscratchdisk/rucio/tests/｟*｠/｟*｠/｟*｠
+Protocol not supported or path/url invalid: root:/se1.oscer.ou.edu:1094/xrd/atlasscratchdisk/rucio/tests/｟*｠/｟*｠/｟*｠
+Protocol not supported or path/url invalid: root:/xrootd.aglt2.org:1094/pnfs/aglt2.org/atlasscratchdisk/rucio/tests/｟*｠/｟*｠/｟*｠
+Protocol not supported or path/url invalid: root:/｟*｠:1094/pnfs/｟*｠/atlasscratchdisk/rucio/tests/｟*｠/｟*｠/｟*｠
 No such file or directory
-"srm-ifce err: Permission denied, err: [SE][Ls][SRM_AUTHORIZATION_FAILURE] httpg:/:8443/srm/managerv2:"
-"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: rejected PUT:"
-"[gfalt_copy_file][perform_copy][gfal_http_copy] DESTINATION OVERWRITE [gfal_http_copy_overwrite] [gfal_http_exists][gfal_http_access][davix2gliberr] Result Authentication error, reached maximum number of attempts after 1 attempts"
-"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: Failed to select｟*｠: No｟*｠ candidates available/configured/left for stage"
-TRANSFER CHECKSUM MISMATCH and
-CHECKSUM｟*｠ timed out
-Error on XrdCl:CopyProcess:Run(): []
+Protocol not supported or path/url invalid: root:/｟*｠:1094/｟*｠/atlas/atlasscratchdisk/rucio/tests/｟*｠/｟*｠/｟*｠
+Protocol not supported or path/url invalid: root:/atlasxrootd-kit.gridka.de:1094/pnfs/gridka.de/atlas/disk-only/atlasscratchdisk/rucio/tests/｟*｠/｟*｠/｟*｠
+Protocol not supported or path/url invalid: root:/ftp1.ndgf.org:1094/atlas/disk/atlasscratchdisk/rucio/tests/｟*｠/｟*｠/｟*｠
+Protocol not supported or path/url invalid: root:/sdrm.t1.grid.kiae.ru:1094/t1.grid.kiae.ru/data/atlas/atlasscratchdisk/rucio/tests/｟*｠/｟*｠/｟*｠
+"srm-ifce err:｟*｠ denied, err: [SE][Ls][SRM_AUTHORIZATION_FAILURE] httpg:/｟*｠:8443/srm/managerv2:｟*｠"
+TRANSFER globus_ftp_client: the server responded with an error 500｟*｠ failed. : open/create : [ERROR] Server responded with an error: [3021] Unable to get quota space - quota not defined or exhausted /eos/｟*｠/｟*｠/user/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠; Disk quota｟*｠
+Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [3012] sync - TPC open failed for src_url=root:/｟*｠:1094/｟*｠/｟*｠/atlasscratchdisk/rucio/tests/｟*｠/｟*｠/｟*｠?fst.readahead=true
+"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure:｟*｠:｟*｠"
+"[gfalt_copy_file][perform_copy][gfal_http_copy] DESTINATION OVERWRITE [gfal_http_copy_overwrite] [gfal_http_exists][gfal_http_access][davix2gliberr] Result Authentication error, reached maximum number of｟*｠ after 1｟*｠"
+an end-of-file was reached｟*｠: An end of file occurred
+"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: Failed to select pool:｟*｠ pool｟*｠/｟*｠/｟*｠"
+｟*｠ CHECKSUM｟*｠ timed out
 SRM operation canceled
-TRANSFER globus_ftp_client: the server responded with an error 555 SRM upload aborted:｟*｠.
-"TRANSFER ERROR: Copy failed with mode, with error: HTTP｟*｠ : Server Error"
-[gfalt_copy_file][perform_copy][gfal_xrootd_3rd_copy][gfal_xrootd_3rd_copy_bulk] Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [3010] Unable to /atlas/atlasscratchdisk/rucio/tests///;
-and checksums do not match
-TRANSFER globus_ftp_client: the server responded with an error 500 500-Command failed. :: to connect to:: error in connect: Connection 500-globus_xio: A system call failed: Connection 500 End.
-globus_ftp_client: the server responded with an error 500 Command failed :｟*｠ error: No
-"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure:"
-HTTP 404 : File not found after 1 attempts
-TRANSFER globus_ftp_client: the server responded with an error 451｟*｠
-Error reported from srm_ifce : 2 [SE][Ls][SRM_INVALID_PATH] No such file or directory /pnfs////////
+"srm-ifce err: Communication error on send, err: [SE][｟*｠][] httpg:/｟*｠:｟*｠/srm/managerv2: CGSI-gSOAP running on｟*｠ reports could not open connection to｟*｠:｟*｠"
+"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure:｟*｠ failed with｟*｠:"
+globus_ftp_client: the server responded with an error 500 Command failed :｟*｠ error: No such file or directory
+Result HTTP 404 : File not found after 1 attempts
+TRANSFER CHECKSUM MISMATCH Source and destination checksums do not match｟*｠ !=｟*｠
+TRANSFER globus_ftp_client: the server responded with an error 555 SRM upload aborted: Changing file state because request state has changed.
+"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: problem sending data: Received fatal alert:｟*｠"
 Error on XrdCl:CopyProcess:Run(): [FATAL]｟*｠ limit has been reached
+Error reported from srm_ifce : 2 [SE][Ls][SRM_INVALID_PATH] No such file or directory /pnfs/｟*｠/｟*｠/atlas/｟*｠/atlasdatadisk/rucio/｟*｠/｟*｠/｟*｠/｟*｠
 Checksum value required if mode is not end to end
-[gfalt_copy_file][perform_copy][gfal_xrootd_3rd_copy][gfal_xrootd_3rd_copy_bulk] Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [4003] Authentication to ftp1.ndgf.org:1094 failed; all protocols have been tried.
-"srm-ifce err: Communication error on send, err: [SE][Ls][] httpg:/:/srm/managerv2: CGSI-gSOAP running on reports Could NOT load client credentials GSS Major Status: General failure GSS Minor Status Error Chain: globus_gsi_gssapi: Error with GSI credential globus_gsi_gssapi: Error with gss credential handle globus_credential: Valid credentials could not be found in any of the possible locations specified by the credential search order. Valid credentials could not be"
-HTTP 500 :｟*｠ server error: 500 after 1 attempts
-Source and destination file｟*｠
-DESTINATION SRM_PUTDONE call to srm_ifce error: [SE][PutDone][] httpg:/:/srm/managerv2: CGSI-gSOAP running on reports:
-"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Error string contains not valid UTF-8 chars"
-": the server responded with an error 530 Login incorrect. : Server over the user connection limit of (host=, user=)"
-: the server responded with an error 421 Idle Timeout: closing control connection.
-TRANSFER globus_ftp_client: the server responded with an error 500 500-Command failed. : globus_xio: The GSI XIO driver failed to establish a secure connection. The failure occured during a handshake read. 500-globus_xio: System error in recv: Connection reset by peer 500-globus_xio: A system call failed: Connection reset by peer 500 End.
-"[gfalt_copy_file][perform_copy] TRANSFER [gfal_http_copy] ERROR: Copy failed with mode 3rd push, with error: [davix2gliberr] Transfer failed: failure:"
-[gfalt_copy_file][perform_copy][gfal_http_copy] DESTINATION OVERWRITE [gfal_http_copy_overwrite] [gfal_http_exists][gfal_http_access][davix2gliberr] HTTP 403 : Permission refused
-TRANSFER globus_ftp_client: the operation was aborted
-"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: while pushing https:/:/atlasscratchdisk/rucio/tests///:"
-: the server responded with an error 530 530-Login incorrect. : globus_gss_assist: Error invoking｟*｠ 530-globus_callout_module: The｟*｠ returned an error 530-an｟*｠ error occurred 530 End.
-"TRANSFER ERROR: Copy failed with mode 3rd, with error: Request cancellation was requested."
+"DESTINATION SRM_PUTDONE Error on the surl srm:/srm.ihep.ac.cn/pnfs/ihep.ac.cn/data/cms/store/user/jixiao/nano2016_v2/｟*｠/｟*｠/｟*｠/｟*｠/ while putdone : [SE][PutDone][｟*｠] PreparedStatementCallback; SQL [UPDATE t_inodes SET inlink=inlink +?,imtime=?,ictime=?,igeneration=igeneration+1 WHERE inumber=?]; ERROR: deadlock detected; Detail: Process｟*｠ waits for｟*｠ on｟*｠; blocked by process｟*｠.;Process｟*｠ waits for ExclusiveLock on｟*｠"
+User and｟*｠ checksums do not match
+"srm-ifce err: Communication error on send, err: [SE][Ls][] httpg:/｟*｠:｟*｠/srm/managerv2: CGSI-gSOAP running on｟*｠ reports Could NOT load client credentials｟*｠ Major Status: General failure｟*｠ Minor Status Error Chain: globus_gsi_gssapi: Error with GSI credential globus_gsi_gssapi: Error with gss credential handle globus_credential: Valid credentials could not be found in any of the possible locations specified by the credential search order. Valid credentials could not be｟*｠"
+｟*｠ HTTP 500 :｟*｠ server error: 500 after 1 attempts
+TRANSFER globus_ftp_client: the server responded with an error 500 500-Command failed. :｟*｠:｟*｠ to connect to｟*｠:｟*｠ 500-globus_xio: System error in connect: Connection timed out 500-globus_xio: A system call failed: Connection timed out 500 End.
+TRANSFER CHECKSUM MISMATCH USER_DEFINE and｟*｠ checksums are different.｟*｠ !=｟*｠
+Source and destination file size mismatch
+"DESTINATION SRM_PUTDONE Error on the surl srm:/srm.ihep.ac.cn/pnfs/ihep.ac.cn/data/cms/store/user/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠ while putdone : [SE][PutDone][｟*｠] PreparedStatementCallback; SQL [UPDATE t_inodes SET inlink=inlink +?,imtime=?,ictime=?,igeneration=igeneration+1 WHERE inumber=?]; ERROR: deadlock detected; Detail: Process｟*｠ waits for｟*｠ on｟*｠ ;｟*｠"
+"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Error string｟*｠ not valid｟*｠"
+"globus_ftp_client: the server responded with an error 530 Login incorrect. : Server over the user connection limit of｟*｠ (host=｟*｠, user=｟*｠)"
+｟*｠ globus_ftp_client: the server responded with an error 421｟*｠ Timeout: closing control connection.
+TRANSFER globus_ftp_client: the server responded with an error 500 500-Command failed.｟*｠ :｟*｠: The GSI XIO driver failed to establish a secure connection. The failure occured during a handshake read. 500-globus_xio: System error in recv: Connection reset by peer 500-globus_xio: A system call failed: Connection reset by peer 500 End.
+[gfalt_copy_file][perform_copy][gfal_xrootd_3rd_copy][gfal_xrootd_3rd_copy_bulk] Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [3010] Unable to create /atlas/atlasscratchdisk/rucio/tests/｟*｠/｟*｠/｟*｠; permission denied
+TRANSFER globus_ftp_client: the server responded with an error｟*｠
+｟*｠ globus_ftp_client: the operation was aborted
+"[gfalt_copy_file][perform_copy] TRANSFER [gfal_http_copy] ERROR: Copy failed with mode 3rd push, with error: [davix2gliberr] Transfer failed: failure:｟*｠ failed with｟*｠"
+[gfalt_copy_file][perform_copy][gfal_http_copy] DESTINATION OVERWRITE [gfal_http_copy_overwrite] [gfal_http_exists][gfal_http_access][davix2gliberr]｟*｠ :｟*｠
+DESTINATION｟*｠ error on the turl request : [SE][｟*｠][｟*｠]｟*｠
+｟*｠ globus_ftp_client: the server responded with an error 500｟*｠ failed｟*｠ :｟*｠
+"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure:｟*｠ while pushing https:/｟*｠:｟*｠/atlasscratchdisk/rucio/tests/｟*｠/｟*｠/｟*｠:｟*｠"
+globus_ftp_client: the server responded with an error 530 530-Login incorrect. : globus_gss_assist: Error invoking｟*｠ 530-globus_callout_module: The｟*｠ returned an error 530-an unknown error occurred 530 End.
+TRANSFER globus_ftp_client: the server responded with an error 451 Transfer was forcefully｟*｠
 "TRANSFER ERROR: Copy failed with mode 3rd push, with error: copy"
-TRANSFER｟*｠ canceled from｟*｠
-globus_xio: Unable to connect to:2811 globus_xio: System error in connect: No route to host globus_xio: A system call failed: No route to host
-"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed:: Remote copy failed with status code 0:"
-"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: problem sending data: Connect to｟*｠: [｟*｠/] failed: timed out"
-TRANSFER CHECKSUM MISMATCH and｟*｠｟*｠
-: the server responded with an error 530 530-globus_xio: Authentication Error 530-globus_gsi_callback_module: Could not verify credential 530-globus_gsi_callback_module: Could not verify credential 530-globus_gsi_callback_module: Invalid｟*｠: The available｟*｠ has expired 530 End.
-"TRANSFER globus_ftp_client: the server responded with an error 451 write [net=2001:1458:301::0:0:100:=GFtp/2,store=@==]"
-"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: Error pushing https:/dpmhead-rc.cern.ch:443/dpm/cern.ch/home/dteam/domatests/https/domatest/: 507 Insufficient Storage"
-TRANSFER globus_ftp_client: the server responded with an error｟*｠ Protocol｟*｠ not supported
+TRANSFER Operation canceled from｟*｠
+TRANSFER｟*｠: Unable to connect to grid24.physics.uoi.gr:2811｟*｠: System error in connect: No route to host｟*｠: A system call failed: No route to host
+"DESTINATION SRM_PUTDONE Error on the surl srm:/srm.ihep.ac.cn/pnfs/ihep.ac.cn/data/cms/store/user/jixiao/nano2016_v2/｟*｠/｟*｠/｟*｠/0000/ while putdone : [SE][PutDone][｟*｠] PreparedStatementCallback; SQL [UPDATE t_inodes SET inlink=inlink +?,imtime=?,ictime=?,igeneration=igeneration+1 WHERE inumber=?]; ERROR: deadlock detected; Detail: Process｟*｠ waits for ExclusiveLock on tuple (｟*｠) of relation 16397 of database 16387; blocked by process｟*｠.;Process｟*｠"
+"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: Remote copy failed with status code 0:｟*｠:｟*｠"
+"TRANSFER ERROR: Copy failed with mode 3rd pull, with error: Request cancellation was requested."
+"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: problem sending data:｟*｠:｟*｠ failed:｟*｠"
+DESTINATION SRM_PUTDONE call to srm_ifce error: [SE][PutDone][] httpg:/｟*｠:｟*｠/srm/managerv2: CGSI-gSOAP running on｟*｠ reports could not open connection to｟*｠:｟*｠
+DESTINATION SRM_PUTDONE call to｟*｠ error: [SE][PutDone][] httpg:/｟*｠:｟*｠/srm/managerv2: CGSI-gSOAP running on｟*｠ reports Error reading token data｟*｠: Connection｟*｠
+｟*｠ globus_ftp_client: the server responded with an error 530 530-globus_xio: Authentication Error 530-globus_gsi_callback_module: Could not verify credential 530-globus_gsi_callback_module: Could not verify credential 530-globus_gsi_callback_module: Invalid｟*｠: The available｟*｠ has expired 530 End.
+"[｟*｠][｟*｠] TRANSFER [｟*｠] ERROR: Copy failed with mode 3rd｟*｠, with error: [｟*｠]｟*｠"
+"TRANSFER globus_ftp_client: the server responded with an error｟*｠ Space reservation 229317465 may not be used for this write request [net=2001:1458:301:｟*｠:0:0:100:｟*｠=GFtp/2,store=vo-atlas.ifae@enstore,cache=,linkgroup=linkgroup-atlast3]"
+TRANSFER globus_ftp_client: the server responded with an error｟*｠ Protocol family not supported
+globus_ftp_client: the server responded with an error｟*｠ 451-GlobusError: v=1 c=INTERNAL_ERROR 451-GridFTP-Errno: 108 451-GridFTP-Reason: System error in stat 451-GridFTP-Error-String: Cannot send after transport endpoint shutdown｟*｠ End.
 TRANSFER globus_ftp_client: the server responded with an error 550 File not found
-DESTINATION SRM_PUTDONE Error on the surl srm://dpm//home//// while putdone : [SE][PutDone][]
-TRANSFER globus_ftp_client: the server responded with an error 451 General problem: to::
-: System error in send:｟*｠ globus_xio: A system call failed:｟*｠
-": the server responded with an error 530 Login incorrect. : Server over the global connection limit of 250 (user has 0 transfers) (host=, user=cms, path=(null)"
-"TRANSFER ERROR: Copy failed with mode｟*｠, with error: 404"
+Source and destination checksums do not match
+TRANSFER globus_ftp_client: the server responded with an error 500 500-Command failed. :｟*｠: Unable to connect to｟*｠:｟*｠:｟*｠:｟*｠:｟*｠:｟*｠:｟*｠:｟*｠:｟*｠ 500-globus_xio: System error in connect: Connection timed out 500-globus_xio: A system call failed: Connection timed out｟*｠ 500 End.
+｟*｠ globus_xio: System error in send: Broken pipe globus_xio: A system call failed: Broken pipe
+"globus_ftp_client: the server responded with an error 530 Login incorrect. : Server over the global connection limit of 250 (user has 0｟*｠) (host=｟*｠, user=cms, path=(null)"
+TRANSFER globus_ftp_client: the server responded with an error 555 SRM upload aborted: File was deleted by request｟*｠:｟*｠:srm2:rm.
 TRANSFER globus_ftp_client: the server responded with an error 451 Post-processing failed: No such file or directory:｟*｠
-CHECKSUM globus_ftp_client: the operation was aborted
-CHECKSUM HTTP 404 : File not found
-DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][SRM_FILE_BUSY] The surl srm:///// is currently busy (ongoing put
-TRANSFER globus_ftp_client: the server responded with an error 500 Command failed. : IPC failed while attempting to perform request
-: the server responded with an error 550 550-GlobusError: v=1 c= 550-GridFTP-Errno: 550-GridFTP-Reason: System error in name 550-GridFTP-Error-String: 550 End.
-TRANSFER globus_ftp_client: the server responded with an error 500 Command failed. :｟*｠｟*｠
-Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [3010] Unable to open - tpc key replayed /eos//////; operation not permitted
-TRANSFER globus_ftp_client: the server responded with an error 451 General problem: Failed to connect [:::]::
-"TRANSFER ERROR: Copy failed with mode｟*｠, with error: (Neon):"
-TRANSFER globus_ftp_client: the server responded with an error 451 General problem: Failed to connect [::::]::
+TRANSFER globus_ftp_client: the server responded with an error 451 General problem:｟*｠ to｟*｠:｟*｠:｟*｠
+｟*｠ CHECKSUM globus_ftp_client: the operation was aborted
+"TRANSFER ERROR: Copy failed with mode｟*｠, with error: HTTP 404 : File not found"
+｟*｠ CHECKSUM HTTP 404 : File not found
+｟*｠ globus_ftp_client: the server responded with an error 500｟*｠ failed. :｟*｠: The GSI XIO driver failed to establish a connection via the underlying protocol. 500-globus_xio: Unable to connect to｟*｠:2811 500-globus_xio: System error in connect: Connection｟*｠ 500-globus_xio: A system call failed: Connection｟*｠ 500 End.
+TRANSFER globus_ftp_client: the server responded with an error 500 Command failed. :｟*｠ failed while｟*｠ to perform request
+TRANSFER globus_ftp_client: the server responded with an error｟*｠ General problem: Failed to connect [2001:｟*｠:｟*｠:｟*｠:｟*｠:｟*｠:｟*｠:｟*｠]:｟*｠:｟*｠
+"TRANSFER ERROR: Copy failed with mode｟*｠, with error: (Neon):｟*｠ error｟*｠"
+Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [3010] Unable to open - tpc key replayed /eos/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠; operation not permitted
+Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [3005] destination file prematurely closed
+TRANSFER globus_ftp_client: the server responded with an error｟*｠ General problem: Failed to connect [2401:de00:2:33:｟*｠]:｟*｠:
+"globus_ftp_client: the server responded with an error 530 530-globus_xio: Authentication Error 530-OpenSSL Error: s3_srvr.c:｟*｠: in library: SSL routines, function｟*｠: certificate verify｟*｠ 530-globus_gsi_callback_module: Could not verify credential 530-globus_gsi_callback_module: The certificate has expired: Credential with subject: /C=DE/O=GermanGrid/OU=KIT/CN=Michael Wassmer/CN=1649345804/CN=870338423/CN=851183001 has expired. 530 End."
+DESTINATION SRM_PUTDONE Error on the surl srm:/｟*｠/dpm/｟*｠/home/atlas/｟*｠/rucio/｟*｠/｟*｠/｟*｠/｟*｠.｟*｠ while putdone : [SE][PutDone][｟*｠]｟*｠
+"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: Error pushing https:/dpmhead-rc.cern.ch:443/dpm/cern.ch/home/dteam/domatests/https/domatest/｟*｠: 507 Insufficient Storage"
 Transfer canceled
-: the server responded with an error 500 Command failed :｟*｠ server error
-｟*｠
-"TRANSFER ERROR: Copy failed with mode 3rd push, with error: copy HTTP 500 :｟*｠ server error: 500"
-DESTINATION SRM_PUT_TURL error on the turl request : [SE][][]
-: the server responded with an error 500 an｟*｠ error occurred
+"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: Error pushing https:/｟*｠:443/dpm/｟*｠/home/dteam/｟*｠/https/domatest/｟*｠: 507 status code: 507, reason phrase:｟*｠"
+DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][SRM_FILE_BUSY] The surl srm:/｟*｠/｟*｠/｟*｠/rucio/｟*｠/｟*｠/｟*｠/｟*｠ is currently busy (ongoing put requests)
+Operation canceled
 Error reported from srm_ifce : 16 [SE][Ls][SRM_FILE_BUSY] The requested SURL is locked by an upload.
-"TRANSFER globus_ftp_client: the server responded with an error 451 451-GlobusError: v=1 c=INTERNAL_ERROR 451-GridFTP-Errno: 255 451-GridFTP-Reason: System error in HDFS (host=, user=, path=/store/////) 451-GridFTP-Error-String: Unknown"
-TRANSFER globus_ftp_client: the server responded with an error 500 500-Command failed. :: error in: 500-globus_xio: A system call failed: 500 End.
-TRANSFER globus_ftp_client: the server responded with an error 451｟*｠ failed: File upload not｟*｠
-TRANSFER globus_ftp_client: the server responded with an error 451 General problem: Problem while connected to [2a00:139c:5:215:0:41:7c:b2]:: Input/output error
-": the server responded with an error 530 Login incorrect. : Server is cancelling transfer due to over-load limit (host=, user=, path=(null)"
+TRANSFER globus_ftp_client: the server responded with an error 451｟*｠ failed: File upload not yet｟*｠
+TRANSFER globus_ftp_client: the server responded with an error｟*｠ General problem:｟*｠ to [｟*｠:｟*｠:5:215:0:41:7c:｟*｠]:｟*｠:｟*｠ error
+"globus_ftp_client: the server responded with an error 530 Login incorrect. : Server is cancelling transfer due to over-load limit (host=｟*｠, user=｟*｠, path=(null)"
 TRANSFER globus_ftp_client: the server responded with an error 500 Command failed. : Error closing｟*｠ file handle
-TRANSFER globus_ftp_client: the server responded with an error 500 500-Command failed. : globus_xio: Unable to connect to 2001:2F8:102D:589:2:3:1:: 500-globus_xio: System error in connect: Connection timed out 500-globus_xio: A system call failed: Connection timed out 500 End.
-reported from srm_ifce : 70 [SE][Ls][SRM_INTERNAL_ERROR] Request to [>PnfsManager@local] timed out.
-globus_ftp_client: the server responded with an error 500: v=1 c= 500-GridFTP-Errno: 500-GridFTP-Reason: System error in name 500-GridFTP-Error-String: 500- 500 End.
-"TRANSFER globus_ftp_client: the server responded with an error 451 Post-processing failed: File｟*｠ (expected=, actual=)"
-SOURCE SRM_GET_TURL error on the turl request : [SE][StatusOfGetRequest][SRM_FAILURE] Insufficient user privileges to trigger a tape recall or file replication to the t0cms service class
-Error on XrdCl:CopyProcess:Run(): [ERROR]: Got while querying the checksum!
-CHECKSUM HTTP 500 :｟*｠ server error: 500
-TRANSFER globus_ftp_client: the server responded with an error 451 General problem: Problem while connected to [::::]:: Input/output error
-TRANSFER globus_ftp_client: the server responded with an error 451 General problem: Problem while connected to:
-globus_ftp_client: the server responded with an error 530 Login incorrect. : Mapped user is invalid.
+Error reported from srm_ifce : 70 [SE][Ls][SRM_INTERNAL_ERROR] Request to [>｟*｠@local] timed out.
+TRANSFER globus_ftp_client: the server responded with an error 500 500-Command failed. : GlobusError: v=1 c=｟*｠ 500-GridFTP-Errno:｟*｠ 500-GridFTP-Reason: System error in name 500-GridFTP-Error-String:｟*｠ 500- 500 End.
+｟*｠ error on the turl request : [SE][｟*｠][SRM_FAILURE] Local filesystem mask does not allow setting up correct｟*｠ for｟*｠!
+"TRANSFER globus_ftp_client: the server responded with an error｟*｠ Post-processing failed: File size mismatch (expected=｟*｠, actual=｟*｠)"
+SOURCE｟*｠ error on the turl request : [SE][｟*｠][SRM_FAILURE] Insufficient user｟*｠ to trigger a tape recall or file replication to the｟*｠ service class
+TRANSFER globus_ftp_client: the server responded with an error 500 500-Command failed. : globus_xio: System error in｟*｠:｟*｠ pipe 500-globus_xio: A system call failed:｟*｠ pipe｟*｠ 500 End.
+｟*｠ CHECKSUM HTTP 500 : Unexpected server error: 500
+Error on XrdCl:CopyProcess:Run(): [ERROR]｟*｠:｟*｠ error｟*｠
+TRANSFER globus_ftp_client: the server responded with an error｟*｠ General problem: Problem while connected to｟*｠:｟*｠:｟*｠:｟*｠:｟*｠:｟*｠: Input/output error
+globus_ftp_client: the server responded with an error 530 Login incorrect. :｟*｠ user｟*｠ is invalid.
+TRANSFER globus_ftp_client: the server responded with an error 500 500-Command failed. :｟*｠ failed. 500-globus_xio:｟*｠ error in｟*｠:｟*｠ error 500-globus_xio: A system call failed:｟*｠ error 500 End.
 [｟*｠] operation canceled by user
-TRANSFER globus_ftp_client: the server responded with an error 500 500-Command failed. : end-of-file was reached 500-globus_xio: An end of file occurred 500 End.
-"Authentication error, reached maximum number of attempts after 1 attempts"
-: the server responded with an error 500 callback failed. 500-globus_xio: System error in read: Input/output error 500-globus_xio: A system call failed: Input/output error 500 End.
-TRANSFER globus_ftp_client: the server responded with an error｟*｠ 553-GlobusError: v=1 c=PATH_EXISTS 553-GridFTP-Errno: 17 553-GridFTP-Reason: System error in 553-GridFTP-Error-String: File exists｟*｠ End.
-Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [｟*｠] Unable to checksum /dpm//home////; invalid argument Got an error while querying the checksum!
-reported from srm_ifce : 70 [SE][Ls][SRM_INTERNAL_ERROR] Failed to｟*｠ transfers
-"ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: Remote copy failed with status code 0:｟*｠ too slow. Less than 1048576 bytes/sec transferred the last 120 seconds"
-"DESTINATION MAKE_PARENT srm-ifce err: Communication error on send, err: [SE][Mkdir][] httpg:/lcg-se1.sfu.computecanada.ca:8443/srm/managerv2: org.apache.axis.types.URI$MalformedURIException: Scheme specific part cannot be empty."
-TRANSFER CHECKSUM MISMATCH User defined checksum and destination checksums do not match !=
-TRANSFER globus_ftp_client: the server responded with an error 500 500-Command failed. :｟*｠ error 500 End.
-DESTINATION SRM_PUTDONE Error on the surl srm://dpm//home////// while putdone : [SE][PutDone][]
+｟*｠ globus_ftp_client: the server responded with an error｟*｠ an unknown error occurred
+TRANSFER globus_ftp_client: the server responded with an error 500 500-Command failed. : an｟*｠ was｟*｠ 500-globus_xio:｟*｠ 500 End.
+TRANSFER globus_ftp_client: the server responded with an error｟*｠ 553-GlobusError: v=1 c=PATH_EXISTS 553-GridFTP-Errno: 17 553-GridFTP-Reason: System error in｟*｠ 553-GridFTP-Error-String: File exists｟*｠ End.
+Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [｟*｠] Unable to checksum /dpm/｟*｠/home/｟*｠/｟*｠/｟*｠/｟*｠; invalid argument Got an error while querying the checksum!
+DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][SRM_FILE_BUSY] The surl srm:/｟*｠/｟*｠/store/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠ is currently busy (ongoing put requests)
+Error reported from srm_ifce : 70 [SE][Ls][SRM_INTERNAL_ERROR] Failed to abort transfers
+"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure:｟*｠ copy failed with status code 0:｟*｠ too slow.｟*｠ than｟*｠ bytes/sec transferred the last 120 seconds"
+"DESTINATION MAKE_PARENT srm-ifce err: Communication error on send, err: [SE][Mkdir][] httpg:/｟*｠:8443/srm/managerv2:｟*｠$｟*｠:｟*｠ specific part cannot be empty."
+Error on XrdCl:CopyProcess:Run(): [｟*｠]｟*｠
+TRANSFER CHECKSUM MISMATCH User defined checksum and destination checksums do not match｟*｠ !=｟*｠
+DESTINATION SRM_PUTDONE Error on the surl srm:/｟*｠/dpm/｟*｠/home/atlas/｟*｠/rucio/｟*｠/｟*｠/｟*｠/｟*｠.｟*｠ while putdone : [SE][PutDone][｟*｠]｟*｠
+"TRANSFER globus_ftp_client: the server responded with an error｟*｠ 451-GlobusError: v=1 c=INTERNAL_ERROR 451-GridFTP-Errno:｟*｠ 451-GridFTP-Reason: System error in write into HDFS (host=, user=｟*｠, path=/｟*｠/store/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠) 451-GridFTP-Error-String: Unknown error｟*｠ End."
+"TRANSFER globus_ftp_client: the server responded with an error｟*｠ 451-GlobusError: v=1 c=INTERNAL_ERROR 451-GridFTP-Errno: 255 451-GridFTP-Reason: System error in｟*｠ HDFS (host=｟*｠, user=｟*｠, path=/｟*｠/｟*｠/store/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠) 451-GridFTP-Error-String: Unknown error 255｟*｠"
+TRANSFER CHECKSUM MISMATCH SRC and｟*｠ checksum are different. Source:｟*｠ Destination:｟*｠
 Failed to stat file (Permission denied)
-TRANSFER globus_ftp_client: the server responded with an error 500 Command failed. : transfer has been aborted
-TRANSFER globus_ftp_client: the server responded with an error 500 500-Command failed. :: Unable to connect to: 500-globus_xio: System error in connect: 500-globus_xio: A system call failed: 500 End.
-｟*｠ (Neon): Server certificate verification failed: certificate issued for a different hostname after 1 attempts
-"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: Remote copy could not be｟*｠ (status:):"
-CHECKSUM globus_ftp_client: the server responded with an error 500｟*｠ server error 500- 500 End.
+globus_ftp_client: the server responded with an error 500 Command failed :｟*｠ error: No data available
+｟*｠ (｟*｠): Server certificate verification failed: certificate issued for a different｟*｠ after 1｟*｠
+｟*｠ CHECKSUM an｟*｠ was reached｟*｠:｟*｠ end of file｟*｠
+"srm-ifce err:｟*｠, err: [SE][｟*｠][ETIMEDOUT] httpg:/｟*｠:8443/srm/managerv2: User timeout over"
+Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [3005] [｟*｠]｟*｠ error
+TRANSFER globus_ftp_client: the server responded with an error 451 General problem:｟*｠
+｟*｠ CHECKSUM globus_ftp_client: the server responded with an error 500｟*｠ server error 500- 500 End.
 TRANSFER globus_ftp_client: the server responded with an error｟*｠ 426-GlobusError: v=1 c=DATA_CHANNEL_COMMUNICATION_FAILURE 426-GridFTP-Errno: 104 426-GridFTP-Reason: System error in name 426-GridFTP-Error-String: Connection reset by peer｟*｠ End.
-": the server responded with an error 535 Authentication failed: The peers certificate with subjects DN CN====== was rejected. The peers certificate status is: FAILED The following validation errors were found: error at position in chain, problematic certificate subject: CN=="
-DESTINATION SRM_PUT_TURL error on the turl request : [SE][PrepareToPut][SRM_EXCEED_ALLOCATION] Space associated with the space token 30043703 is not enough to hold SURL.
-TRANSFER globus_ftp_client: the server responded with an error 530 Login failed: Failed to deliver LoginMessage message <:> to [>gPlazma@local]:@ is busy (its estimated response time of ms is longer than the message TTL of 30000 ms).
-"SOURCE SRM_GET_TURL error on the turl request : [SE][StatusOfGetRequest][SRM_FAILURE] Failed to pin file [rc=10011,msg= not open JDBC Connection for transaction; nested exception is java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after.]."
-"DESTINATION MAKE_PARENT srm-ifce err: Permission denied, err: [SE][Mkdir][SRM_AUTHORIZATION_FAILURE] httpg:/srm-atlas.cern.ch:8443/srm/managerv2: srm:/srm-atlas.cern.ch/castor/cern.ch/grid/atlas/tzero/user/mlassnig/pilot/user.mlassnig.pilot.test.single.hits: No such file or directory"
-TRANSFER globus_ftp_client: the server responded with an error 451 General problem: to [2001:48a8:68f7::192:41::]::
-"srm-ifce err:｟*｠ not supported, err: [SE][][SRM_NOT_SUPPORTED] httpg:/:8443/srm/managerv2: Protocol(s) not supported: [gsiftp]"
-TRANSFER globus_ftp_client: the server responded with an error 500 500-Command failed. :: error in: Connection reset by peer 500-globus_xio: A system call failed: Connection reset by peer 500 End.
-"Authentication error, reached maximum number of attempts"
-reported from srm_ifce : 2 [SE][Ls][SRM_INVALID_PATH] SURL is not local: srm:/lcg-se1.sfu.computecanada.ca/atlas//rucio////.
-globus_ftp_client: the operation was aborted
-"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Connection｟*｠; Status of TPC request｟*｠"
-TRANSFER globus_ftp_client: the server responded with an error 451 General problem: Stream ended before EOD
-: Unable to connect to:2811 globus_xio: globus_libc_getaddrinfo failed. globus_common: Name or service not known
-error on the turl request : [SE][][SRM_FAILURE] Unable to build the TURL for the provided transfer protocol
-TRANSFER globus_ftp_client: the server responded with an error 500 Command failed. : data stream overflows buffer error: No such file or directory
-TRANSFER globus_ftp_client: the server responded with an error 451 General problem: Problem while connected to [2001:6a8:3081:1201:1:]:: Connection timed out
-SOURCE SRM_GET_TURL error on the turl request : [SE][StatusOfGetRequest][SRM_FAILURE] Local filesystem!
-Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [｟*｠]:/｟*｠:1094
+TRANSFER globus_ftp_client: the server responded with an error｟*｠ General problem:｟*｠ to [2001:48a8:68f7:｟*｠:192:41:｟*｠:｟*｠]:｟*｠:｟*｠
+DESTINATION SRM_PUT_TURL error on the turl request : [SE][PrepareToPut][｟*｠] Space associated with the space token｟*｠ is not enough to hold｟*｠.
+TRANSFER globus_ftp_client: the server responded with an error｟*｠ General problem: Problem while connected to｟*｠:｟*｠: Connection｟*｠
+TRANSFER globus_ftp_client: the server responded with an error 530 Login failed: Failed to deliver LoginMessage message <｟*｠:｟*｠> to [>gPlazma@local]:｟*｠@｟*｠ is busy (its estimated response time of｟*｠ is longer than the message TTL of 30000｟*｠).
+"SOURCE｟*｠ error on the turl request : [SE][｟*｠][SRM_FAILURE] Failed to pin file [rc=10011,msg=｟*｠: Could not open JDBC Connection for transaction; nested exception is java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after｟*｠.]."
+"DESTINATION MAKE_PARENT srm-ifce err: Permission denied, err: [SE][Mkdir][SRM_AUTHORIZATION_FAILURE] httpg:/｟*｠:8443/srm/managerv2: srm:/｟*｠/castor/cern.ch/grid/atlas/tzero/user/mlassnig/pilot/user.mlassnig.pilot.test.single.hits: No such file or directory"
+"｟*｠ srm-ifce err:｟*｠ not supported, err: [SE][｟*｠][｟*｠] httpg:/｟*｠:8443/srm/managerv2: Protocol(s) not supported: [gsiftp]"
+Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [｟*｠] Unable to｟*｠ /dpm/｟*｠/home/dteam/root/｟*｠/;｟*｠
+DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][｟*｠]｟*｠
+"｟*｠ Authentication error, reached maximum number of attempts"
+DESTINATION SRM_PUTDONE Error on the surl srm:/｟*｠/dpm/｟*｠/home/cms/store/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠ while putdone : [SE][PutDone][｟*｠]｟*｠
+"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Connection｟*｠ abruptly; Status of TPC request unknown"
+globus_ftp_client: the server responded with an error 500 500-checksum read callback failed. 500-globus_xio: System error in read: Input/output error 500-globus_xio: A system call failed: Input/output error 500 End.
+｟*｠: Unable to connect to｟*｠:2811｟*｠: globus_libc_getaddrinfo failed. globus_common: Name or service not known
+Error reported from srm_ifce : 2 [SE][Ls][SRM_INVALID_PATH] No such file or directory /pnfs/lcg.cscs.ch/atlas/atlasdatadisk/rucio/mc16_13TeV/1d/38/｟*｠._000013.pool.root.1
+｟*｠ error on the turl request : [SE][｟*｠][SRM_FAILURE] Unable to build the｟*｠ for the provided transfer protocol
+TRANSFER globus_ftp_client: the server responded with an error｟*｠ General problem: Problem while connected to [2001:｟*｠:｟*｠:｟*｠:｟*｠:｟*｠]:｟*｠: Connection timed out
+SOURCE CHECKSUM globus_ftp_client: the server responded with an error 500 Command failed : error:｟*｠ denied
+"TRANSFER globus_ftp_client: the server responded with an error 535 Authentication failed: The peers certificate with subjects DN CN=｟*｠=｟*｠=｟*｠=｟*｠=｟*｠=｟*｠=｟*｠=｟*｠=｟*｠=Users,OU=Organic Units,DC=cern,DC=ch was rejected. The peers certificate status is: FAILED The following validation errors were found: error at position 6 in chain, problematic certificate subject: CN=｟*｠=｟*｠=｟*｠=Users,OU=Organic"
+Error reported from srm_ifce : 2 [SE][Ls][SRM_INVALID_PATH] No such file or directory /pnfs/｟*｠/｟*｠/cms/｟*｠/｟*｠/｟*｠/user/raly.e266b32b9bea6112711687fb835d9ffd294588f1/MonoHiggs/FullRunII/Data2017processing/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠
+Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [3007]｟*｠:｟*｠/｟*｠:1094
+DESTINATION SRM_PUTDONE Error on the surl srm:/｟*｠/dpm/｟*｠/home/cms/store/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠ while putdone : [SE][PutDone][｟*｠]｟*｠
 "TRANSFER ERROR: Copy failed with mode｟*｠, with error: TRANSFER STREAMED DISABLED Trying to fallback to a｟*｠ copy, but they are disabled"
-TRANSFER globus_ftp_client: the server responded with an error 500 500-Command failed. : System error in open:｟*｠ deadlock｟*｠ 500-A system call failed:｟*｠ deadlock｟*｠ 500 End.
-"DESTINATION OVERWRITE error reported from srm_ifce, [SE][srmRm][SRM_INTERNAL_ERROR]"
-"TRANSFER ERROR: Copy failed with mode, with error: Authentication error, reached maximum number of attempts"
-[gfalt_copy_file][perform_copy][gfal_xrootd_3rd_copy][gfal_xrootd_3rd_copy_bulk] Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [3012] sync - TPC open failed for src_url=root:/ftp1.ndgf.org:1094/atlas/disk/atlasscratchdisk/rucio/tests///?fst.readahead=true
-TRANSFER globus_ftp_client: the server responded with an error. :｟*｠
-DESTINATION SRM_PUTDONE Error on the surl srm://///// while putdone : [SE][PutDone][SRM_INTERNAL_ERROR] Request to [>PnfsManager@local] timed out.
-": the server responded with an error 530 530-Login incorrect. : /builddir/build/BUILD/gridftp-hdfs-1.1.1/src/gridftp_hdfs.c:hdfs_start:756: 530-Server is cancelling transfer due to over-load limit (host=gftp-3.t2.ucsd.edu, user=, path=(null) 530 End."
-"TRANSFER ERROR: Copy failed with mode, with error: (Neon): SSL handshake failed: Connection timed out during SSL handshake"
-"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure:｟*｠: timed out while waiting for mover｟*｠"
-"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure:: The peers certificate with subjects DN CN=s3.cern.ch,OU=Unified Communications,OU=Issued through Organisation Europ enne pour la Recherche Nucl ai,O=Organisation Europ enne pour la Recherche Nucl aire (CERN),STREET=Route de Meyrin 385,L=Meyrin,ST=Geneva,2.5.4.17=#130431323137,C=CH was rejected. The peers certificate status is: FAILED The following validation errors"
-DESTINATION CHECKSUM globus_xio: Unable to connect to:2811 globus_xio: System error in connect: Connection refused globus_xio: A system call failed: Connection refused
+TRANSFER globus_ftp_client: the server responded with an error 500 500-Command failed. : System error in open: Resource deadlock｟*｠ 500-A system call failed: Resource deadlock｟*｠ 500 End.
+｟*｠ globus_ftp_client: the server responded with an error 451 451-GlobusError: v=1 c=INTERNAL_ERROR 451-GridFTP-Errno:｟*｠ 451-GridFTP-Reason: System error in｟*｠ 451-GridFTP-Error-String:｟*｠ 451 End.
+"DESTINATION OVERWRITE error reported from srm_ifce, [SE][srmRm][SRM_INTERNAL_ERROR]｟*｠"
+｟*｠ globus_ftp_client: the server responded with an error 500 500-Command failed. : System error in｟*｠:｟*｠ 500-A system call failed:｟*｠ 500 End.
+[｟*｠][｟*｠][｟*｠][｟*｠] Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [3012] sync - TPC open failed for src_url=root:/｟*｠:1094/｟*｠/｟*｠/atlasscratchdisk/rucio/tests/｟*｠/｟*｠/｟*｠?fst.readahead=true
+"TRANSFER ERROR: Copy failed with mode｟*｠, with error:｟*｠ Authentication error, reached maximum number of｟*｠"
+Error reported from srm_ifce : 2 [SE][Ls][SRM_INVALID_PATH]｟*｠ is not local: srm:/｟*｠/atlas/atlasdatadisk/rucio/｟*｠/｟*｠/｟*｠/｟*｠.｟*｠
+"TRANSFER ERROR: Copy failed with mode 3rd push, with error: copy (Neon): SSL handshake failed:｟*｠ SSL handshake"
+DESTINATION SRM_PUT_TURL error on the turl request : [SE][PrepareToPut][SRM_DUPLICATION_ERROR] The requested SURL is locked by another upload.
+"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure:｟*｠:｟*｠"
+"｟*｠ globus_ftp_client: the server responded with an error 530｟*｠ incorrect. : /builddir/build/BUILD/gridftp-hdfs-1.1.1/src/｟*｠:｟*｠:｟*｠:｟*｠ is｟*｠ transfer due to｟*｠ limit (host=gftp-3.t2.ucsd.edu, user=｟*｠, path=(null) 530 End."
+TRANSFER globus_ftp_client: the server responded with an error｟*｠ General problem: Problem while connected to｟*｠:｟*｠:｟*｠
+TRANSFER globus_ftp_client: the server responded with an error 500 500-Command failed. 500- : an unknown error occurred 500 End.
+"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: failed｟*｠:｟*｠:｟*｠: The peers certificate with subjects DN｟*｠=s3.cern.ch,OU=Unified Communications,OU=Issued through Organisation Europ enne pour la Recherche Nucl ai,O=Organisation Europ enne pour la Recherche Nucl aire (CERN),STREET=Route de Meyrin 385,L=Meyrin,ST=Geneva,2.5.4.17=#130431323137,C=CH was｟*｠. The peers certificate status is: FAILED The following validation errors｟*｠"
 "TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: problem sending data: Connect to golias100.farm.particle.cz:443 [golias100.farm.particle.cz/｟*｠, golias100.farm.particle.cz/2001:718:401:6017:2:0:0:1000] failed: connect timed out"
-DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][SRM_INVALID_PATH] Failed to put /storage/data/cms/store///////
-DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][SRM_FILE_BUSY] The surl srm:///store/////// is currently busy (ongoing put requests)
-"DESTINATION MAKE_PARENT srm-ifce err: Permission denied, err: [SE][Mkdir][SRM_AUTHORIZATION_FAILURE] httpg:/:8443/srm/managerv2: srm://castor/ads.rl.ac.uk/prod///: User can not create a directory at this level"
-"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure::; redirections [:/:////?sfn=%2Fdpm%%2Fhome%%%%&token=%3D%%401]"
+DESTINATION SRM_PUTDONE Error on the surl srm:/｟*｠/dpm/｟*｠/home/cms/store/mc/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠ while putdone : [SE][PutDone][SRM_FAILURE] Incompatible with current file status
+"DESTINATION MAKE_PARENT srm-ifce err:｟*｠ denied, err: [SE][Mkdir][SRM_AUTHORIZATION_FAILURE] httpg:/｟*｠:8443/srm/managerv2: srm:/｟*｠/castor/ads.rl.ac.uk/prod/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠: User can not create a directory at this level"
+DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][SRM_FILE_BUSY] The surl srm:/｟*｠/cms/store/user/raly/MonoHiggs/FullRunII/Data2017processing/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠ is currently busy (ongoing put requests)
+TRANSFER globus_ftp_client: the server responded with an error｟*｠ General problem:｟*｠ to｟*｠:｟*｠: La connexi ha｟*｠
+DESTINATION CHECKSUM Connection｟*｠ during redirection on https:/｟*｠:1094/cephfs/grid/atlas/｟*｠/rucio/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠?authz=Bearer%｟*｠
+"SOURCE SRM_GET_TURL srm-ifce err: Communication error on send, err: [SE][PrepareToGet][] httpg:/｟*｠:8446/srm/managerv2: CGSI-gSOAP running on｟*｠ reports could not open connection to｟*｠:8446"
+"TRANSFER ERROR: Copy failed with mode streamed, with error: HTTP 400 : Server Error"
 Connection timed out
-globus_ftp_client: the server responded with an error 530 530-Login incorrect. : gridmap.c:globus_gss_assist_map_and_authorize:2017: 530-Error invoking｟*｠ 530-globus_callout.c:globus_callout_handle_call_type:920: 530-The｟*｠ returned an error 530-an｟*｠ error occurred 530 End.
-"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: failed to send PUT request: Cannot retry request with a non-repeatable request entity; caused by:; after sending B () (%); redirections [:/:////?sfn=%2Fdpm%%2Fhome%%%%%&token="
-"DESTINATION MAKE_PARENT srm-ifce err: Communication error on send, err: [SE][Mkdir][SRM_INTERNAL_ERROR] httpg:/:8443/srm/managerv2: srm:///////:｟*｠ name space timeout"
-DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][SRM_DUPLICATION_ERROR] Cannot srmPut file because it already exists!
-[gfalt_copy_file][perform_copy][srm_plugin_filecopy][srm_do_transfer][gfalt_copy_file][perform_copy][｟*｠][｟*｠] TRANSFER｟*｠
-Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [4003] Invalid request; user not｟*｠
-Connection Timeout during redirection on https:/:1094/cephfs/grid/atlas/atlaslocalgroupdisk/rucio/user/amelzer///user.amelzer.20070922.EXT0.?authz=Bearer%
-: the server responded with an error 500 500-GlobusError: v=1 c=INTERNAL_ERROR 500-GridFTP-Errno: 500-GridFTP-Reason: System error in name 500-GridFTP-Error-String: 500- 500 End.
-DESTINATION SRM_PUTDONE Error on the surl srm://atlas/atlasdatadisk/rucio/mc16_13TeV///. while putdone : [SE][PutDone][SRM_INVALID_PATH] PtP status for this SURL is SRM_ABORTED
-DESTINATION SRM_PUTDONE call to srm_ifce error: [SE][PutDone][] httpg:/:8443/srm/managerv2:
-Error reported from srm_ifce : 2 [SE][Ls][SRM_INVALID_PATH] No such file or directory /pnfs//data/cms/store/////
-Error reported from srm_ifce : 2 [SE][Ls][SRM_INVALID_PATH] File does not｟*｠
-"SOURCE SRM_GET_TURL srm-ifce err: Invalid request descriptor, err: [SE][StatusOfGetRequest][SRM_INVALID_REQUEST] httpg:/se01.dur.scotgrid.ac.uk:8446/srm/managerv2: Unknown request token"
-TRANSFER globus_ftp_client: the server responded with an error 500 500-Command failed. : System error in name: 500-A system call failed: 500 End.
-"TRANSFER ERROR: Copy failed with mode 3rd push, with error: copy (Neon): Could not read status｟*｠:"
-DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][]
-: the server responded with an error 500 500-Command failed : System error in: Permission denied 500-A system call failed: Permission denied 500 End.
-Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [｟*｠] [ERROR] Server responded with an error: [] Unable to ///atlasscratchdisk/rucio/tests///;
-DESTINATION SRM_PUTDONE Error on the surl srm:/lcg-se1.sfu.computecanada.ca/atlas//rucio//// while putdone : [SE][PutDone][SRM_INVALID_PATH] SURL is not local: srm:/lcg-se1.sfu.computecanada.ca/atlas//rucio////
-TRANSFER globus_xio: Unable to connect to:2811 globus_xio: System error in connect: Network is unreachable globus_xio: A system call failed: Network is unreachable
-DESTINATION error on the turl request : [SE][][｟*｠] chunk is being processed!
-CHECKSUM globus_ftp_client: the server responded with an error 500｟*｠ server error
-"TRANSFER ERROR: Copy failed with mode 3rd push, with error: copy Could not the proxy: SOAP 1.1 fault: SOAP-ENV:Client [no subcode] Error observed by underlying SSL/TLS BIO: Connection reset by peer Detail: SSL_connect error in tcp_connect()"
+DESTINATION SRM_PUTDONE Error on the surl srm:/｟*｠/dpm/｟*｠/home/cms/store/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠ while putdone : [SE][PutDone][｟*｠] <none>
+DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][SRM_DUPLICATION_ERROR] Cannot｟*｠ file because it already exists!
+globus_ftp_client: the server responded with an error 530 530-Login incorrect. : gridmap.c:globus_gss_assist_map_and_authorize:2017: 530-Error invoking｟*｠ 530-globus_callout.c:globus_callout_handle_call_type:920: 530-The｟*｠ returned an error 530-an unknown error｟*｠ 530 End.
+｟*｠ globus_ftp_client: the server responded with an error 500 Internal server error
+Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [4003]｟*｠
+｟*｠ globus_ftp_client: the server responded with an error 500｟*｠: v=1 c=｟*｠ 500-GridFTP-Errno:｟*｠ 500-GridFTP-Reason: System error in name 500-GridFTP-Error-String:｟*｠ 500- 500 End.
+TRANSFER globus_ftp_client: the server responded with an error｟*｠ 500-Command failed. :｟*｠:｟*｠:｟*｠:｟*｠ to connect to｟*｠:｟*｠:｟*｠:｟*｠:｟*｠ error in connect: Connection timed out 500-globus_xio: A system call failed: Connection timed out｟*｠ End.
+DESTINATION SRM_PUTDONE Error on the surl srm:/｟*｠/dpm/｟*｠/home/cms/｟*｠/store/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠ while putdone : [SE][PutDone][SRM_FAILURE] Incompatible with current file status
+[gfalt_copy_file][perform_copy][srm_plugin_filecopy][srm_do_transfer][gfalt_copy_file][perform_copy][gridftp_plugin_filecopy][gridftp_plugin_filecopy] TRANSFER Operation｟*｠
+DESTINATION SRM_PUTDONE Error on the surl srm:/｟*｠/｟*｠/｟*｠/｟*｠/atlas/atlasdatadisk/rucio/mc16_13TeV/｟*｠/｟*｠/｟*｠.｟*｠ while putdone : [SE][PutDone][SRM_INVALID_PATH] PtP status for this｟*｠ is SRM_ABORTED
+DESTINATION SRM_PUTDONE call to srm_ifce error: [SE][PutDone][｟*｠] httpg:/lcg-se1.sfu.computecanada.ca:8443/srm/managerv2:｟*｠ request time exceeded
+Error reported from srm_ifce : 2 [SE][Ls][SRM_INVALID_PATH] File does not exist
+DESTINATION｟*｠ error on the turl request : [SE][｟*｠][｟*｠]｟*｠!
+"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: failed to send PUT request: Cannot retry request with a non-repeatable request entity; caused by:｟*｠; after sending｟*｠ B (｟*｠) (｟*｠%); redirections [｟*｠:/｟*｠:｟*｠/｟*｠/atlas/｟*｠/｟*｠?sfn=%2Fdpm%｟*｠%2Fhome%2Fatlas%2Fatlasscratchdisk%2Frucio%2Ftests%｟*｠&token=｟*｠%｟*｠%｟*｠%"
+"TRANSFER ERROR: Copy failed with mode 3rd push, with error: copy (Neon): Could not read status line:｟*｠"
+"SOURCE SRM_GET_TURL srm-ifce err: Invalid request descriptor, err: [SE][StatusOfGetRequest][｟*｠] httpg:/se01.dur.scotgrid.ac.uk:8446/srm/managerv2: Unknown request token"
+"TRANSFER globus_ftp_client: the server responded with an error｟*｠ 451-GlobusError: v=1 c=INTERNAL_ERROR 451-GridFTP-Errno:｟*｠ 451-GridFTP-Reason: System error in write into HDFS (host=｟*｠, user=cmsphedex, path=/user/uscms01/pnfs/unl.edu/data4/cms/store/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠) 451-GridFTP-Error-String: Unknown error｟*｠"
+Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [3010] Unable to open - tpc key replayed /eos/ctaatlaspps/archivetest/mc16_13TeV/HITS/｟*｠/｟*｠/｟*｠.｟*｠; operation not permitted
+"TRANSFER ERROR: Copy failed with mode 3rd push, with error: copy｟*｠) Could not get the｟*｠: Could not get proxy｟*｠: SOAP 1.1 fault: SOAP-ENV:Client [no subcode] Error｟*｠ by underlying SSL/｟*｠: Connection reset by peer Detail: SSL_connect error in tcp_connect()｟*｠"
+"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure:｟*｠:｟*｠; redirections [https:/｟*｠:｟*｠/｟*｠/atlas/｟*｠/｟*｠?sfn=%2Fdpm%｟*｠%2Fhome%2Fatlas%2Fatlasscratchdisk%2Frucio%2Ftests%｟*｠&token=｟*｠%｟*｠%3D%｟*｠%401]"
+SOURCE SRM_GET_TURL error on the turl request : [SE][StatusOfGetRequest][｟*｠]｟*｠
+Error reported from srm_ifce : 2 [SE][Ls][SRM_INVALID_PATH] SURL is not local: srm:/lcg-se1.sfu.computecanada.ca/atlas/｟*｠/rucio/｟*｠/｟*｠/｟*｠/｟*｠.｟*｠
 TRANSFER globus_ftp_client: the server responded with an error 530 Login failed: Request to [>gPlazma@local] timed out.
-Error on XrdCl:CopyProcess:Run(): [ERROR]｟*｠ error: Connection timed out
-"[gfalt_copy_file][perform_copy] TRANSFER [gfal_http_copy] ERROR: Copy failed with mode 3rd push, with error: [davix2gliberr] Transfer failed: failure: verification failed: failed to connect to server: java.net.SocketTimeoutException: Read timed out"
-Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [｟*｠] connection timed out: lcg-se01.icepp.jp/2001:2f8:102d:589:2:1:2:1:1094
+Error reported from srm_ifce : 2 [SE][Ls][SRM_INVALID_PATH] No such file or directory /pnfs/roma1.infn.it/data/cms/store/PhEDEx_LoadTest07/LoadTest07_Debug_T2_IT_Rome/T2_CH_CERN/1/LoadTest07_IT_Rome_BC_eK3cZGXejL7A4D1f_1
+DESTINATION SRM_PUTDONE Error on the surl srm:/grid-srm.physik.rwth-aachen.de/pnfs/physik.rwth-aachen.de/cms/store/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠ while putdone : [SE][PutDone][SRM_INTERNAL_ERROR] Request to [>｟*｠@local] timed out.
+Error on XrdCl:CopyProcess:Run(): [ERROR] Internal error: Connection timed out
+DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][SRM_INVALID_PATH] Failed to put /storage/data/cms/store/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠
+Error reported from srm_ifce : 2 [SE][Ls][SRM_INVALID_PATH] No such file or directory /pnfs/｟*｠/｟*｠/cms/｟*｠/｟*｠/temp/user/welmeten.3257b2c1348f232024e043daaeb0ca1bdcc78c41/HiggsNtuples2018DataLegacy/SingleMuon/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠
+"[gfalt_copy_file][perform_copy] TRANSFER [gfal_http_copy] ERROR: Copy failed with mode 3rd push, with error: [davix2gliberr] Transfer failed: failure:｟*｠ failed: failed to connect to server:｟*｠: Read timed out"
+TRANSFER globus_ftp_client: the server responded with an error｟*｠ General problem:｟*｠ to [2001:｟*｠:｟*｠:｟*｠:｟*｠:｟*｠]:｟*｠:｟*｠ error
+TRANSFER globus_ftp_client: the server responded with an error 500｟*｠ failed. : open/create : [ERROR] Server responded with an error: [3021] Unable to get quota space - quota not defined or exhausted /eos/user/r/ragomesd/crab/｟*｠/ParkingBPH_Run2018A_MINIAOD/｟*｠/0000/; Disk quota exceeded
+DESTINATION SRM_PUTDONE Error on the surl srm:/｟*｠/｟*｠/｟*｠/rucio/mc16_13TeV/｟*｠/｟*｠/｟*｠.｟*｠ while putdone : [SE][PutDone][SRM_INTERNAL_ERROR]｟*｠ to [>｟*｠@local] timed out.
+"TRANSFER globus_ftp_client: the server responded with an error｟*｠ 451-GlobusError: v=1 c=INTERNAL_ERROR 451-GridFTP-Errno:｟*｠ 451-GridFTP-Reason: System error in write into HDFS (host=｟*｠, user=｟*｠, path=/store/data/｟*｠/｟*｠/｟*｠/｟*｠/000/｟*｠/｟*｠/｟*｠/｟*｠) 451-GridFTP-Error-String: Unknown error｟*｠ End."
+Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [｟*｠] connection timed out:｟*｠/2001:2f8:102d:589:2:1:2:1:1094
 TRANSFER globus_ftp_client: the server responded with an error 500 Command failed. : open error: Permission denied
-(Neon): SSL handshake failed: Connection timed out during SSL handshake after 1 attempts
-"TRANSFER globus_ftp_control: gss_init_sec_context failed GSS Major Status:｟*｠ Gatekeeper or Service Name globus_gsi_gssapi: Authorization denied: The name of the remote entity (/DC=org/DC=/C=/L=/O=/CN=), and the expected name for the remote entity (/CN=2001:::::::) do not match"
-TRANSFER globus_ftp_client: the server responded with an error 451 General problem: Failed to connect [2001:::]:: Connection
-: the server responded with an error 530 Login incorrect. : an｟*｠ error occurred
-DESTINATION CHECKSUM checksum calculation for ADLER32 not supported for davs:/atlas-fed-fe1.triumf.ca:443/dynafed/atlas/atlasdatadisk/rucio/mc16_13TeV///HITS.10701323.
-"TRANSFER ERROR: Copy failed with mode 3rd push, with error: copy Renewal failedSOAP 1.1 fault: SOAP-ENV:Server.generalException [no subcode] delegation for /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ddmadmin/CN=531497/CN=Robot: ATLAS Data Management with id 1234 Detail: <ns1:DelegationException xmlns:ns1=http:/www.gridsite.org/namespaces/delegation-2><msg> for /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ddmadmin/CN=531497/CN=Robot: ATLAS Data Management with id 1234</msg></ns1:DelegationException>"
-SOURCE SRM_GET_TURL error on the turl request : [SE][StatusOfGetRequest][SRM_INTERNAL_ERROR]｟*｠
-"err: Input/output error, err: [SE][][SRM_FAILURE] httpg:/se03.esc.qmul.ac.uk:8444/srm/managerv2: Failed to authorize XACML request: Timeout was reached."
-Error reported from srm_ifce : 13 [SE][Ls][SRM_AUTHORIZATION_FAILURE] No｟*｠ found for user!
+｟*｠ Result (Neon): SSL handshake failed: Connection timed out during SSL handshake after 1 attempts
+TRANSFER globus_ftp_client: the server responded with an error 500 500-Command failed. :｟*｠ failed. 500-globus_xio:｟*｠ to connect to｟*｠:｟*｠:｟*｠:｟*｠ 500-globus_xio:｟*｠ error in connect:｟*｠ is unreachable 500-globus_xio: A system call failed:｟*｠ is unreachable 500 End.
+"DESTINATION MAKE_PARENT srm-ifce err: Communication error on send, err: [SE][Mkdir][SRM_INTERNAL_ERROR] httpg:/lcg-se1.sfu.computecanada.ca:8443/srm/managerv2: srm:/lcg-se1.sfu.computecanada.ca/｟*｠/｟*｠/rucio/｟*｠/｟*｠/｟*｠:｟*｠ name space timeout"
+DESTINATION CHECKSUM checksum calculation for｟*｠ not supported for｟*｠:/｟*｠:443/｟*｠/atlas/atlasdatadisk/rucio/mc16_13TeV/｟*｠/｟*｠/｟*｠.｟*｠
+TRANSFER globus_ftp_client: the server responded with an error 451 General problem: Failed to connect [2001:6a0:2001:112:12]:｟*｠:
+TRANSFER globus_ftp_client: the server responded with an error 451 General problem: Problem while connected to [2a01:56c0:4033:｟*｠]:｟*｠: Connection timed out
+"TRANSFER ERROR: Copy failed with mode 3rd push, with error: copy｟*｠) Renewal failedSOAP 1.1 fault: SOAP-ENV:Server.generalException [no subcode] delegation already started for /DC=ch/DC=cern/OU=Organic Units/OU=Users/｟*｠=ddmadmin/｟*｠=531497/｟*｠=Robot: ATLAS Data Management with id 1234 Detail: <ns1:DelegationException xmlns:ns1=http:/www.gridsite.org/namespaces/delegation-2><msg>delegation already started for /DC=ch/DC=cern/OU=Organic Units/OU=Users/｟*｠=ddmadmin/｟*｠=531497/｟*｠=Robot: ATLAS Data Management with id 1234</msg></ns1:DelegationException>｟*｠"
+Error on XrdCl:CopyProcess:Run(): [ERROR] Socket error: Got an error while querying the checksum!
+"srm-ifce err: Input/output error, err: [SE][｟*｠][SRM_FAILURE] httpg:/se03.esc.qmul.ac.uk:8444/srm/managerv2: Failed to authorize｟*｠ request:｟*｠ was reached."
+Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [｟*｠] [ERROR] Server responded with an error: [｟*｠] Unable to open /dpm/｟*｠/home/atlas/atlasscratchdisk/rucio/tests/｟*｠/｟*｠/｟*｠;｟*｠
+DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][SRM_INVALID_PATH] Failed to put /storage/data/cms/store/data/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠
+TRANSFER globus_ftp_client: the server responded with an error 500 500-Command failed. : globus_xio_tcp_driver.c:globus_l_xio_tcp_system_connect_cb:2022: 500-Unable to connect to｟*｠:｟*｠ 500-globus_xio_system_select.c:globus_l_xio_system_handle_write:1108: 500-System error in connect: Connection timed out 500-globus_xio: A system call failed: Connection timed out 500 End.
 "TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: verification failed: failed to connect to server: java.net.SocketTimeoutException: Read timed out"
-TRANSFER globus_ftp_client: the server responded with an error 451 General problem: Problem while connected to [::::]:: Connection reset by peer
-TRANSFER globus_ftp_client: the server responded with an error 451 FTP proxy did not shut down
-DESTINATION CHECKSUM globus_ftp_client: the server responded with an error 500 500-globus_xio: The GSI XIO driver failed to establish a connection via the underlying protocol. 500-globus_xio: Unable to connect to:2811 500-globus_xio: System error in connect: Connection refused 500-globus_xio: A system call failed: Connection refused 500 End.
-"TRANSFER globus_ftp_client: the server responded with an error 550 550-GlobusError: v=1 c=PERMISSION_DENIED 550-GridFTP-Errno: 13 550-GridFTP-Reason: System error in mkdir (host=, user=cmsphedx, path=/store/generator/Summer13/GluGluToHHToTauTauBB_M-125_14TeV-powheg-pythia6/GEN/UpgrdPhase1Age5H_STAR17_61_V5A-v1/00000) 550-GridFTP-Error-String: Permission denied 550 End."
-Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [｟*｠] [ERROR] Server responded with an error: []
-TRANSFER globus_ftp_client: the server responded with an error 451 General problem: Problem while connected to [2001::::]::
-Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [] No response from server after 30 seconds.
-DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][SRM_FAILURE] error chowning｟*｠://cms/:｟*｠ not permitted (error 1 on｟*｠)
-"TRANSFER ERROR: Copy failed with mode 3rd push, with error: copy Could not connect to server"
-Error reported from srm_ifce : 2 [SE][Ls][SRM_INVALID_PATH] No such file or directory /pnfs//data/cms/disk/store/temp/user/welmeten.3257b2c1348f232024e043daaeb0ca1bdcc78c41/HiggsNtuples2018DataLegacy/SingleMuon////
-TRANSFER globus_ftp_client: the server responded with an error All｟*｠ are｟*｠
-: the server responded with an error 500 failed. 500-globus_xio: Unable to open file /cms/data/store/mc/RunIIFall17MiniAODv2//MINIAODSIM/PU2017_12Apr2018_94X_mc2017_realistic_v14-v1// 500-globus_xio: System error in open: Permission denied 500-globus_xio: A system call failed: Permission denied 500 End.
-TRANSFER CHECKSUM MISMATCH Source and destination checksums do not match 1 !=｟*｠
+Error reported from srm_ifce : 13 [SE][Ls][SRM_AUTHORIZATION_FAILURE] No approachable｟*｠ found for user!
+"DESTINATION MAKE_PARENT srm-ifce err: Communication error on send, err: [SE][Mkdir][SRM_INTERNAL_ERROR] httpg:/grid-srm.physik.rwth-aachen.de:8443/srm/managerv2: srm:/grid-srm.physik.rwth-aachen.de/pnfs/physik.rwth-aachen.de/cms/store/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠:｟*｠ name space timeout"
+Error reported from srm_ifce : 2 [SE][Ls][SRM_INVALID_PATH] No such file or directory /pnfs/desy.de/cms/tier2/temp/user/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠
+Error reported from srm_ifce : 2 [SE][Ls][SRM_INVALID_PATH] No such file or directory /pnfs/｟*｠/cms/｟*｠/｟*｠/｟*｠/temp/user/raly.e266b32b9bea6112711687fb835d9ffd294588f1/MonoHiggs/FullRunII/Data2017processing/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠
+"TRANSFER globus_ftp_client: the server responded with an error｟*｠ 550-GlobusError: v=1 c=PERMISSION_DENIED 550-GridFTP-Errno: 13 550-GridFTP-Reason: System error in mkdir (host=｟*｠, user=｟*｠, path=/store/generator/Summer13/GluGluToHHToTauTauBB_M-125_14TeV-powheg-pythia6/GEN/UpgrdPhase1Age5H_STAR17_61_V5A-v1/00000) 550-GridFTP-Error-String:｟*｠ denied｟*｠ End."
+TRANSFER globus_ftp_client: the server responded with an error 451｟*｠ proxy did not shut down
+DESTINATION SRM_PUTDONE Error on the surl srm:/se01.grid.nchc.org.tw/dpm/grid.nchc.org.tw/home/cms/store/data/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠ while putdone : [SE][PutDone][｟*｠]｟*｠
+Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [｟*｠] [ERROR] Server responded with an error: [｟*｠] Unable to read /pnfs/usatlas.bnl.gov/atlasscratchdisk/rucio/tests/｟*｠/｟*｠/｟*｠; function not｟*｠
+"TRANSFER globus_ftp_control: gss_init_sec_context failed｟*｠ Major Status:｟*｠ Gatekeeper or Service Name globus_gsi_gssapi: Authorization denied: The name of the remote entity (/DC=org/DC=terena/DC=tcs/C=ES/｟*｠=｟*｠/L=Bellaterra/O=｟*｠/｟*｠=｟*｠), and the｟*｠ name for the remote entity (/｟*｠=2001:67c:1148:201:0:0:0:｟*｠) do not match"
+Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [｟*｠] No response from server after 30 seconds.
+Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [｟*｠] [ERROR] Server responded with an error: [3010]｟*｠
+DESTINATION SRM_PUTDONE Error on the surl srm:/｟*｠/dpm/｟*｠/home/cms/store/data/｟*｠/｟*｠/｟*｠/｟*｠/000/｟*｠/｟*｠/00000/｟*｠ while putdone : [SE][PutDone][｟*｠]｟*｠
+DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][SRM_FAILURE] error chowning｟*｠:/｟*｠/cms/｟*｠: Operation not permitted (error 1 on｟*｠)
+TRANSFER globus_ftp_client: the server responded with an error 500 500-Command failed. : an｟*｠ was｟*｠:｟*｠ was｟*｠ 500 End.
+｟*｠ globus_ftp_client: the server responded with an error 500｟*｠ failed. :｟*｠ failed. 500-globus_xio: Unable to open file /cms/data/store/mc/RunIIFall17MiniAODv2/｟*｠/MINIAODSIM/PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/｟*｠/｟*｠ 500-globus_xio: System error in open:｟*｠ denied 500-globus_xio: A system call failed:｟*｠ denied 500 End.
 DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][SRM_INTERNAL_ERROR] Request to [>PnfsManager@local] timed out.
-DESTINATION SRM_PUTDONE Error on the surl srm://cms/store/user/////0000/ while putdone : [SE][PutDone][] for
-"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: Failed sending data to the peer"
-DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][SRM_INVALID_PATH] Parent ///cms/store///// doesnt｟*｠!
-TRANSFER globus_ftp_client: the server responded with an error 500 500-Command failed. : I/O operation was cancelled 500-globus_xio:｟*｠ was canceled 500 End.
-Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [3010]｟*｠ is no longer valid.
+"TRANSFER globus_ftp_client: the server responded with an error 535 Authentication failed: The peers certificate with subjects DN CN=｟*｠=｟*｠=｟*｠=｟*｠=｟*｠=Users,OU=Organic Units,DC=cern,DC=ch was rejected. The peers certificate status is: FAILED The following validation errors were found: error at position｟*｠ in chain, problematic certificate subject: CN=｟*｠=｟*｠=｟*｠=Users,OU=Organic Units,DC=cern,DC=ch (category:｟*｠:｟*｠"
+TRANSFER globus_ftp_client: the server responded with an error｟*｠ General problem: Problem while connected to [2001:｟*｠:｟*｠:｟*｠:｟*｠]:｟*｠:｟*｠
+Resource temporarily unavailable
 Connection refused
-"TRANSFER globus_ftp_client: the server responded with an error 500 Command failed. : Failed to close file in HDFS. (host=, user=, path=/store///////)"
-DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][SRM_INTERNAL_ERROR] error accessing:///: Timed out
-TRANSFER globus_ftp_client: the server responded with an error 500 500-Command failed. : callback failed. 500-globus_xio: System error in write: 500-globus_xio: A system call failed: 500 End.
-"srm-ifce err: Connection timed out, err: [SE][AbortRequest][] httpg:/:/srm/managerv2: CGSI-gSOAP running on reports Error reading token data header: Connection closed"
-: the server responded with an error 530 Login incorrect. : Invalid group id｟*｠ to user.
+Error reported from srm_ifce : 2 [SE][Ls][SRM_INVALID_PATH] No such file or directory /pnfs/csc.fi/data/cms/store/mc/RunIIFall17MiniAODv2/SUSYGluGluToBBHToBB_M-200_TuneCP5_13TeV-amcatnlo-pythia8/MINIAODSIM/PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/｟*｠/｟*｠
+TRANSFER globus_ftp_client: the server responded with an error｟*｠ General problem: Failed to connect [2001:718:｟*｠:6017:2:｟*｠]:｟*｠: Connection timed out
+DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][SRM_INTERNAL_ERROR] error accessing｟*｠:/｟*｠/｟*｠/cms/cms/｟*｠: Timed out
+DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][SRM_FILE_BUSY] The surl srm:/｟*｠/cmstape/store/mc/RunIISummer19UL18GEN/｟*｠/GEN/106X_upgrade2018_realistic_v4-v1/｟*｠/｟*｠ is currently busy (ongoing put｟*｠
+"[gfalt_copy_file][perform_copy][srm_plugin_filecopy] SOURCE｟*｠ [｟*｠][｟*｠][｟*｠][｟*｠][｟*｠] srm-ifce err: Communication error on send, err: [SE][｟*｠][] httpg:/｟*｠:8444/srm/managerv2: CGSI-gSOAP running on｟*｠ reports Error reading token data header: Connection closed"
+DESTINATION SRM_PUTDONE call to srm_ifce error: [SE][PutDone][ETIMEDOUT] httpg:/｟*｠:｟*｠/srm/managerv2: User timeout over
+globus_ftp_client: the server responded with an error 530 Login incorrect. : Invalid group id assigned to user｟*｠.
+TRANSFER globus_ftp_client: the server responded with an error｟*｠ General problem: Failed to connect [2001:2f8:102d:589:2:3:1:｟*｠]:｟*｠: La connexi ha｟*｠
+DESTINATION SRM_PUTDONE Error on the surl srm:/｟*｠/cms/store/user/scalzafe/ME0GE11_muonGun/｟*｠/｟*｠/0000/｟*｠ while putdone : [SE][PutDone][SRM_INVALID_PATH] PtP status for this｟*｠ is SRM_ABORTED
+"TRANSFER globus_ftp_control: gss_init_sec_context failed globus_gsi_gssapi: Unable to verify remote sides credentials globus_gsi_gssapi: SSL handshake problems: Couldnt do ssl handshake OpenSSL Error:｟*｠:｟*｠: in library: SSL routines, function｟*｠: unsupported protocol"
+DESTINATION SRM_PUTDONE Error on the surl srm:/｟*｠/dpm/grid.sinica.edu.tw/home/atlas/atlasscratchdisk/rucio/user/｟*｠/｟*｠/｟*｠/｟*｠.｟*｠ while putdone : [SE][PutDone][｟*｠]｟*｠
 Error reported from srm_ifce : 70 [SE][Ls][SRM_INTERNAL_ERROR] TTL exceeded
-"TRANSFER globus_ftp_control: gss_init_sec_context failed globus_gsi_gssapi: Unable to verify remote sides credentials globus_gsi_gssapi: SSL handshake problems: Couldnt do ssl handshake OpenSSL Error: s23_clnt.c:735: in library: SSL routines, function SSL23_GET_SERVER_HELLO: unsupported protocol"
-CHECKSUM timeout of｟*｠
-TRANSFER globus_ftp_client: the server responded with an error 451 General problem: Problem while connected to [::::]::
-DESTINATION SRM_PUTDONE call to srm_ifce error: [SE][PutDone][ETIMEDOUT] httpg:/｟*｠:8444/srm/managerv2: User timeout over
-TRANSFER globus_ftp_client: the server responded with an error 500 Command failed. : Error registering globus write error:
-Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [｟*｠] [ERROR] Server responded with an error: [｟*｠] Unable to read /｟*｠/atlas/tpctest/test/;
-TRANSFER globus_ftp_client: the server responded with an error 451 General problem:
-"srm-ifce err: Communication error on send, err: [SE][Ls][] httpg:/ingrid-se02.cism.ucl.ac.be:8444/srm/managerv2: HTTP/1.0 403 Forbidden"
-DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][SRM_INTERNAL_ERROR] Local filesystem has problems manipulating ACE!
-[gfalt_copy_file][perform_copy][srm_plugin_filecopy][srm_do_transfer][gfalt_copy_file][perform_copy][｟*｠][｟*｠] TRANSFER an end-of-file was reached globus_xio: An end of file occurred
+TRANSFER globus_ftp_client: the server responded with an error｟*｠ General problem: Problem while connected to [2001:760:4205:128:130:｟*｠]:｟*｠: Input/output error
+｟*｠ CHECKSUM timeout of｟*｠
+DESTINATION SRM_PUTDONE Error on the surl srm:/｟*｠/dpm/indiacms.res.in/home/cms/store/mc/PhaseIITDRFall17DR/｟*｠/GEN-SIM-RECO/｟*｠/｟*｠/｟*｠ while putdone : [SE][PutDone][SRM_FILE_LIFETIME_EXPIRED] <none>
+TRANSFER globus_ftp_client: the server responded with an error 500 Command failed. : Error registering globus write error:｟*｠ error｟*｠
+｟*｠: Unable to connect to｟*｠:2811｟*｠: System error in connect: No route to host｟*｠: A system call failed: No route to host
+TRANSFER globus_ftp_client: the server responded with an error 451 General problem:｟*｠
+DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][SRM_FILE_BUSY] The surl srm:/｟*｠/lustre/ific.uv.es/grid/atlas/atlasdatadisk/rucio/｟*｠/｟*｠/｟*｠/｟*｠ is currently busy (ongoing put requests)
+Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [｟*｠] [ERROR] Server responded with an error: [｟*｠]｟*｠: Unable to read /｟*｠/atlas/tpctest/test/｟*｠;｟*｠
+DESTINATION SRM_PUTDONE Error on the surl srm:/lcg-se1.sfu.computecanada.ca/atlas/atlasdatadisk/rucio/mc15_13TeV/｟*｠/｟*｠/EVNT.20183157.｟*｠ while putdone : [SE][PutDone][SRM_INVALID_PATH] SURL is not local: srm:/lcg-se1.sfu.computecanada.ca/atlas/atlasdatadisk/rucio/mc15_13TeV/｟*｠/｟*｠/EVNT.20183157.｟*｠
+TRANSFER globus_ftp_client: the server responded with an error｟*｠ General problem: Problem while connected to [2001:610:108:｟*｠:｟*｠:｟*｠]:22224:｟*｠
+"｟*｠ srm-ifce err: Connection timed out, err: [SE][AbortRequest][] httpg:/｟*｠:｟*｠/srm/managerv2: CGSI-gSOAP running on｟*｠ reports Error reading token data header: Connection closed"
+｟*｠ CHECKSUM Error｟*｠ from｟*｠ :｟*｠ [SE][Ls][SRM_INVALID_PATH] No such file or directory
+DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][SRM_INTERNAL_ERROR] Local filesystem has problems｟*｠!
+"srm-ifce err: Communication error on send, err: [SE][Ls][] httpg:/ingrid-se02.cism.ucl.ac.be:8444/srm/managerv2: HTTP/｟*｠ 403 Forbidden"
+Error reported from srm_ifce : 2 [SE][Ls][SRM_INVALID_PATH] No such file or directory /pnfs/desy.de/cms/tier2/store/mc/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠
+[gfalt_copy_file][perform_copy][srm_plugin_filecopy][srm_do_transfer][gfalt_copy_file][perform_copy][gridftp_plugin_filecopy][gridftp_plugin_filecopy] TRANSFER an end-of-file was reached globus_xio: An end of file occurred
+TRANSFER globus_ftp_client: the server responded with an error 500 Cannot enter passive mode:｟*｠: Invalid argument
 [gfal2_stat][gfal_plugin_statG][｟*｠] Failed to stat file (Permission denied)
-globus_ftp_client: the server responded with an error 500｟*｠ server error
+Transfer process died with: /｟*｠/libfts_common.so.3(_ZN4fts36common5panic13get_backtraceEi+0x21) [｟*｠] /｟*｠/libfts_common.so.3(+0x18f6f) [｟*｠] /｟*｠/libpthread.so.0(+0xf5f0) [｟*｠] /｟*｠/libpthread.so.0(raise+0x2b) [｟*｠] /usr/｟*｠/gfal2-plugins/libgfal_plugin_mock.so(gfal_plugin_mock_stat+0x23b) [｟*｠] /｟*｠/libgfal2.so.2(gfal_plugin_statG+0xbb) [｟*｠] /｟*｠/libgfal2.so.2(gfal2_stat+0x5e) [｟*｠] /｟*｠/libfts_url_copy.so(_ZN5Gfal24statER19Gfal2TransferParamsRKSsb+0xac) [｟*｠] /｟*｠/libfts_url_copy.so(_ZN14UrlCopyProcess11runTransferER8TransferR19Gfal2TransferParams+0xc29) [｟*｠] /｟*｠/libfts_url_copy.so(_ZN14UrlCopyProcess3runEv+0x5cb) [｟*｠] fts_url_copy(main+0x103) [｟*｠] /｟*｠/libc.so.6(__libc_start_main+0xf5) [｟*｠] fts_url_copy(+0x6741) [｟*｠]
 Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [3012]｟*｠ failed Got an error while querying the checksum!
-TRANSFER globus_ftp_client: the server responded with an error 500 Cannot enter passive mode: java.net.SocketException: Invalid argument
-DESTINATION CHECKSUM Connection Timeout during redirection on https:/:1094/cephfs/grid/atlas/atlaslocalgroupdisk/rucio/tests///?authz=Bearer%
-Transfer process died with: /｟*｠/libfts_common.so.3(_ZN4fts36common5panic13get_backtraceEi+0x21) [] /｟*｠/libfts_common.so.3(+0x18f6f) [] /｟*｠/libpthread.so.0(+0xf5f0) [] /｟*｠/libpthread.so.0(raise+0x2b) [] /usr/｟*｠/gfal2-plugins/libgfal_plugin_mock.so(gfal_plugin_mock_stat+0x23b) [] /｟*｠/libgfal2.so.2(gfal_plugin_statG+0xbb) [] /｟*｠/libgfal2.so.2(gfal2_stat+0x5e) [] /｟*｠/libfts_url_copy.so(_ZN5Gfal24statER19Gfal2TransferParamsRKSsb+0xac) [] /｟*｠/libfts_url_copy.so(_ZN14UrlCopyProcess11runTransferER8TransferR19Gfal2TransferParams+0xc29) [] /｟*｠/libfts_url_copy.so(_ZN14UrlCopyProcess3runEv+0x5cb) [] fts_url_copy(main+0x103) [] /｟*｠/libc.so.6(__libc_start_main+0xf5) [] fts_url_copy(+0x6741) []
-Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [] Unable to /dpm//home/dteam/root/test/;
-DESTINATION CHECKSUM checksum calculation for ADLER32 not supported for davs:/:443///atlasscratchdisk/rucio/tests///
-DESTINATION CHECKSUM MISMATCH Source and destination ADLER32 do not match ( !=)
+TRANSFER globus_ftp_client: the server responded with an error 451 General problem: Stream was closed in the middle of a block
 HTTP 403 : Permission refused
-TRANSFER globus_ftp_client: the server responded with an error 451 General problem: Stream was closed in the｟*｠ of a｟*｠
-TRANSFER globus_ftp_client: the server responded with an error 500 500-System error in: 500-A system call failed: 500 End.
-"TRANSFER ERROR: Copy failed with mode｟*｠, with error: HTTP 500 :｟*｠ server error: 500 after 1 attempts"
+TRANSFER globus_ftp_client: the server responded with an error 500 500-System error in｟*｠: File exists 500-A system call failed: File exists 500 End.
+DESTINATION CHECKSUM MISMATCH Source and destination ADLER32 do not match (｟*｠ !=｟*｠)
+DESTINATION SRM_PUTDONE Error on the surl srm:/lcg-se1.sfu.computecanada.ca/atlas/atlasdatadisk/rucio/｟*｠/｟*｠/｟*｠/｟*｠.｟*｠ while putdone : [SE][PutDone][SRM_INVALID_PATH] SURL is not local: srm:/lcg-se1.sfu.computecanada.ca/atlas/atlasdatadisk/rucio/｟*｠/｟*｠/｟*｠/｟*｠.｟*｠
+Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [｟*｠] Unable to close file ;｟*｠
+TRANSFER globus_ftp_client: the server responded with an error 500 500-Command failed. :｟*｠ failed. 500-globus_xio: System error in write: Disk quota exceeded 500-globus_xio: A system call failed: Disk quota exceeded 500 End.
+"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: problem sending data:｟*｠:80 failed to respond; redirections [http:/｟*｠:80/｟*｠/｟*｠/dteam/｟*｠/｟*｠?sfn=%2Fdpm%｟*｠%2Fhome%2Fdteam%｟*｠%2Fdomatest%｟*｠&token=｟*｠%｟*｠%｟*｠%｟*｠%3D%｟*｠%401]"
+"TRANSFER ERROR: Copy failed with mode｟*｠, with error:｟*｠ HTTP 500 :｟*｠ server error: 500 after 1 attempts"
 [gfalt_copy_file][perform_copy][gfal_xrootd_3rd_copy][gfal_xrootd_3rd_copy_bulk] Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [3012] Failed to open file (｟*｠ unavailable [｟*｠])
-[gfalt_copy_file][perform_copy][srm_plugin_filecopy][srm_do_transfer][gfalt_copy_file][perform_copy][｟*｠][｟*｠] TRANSFER globus_xio: System error in: globus_xio: A system call failed:
-"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: problem sending data:｟*｠ (Write failed)"
-Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [｟*｠] Unable to close file ; invalid argument
-Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [｟*｠] [ERROR] Server responded with an error: [] Unable to open /dpm//home/dteam//root/test/;
-[gfalt_copy_file][perform_copy][srm_plugin_filecopy][srm_do_transfer][gfalt_copy_file][perform_copy][｟*｠][｟*｠] TRANSFER globus_ftp_client: the server responded with an error｟*｠
-TRANSFER globus_ftp_client: the server responded with an error 451 General problem: Failed to connect [::::]:: Connection timed out
-TRANSFER globus_ftp_client: the server responded with an error 451 General problem: Failed to connect [2406:f00:9:]::
-TRANSFER globus_ftp_client: the server responded with an error 500 500-Command failed. :: Unable to connect to 2001:610:108:203A::22224 500-globus_xio: System error in connect: Permission denied 500-globus_xio: A system call failed: Permission denied 500 End.
-DESTINATION SRM_PUTDONE Error on the surl srm:/storage01.lcg.cscs.ch/pnfs/lcg.cscs.ch/cms/trivcat/store/PhEDEx_LoadTest07//// while putdone : [SE][PutDone][SRM_INVALID_PATH] No such file or directory: /pnfs/lcg.cscs.ch/cms/trivcat/store/PhEDEx_LoadTest07///
-"DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][SRM_INVALID_PATH] The requested SURL is: srm:/srm01.ifca.es:8444/cms/store/user/fernanpe/CRAB_PrivateMC///0000/log/, but its parent srm:/srm01.ifca.es:8444/cms/store/user/fernanpe/CRAB_PrivateMC///0000/log/does not｟*｠!"
-"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: Too many attempts to select｟*｠; last｟*｠@ failed with Could not create MoverProtocol mover for RemoteHttpsDataTransfer-1.1:https:/dynafed02.heprc.uvic.ca:8443/atlas/scratchdisk/rucio/mc16_13TeV/fe/21/AOD.11982116._000010.pool.root.1: directory not found: /etc/grid-security/certificates"
-"SOURCE CHECKSUM globus_ftp_client: the server responded with an error 504 Checksum is not available, dynamic checksum calculation is not supported"
-TRANSFER globus_ftp_client: the server responded with an error 500 500-System error in mkdir:｟*｠ or｟*｠ busy 500-A system call failed:｟*｠ or｟*｠ busy 500 End.
-DESTINATION CHECKSUM globus_ftp_client: the server responded with an error 451 451-GlobusError: v=1 c=INTERNAL_ERROR 451-GridFTP-Errno: 110 451-GridFTP-Reason: System error in name 451-GridFTP-Error-String: Connection timed out 451 End.
-DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][SRM_FILE_BUSY] The surl srm:///store/mc////// is currently busy
-error on the turl request : [SE][][SRM_REQUEST_QUEUED] Failed to process any of the｟*｠
-"DESTINATION MAKE_PARENT srm-ifce err: No such file or directory, err: [SE][Mkdir][SRM_INVALID_PATH] httpg:/:8443/srm/managerv2: No such file or directory"
+"TRANSFER globus_ftp_client: the server responded with an error 535 Authentication failed: The peers certificate with subjects DN｟*｠=｟*｠=｟*｠=｟*｠=｟*｠=｟*｠=｟*｠ was｟*｠. The peers certificate status is: FAILED The following validation errors were found: error at position｟*｠ in chain, problematic certificate subject:｟*｠=｟*｠=｟*｠=｟*｠=｟*｠ (category:｟*｠): No valid｟*｠ was found for the CA which issued the chain Cause: No CRLs found for｟*｠"
+"TRANSFER globus_ftp_client: the server responded with an error 530 530-globus_xio: Authentication Error 530-OpenSSL Error: s3_srvr.c:3327: in library: SSL routines, function ssl3_get_client_certificate: certificate verify failed 530-globus_gsi_callback_module: Could not verify credential 530-globus_gsi_callback_module: The certificate is not yet valid: Cert with subject: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=fstagni/CN=693025/CN=Federico Stagni/CN=4566239866/CN=｟*｠/CN=｟*｠/CN=｟*｠"
+Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [｟*｠] [ERROR] Server responded with an error: [｟*｠] Unable to｟*｠ /dpm/｟*｠/home/dteam/｟*｠/root/test/｟*｠;｟*｠
+TRANSFER globus_ftp_client: the server responded with an error｟*｠ General problem: Problem while connected to｟*｠:｟*｠:｟*｠ m quina｟*｠ ha｟*｠ la connexi
+DESTINATION SRM_PUTDONE Error on the surl srm:/lcg-se1.sfu.computecanada.ca/atlas/atlasscratchdisk/rucio/user/｟*｠/｟*｠/｟*｠/｟*｠.｟*｠ while putdone : [SE][PutDone][SRM_INVALID_PATH] SURL is not local: srm:/lcg-se1.sfu.computecanada.ca/atlas/atlasscratchdisk/rucio/user/｟*｠/｟*｠/｟*｠/｟*｠.｟*｠
+DESTINATION SRM_PUTDONE Error on the surl srm:/se.cis.gov.pl/dpm/cis.gov.pl/home/cms/store/data/Run2018A/EGamma/ALCARECO/HcalCalIsoTrkFilter-PromptReco-v1/000/｟*｠/｟*｠/00000/｟*｠ while putdone : [SE][PutDone][｟*｠]｟*｠
+"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: failed to send PUT request: Cannot retry request with a non-repeatable request entity; caused by:｟*｠; after sending｟*｠ B (｟*｠) (｟*｠%); redirections [｟*｠:/｟*｠:｟*｠/mnt/｟*｠/dteam/｟*｠/｟*｠?sfn=%2Fdpm%｟*｠%2Fhome%2Fdteam%｟*｠%2Fhttps%｟*｠%｟*｠&token=｟*｠%｟*｠%｟*｠%3D%｟*｠"
+DESTINATION CHECKSUM checksum calculation for ADLER32 not supported for davs:/dcgftp.usatlas.bnl.gov:443/pnfs/usatlas.bnl.gov/atlasscratchdisk/rucio/tests/｟*｠/｟*｠/｟*｠
+DESTINATION SRM_PUTDONE Error on the surl srm:/storage01.lcg.cscs.ch/pnfs/lcg.cscs.ch/cms/trivcat/store/PhEDEx_LoadTest07/｟*｠/｟*｠/｟*｠/｟*｠ while putdone : [SE][PutDone][SRM_INVALID_PATH] No such file or directory: /pnfs/lcg.cscs.ch/cms/trivcat/store/PhEDEx_LoadTest07/｟*｠/｟*｠/｟*｠
+TRANSFER globus_ftp_client: the server responded with an error 500 500-System error in mkdir:｟*｠ or resource busy 500-A system call failed:｟*｠ or resource busy 500 End.
+SOURCE SRM_GET_TURL error on the turl request : [SE][StatusOfGetRequest][SRM_FAILURE] Local filesystem has problems｟*｠!
+"TRANSFER globus_ftp_client: the server responded with an error｟*｠ 451-GlobusError: v=1 c=INTERNAL_ERROR 451-GridFTP-Errno: 255 451-GridFTP-Reason: System error in write into HDFS (host=｟*｠, user=｟*｠, path=/store/group/phys_exotica/delayedjets/RAWSKIM/V2/｟*｠/｟*｠/｟*｠/SingleMuon/｟*｠/｟*｠/｟*｠/｟*｠) 451-GridFTP-Error-String: Unknown error 255｟*｠ End."
+"DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][SRM_INVALID_PATH] The requested｟*｠ is: srm:/srm01.ifca.es:8444/cms/store/user/fernanpe/CRAB_PrivateMC/｟*｠/｟*｠/0000/log/｟*｠, but its parent srm:/srm01.ifca.es:8444/cms/store/user/fernanpe/CRAB_PrivateMC/｟*｠/｟*｠/0000/log/does not exist!"
+TRANSFER globus_ftp_client: the server responded with an error｟*｠ General problem: Failed to connect [2605:9a00:10:400d:｟*｠:｟*｠:｟*｠:｟*｠]:｟*｠: Connection timed out
+｟*｠ error on the turl request : [SE][｟*｠][｟*｠] Failed to｟*｠ the｟*｠
+DESTINATION SRM_PUTDONE Error on the surl srm:/lcg-se1.sfu.computecanada.ca/atlas/atlasdatadisk/rucio/mc16_13TeV/｟*｠/｟*｠/｟*｠.｟*｠ while putdone : [SE][PutDone][SRM_INVALID_PATH] SURL is not local: srm:/lcg-se1.sfu.computecanada.ca/atlas/atlasdatadisk/rucio/mc16_13TeV/｟*｠/｟*｠/｟*｠.｟*｠
+Error reported from srm_ifce : 2 [SE][Ls][SRM_INVALID_PATH] No such file or directory /pnfs/｟*｠/cms/｟*｠/｟*｠/user/raly.e266b32b9bea6112711687fb835d9ffd294588f1/MonoHiggs/FullRunII/Data2017processing/DoubleMuon/｟*｠/｟*｠/｟*｠/｟*｠
+"SOURCE CHECKSUM globus_ftp_client: the server responded with an error｟*｠ Checksum is not available, dynamic checksum calculation is not supported"
+"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: Too many｟*｠ to select pool; last pool｟*｠@｟*｠ failed with Could not create MoverProtocol mover for RemoteHttpsDataTransfer-1.1:https:/｟*｠:8443/atlas/｟*｠/rucio/mc16_13TeV/fe/｟*｠/｟*｠.｟*｠: directory not found: /etc/grid-security/certificates"
+DESTINATION SRM_PUTDONE Error on the surl srm:/grid02.physics.uoi.gr/dpm/physics.uoi.gr/home/cms/store/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠ while putdone : [SE][PutDone][SRM_INTERNAL_ERROR] <none>
+TRANSFER globus_ftp_client: the server responded with an error 451 General problem: Failed to connect [2406:f00:9:｟*｠]:｟*｠: No route to host
+TRANSFER globus_ftp_client: the server responded with an error 451 General problem: Failed to connect [2620:0:210:1:｟*｠]:｟*｠: Connection timed out
+[gfalt_copy_file][perform_copy][srm_plugin_filecopy][srm_do_transfer][gfalt_copy_file][perform_copy][gridftp_plugin_filecopy][gridftp_plugin_filecopy] TRANSFER globus_ftp_client: the server responded with an error 451 Transfer was forcefully killed
+TRANSFER globus_ftp_client: the server responded with an error｟*｠ General problem:｟*｠ to｟*｠ [2001:1458:301:6e:100:11]:｟*｠:｟*｠
+"TRANSFER globus_ftp_client: the server responded with an error 500｟*｠ failed. : Failed to close file in HDFS. (host=｟*｠, user=｟*｠, path=/store/mc/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠)"
+"TRANSFER globus_ftp_client: the server responded with an error｟*｠ No write｟*｠ for [net=2001:1458:301:｟*｠:0:0:100:｟*｠=GFtp/2,store=｟*｠:｟*｠@osm,cache=disk,linkgroup=atlas-disk-group]"
 Failed to stat file (No such file or directory)
-DESTINATION CHECKSUM checksum calculation for ADLER32 not supported for davs:/:443/dpm//home/atlas/atlasdatadisk/rucio/mc16_13TeV/ad/dc/log.20115295._000026.job.log.tgz.1
-"[gfalt_copy_file][perform_copy] TRANSFER [gfal_http_copy] ERROR: Copy failed with mode 3rd push, with error: [davix2gliberr] copy"
-(Neon): SSL handshake failed: Connection timed out during SSL handshake
-error on the turl request : [SE][][SRM_INVALID_PATH] SURL is not local: srm:/lcg-se1.sfu.computecanada.ca/atlas/atlasdatadisk/rucio////
-DESTINATION CHECKSUM checksum calculation for ADLER32 not supported for davs:/:2880/atlasscratchdisk/rucio/tests///
-: Unable to connect to:2811 globus_xio: globus_libc_getaddrinfo failed. globus_common: Temporary failure in name｟*｠
-Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [｟*｠] [ERROR] Server responded with an error: [｟*｠] Unable to open /dpm//home/atlas/atlasscratchdisk/rucio/tests///; Server error: No such file or directory
-"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: Failed to select｟*｠: Request to [>｟*｠@｟*｠] timed out."
-SOURCE SRM_GET_TURL error on the turl request : [SE][StatusOfGetRequest][SRM_FAILURE] Failed to pin file [rc=｟*｠=｟*｠ was aborted].
-DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][]///belle///////4S/!
+TRANSFER globus_ftp_client: the server responded with an error 500 500-Command failed. : System error in name: Permission denied 500-A system call failed: Permission denied 500- 500 End.
+"TRANSFER globus_ftp_control: gss_init_sec_context failed｟*｠ Major Status:｟*｠ Gatekeeper or Service Name globus_gsi_gssapi: Authorization denied: The name of the remote entity (/DC=org/DC=incommon/C=US/ST=MI/L=｟*｠/O=Michigan｟*｠ University/｟*｠=｟*｠), and the｟*｠ name for the remote entity (/｟*｠=2001:｟*｠:｟*｠:｟*｠:192:41:｟*｠:｟*｠) do not match"
+DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][SRM_INVALID_PATH] Parent /｟*｠/｟*｠/｟*｠/cms/store/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠ doesnt exist!
+｟*｠ (Neon): SSL handshake failed: Connection timed out during SSL handshake
+DESTINATION CHECKSUM checksum calculation for｟*｠ not supported for｟*｠:/｟*｠:443/dpm/｟*｠/home/atlas/atlasdatadisk/rucio/mc16_13TeV/ad/dc/log.20115295._000026.job.log.tgz.1
+"DESTINATION MAKE_PARENT srm-ifce err: No such file or directory, err: [SE][Mkdir][SRM_INVALID_PATH] httpg:/｟*｠:8443/srm/managerv2: No such file or directory"
+[gfalt_copy_file][perform_copy][srm_plugin_filecopy][srm_do_transfer][gfalt_copy_file][perform_copy][gridftp_plugin_filecopy][gridftp_plugin_filecopy] TRANSFER globus_xio: System error in recv: Connection timed out globus_xio: A system call failed: Connection timed out
+｟*｠: Unable to connect to｟*｠:2811｟*｠: globus_libc_getaddrinfo failed. globus_common:｟*｠ failure in name resolution
 "TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: HTTP protocol failure: org.apache.http.client.ClientProtocolException; caused by: Cannot retry request with a non-repeatable request entity; caused by: java.nio.channels.ClosedChannelException"
-TRANSFER globus_ftp_client: the server responded with an error 451 General problem: Problem while connected to [2001::::]:: La m quina remota ha reiniciat la connexi
-TRANSFER globus_ftp_client: the server responded with an error 500 Command failed. : open : [ERROR] Server responded with an error: [｟*｠] Unable to open file /eos/cms/store/temp/user///////; No such file or directory
-"TRANSFER ERROR: Copy failed with mode 3rd push, with error: copy (Neon)::｟*｠"
-[gfalt_copy_file][perform_copy] DESTINATION CHECKSUM [gfal_http_copy][｟*｠][davix2gliberr] HTTP 500 :｟*｠ server error: 500
-TRANSFER globus_ftp_client: the server responded with an error 500 500-Command failed. : globus_xio_tcp_driver.c:globus_l_xio_tcp_system_connect_cb:2022: 500-Unable to connect to 2A0E:E140:: 500-globus_xio_system_select.c:globus_l_xio_system_handle_write:1108: 500-System error in connect: Network is unreachable 500-globus_xio: A system call failed: Network is unreachable 500 End.
-DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][SRM_FAILURE] Space Management｟*｠ in srmPrepareToPut failed!
-"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: Failed to｟*｠ file: No route to [>PnfsManager@local]"
-DESTINATION CHECKSUM globus_ftp_client: the server responded with an error 550 Error retrieving /pnfs/nikhef.nl/data/atlas/atlasdatadisk/rucio/mc15_13TeV///TXT.13045593.: No such file or directory /pnfs/nikhef.nl/data/atlas/atlasdatadisk/rucio/mc15_13TeV///TXT.13045593.
-"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: Failed while waiting for mover to start: Could not create mover for RemoteHttpsDataTransfer-1.1:https:/dynafed02.heprc.uvic.ca:8443/atlas/scratchdisk/rucio/mc16_13TeV/fe/21/AOD.11982116._000010.pool.root.1"
-DESTINATION SRM_PUTDONE call to srm_ifce error: [SE][PutDone][SRM_FAILURE] httpg:/se03.esc.qmul.ac.uk:8444/srm/managerv2: Failed to authorize XACML request: Timeout was reached.
+DESTINATION CHECKSUM checksum calculation for ADLER32 not supported for davs:/｟*｠:2880/atlasscratchdisk/rucio/tests/｟*｠/｟*｠/｟*｠
+SOURCE SRM_GET_TURL error on the turl request : [SE][StatusOfGetRequest][SRM_FAILURE] Failed to pin file [rc=｟*｠=｟*｠ was aborted].
+"TRANSFER globus_ftp_client: the server responded with an error 535 Authentication failed: The peers certificate with subjects DN CN=｟*｠=｟*｠=｟*｠=｟*｠=143667911,CN=205471951,CN=Maximilian Dieter Heindl,CN=762107,CN=mheindl,OU=Users,OU=Organic Units,DC=cern,DC=ch was rejected. The peers certificate status is: FAILED The following validation errors were found: error at position 6 in chain, problematic certificate subject: CN=Maximilian Dieter Heindl,CN=762107,CN=｟*｠"
+Error reported from srm_ifce : 2 [SE][Ls][SRM_INVALID_PATH] No such file or directory /pnfs/｟*｠/data/cms/store/temp/user/｟*｠/｟*｠/｟*｠/｟*｠/0000/｟*｠
+TRANSFER globus_ftp_client: the server responded with an error 500｟*｠ failed. : open : [ERROR] Server responded with an error: [｟*｠] Unable to open file /eos/cms/store/temp/user/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠; No such file or directory
+DESTINATION CHECKSUM globus_ftp_client: the server responded with an error｟*｠ Error retrieving /pnfs/nikhef.nl/data/atlas/atlasdatadisk/rucio/mc15_13TeV/｟*｠/｟*｠/TXT.13045593.｟*｠: No such file or directory /pnfs/nikhef.nl/data/atlas/atlasdatadisk/rucio/mc15_13TeV/｟*｠/｟*｠/TXT.13045593.｟*｠
+DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][SRM_INVALID_PATH] Parent /｟*｠/｟*｠/cms/store/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠ doesnt exist!
+DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][SRM_FAILURE] Space Management step in srmPrepareToPut failed!
+[gfalt_copy_file][perform_copy] DESTINATION CHECKSUM [gfal_http_copy][｟*｠][davix2gliberr] HTTP 500 : Unexpected server error: 500
+DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][SRM_INVALID_PATH] Parent /gpfs/ddn/srm/cms/store/data/｟*｠/｟*｠/｟*｠/｟*｠/000/｟*｠/｟*｠ doesnt exist!
+"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: Failed while waiting for mover to start: Could not create mover for RemoteHttpsDataTransfer-1.1:https:/｟*｠:8443/atlas/｟*｠/rucio/mc16_13TeV/fe/21/｟*｠._000010.pool.root.1"
+DESTINATION SRM_PUTDONE Error on the surl srm:/se.cis.gov.pl/dpm/cis.gov.pl/home/cms/store/data/Run2017D/JetHT/AOD/09Aug2019_UL2017-v1/｟*｠/｟*｠ while putdone : [SE][PutDone][SRM_FILE_LIFETIME_EXPIRED] <none>
+Error on XrdCl:CopyProcess:Run(): [ERROR] Invalid response: Got invalid response while querying the checksum!
+TRANSFER globus_ftp_client: the server responded with an error 451 General problem:｟*｠ to｟*｠ [2406:f00:9:｟*｠]:｟*｠:
+"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: Failed: Remote copy failed with status code 0:｟*｠ not supported by｟*｠:｟*｠"
+DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][SRM_FILE_BUSY] The surl srm:/｟*｠/cmsdisk/store/mc/RunIIFall17DRPremix/｟*｠/AODSIM/PU2017_94X_mc2017_realistic_v11-v2/70000/｟*｠ is currently busy (
+DESTINATION SRM_PUTDONE call to srm_ifce error: [SE][PutDone][SRM_FAILURE] httpg:/se03.esc.qmul.ac.uk:8444/srm/managerv2: Failed to authorize XACML request:｟*｠ was reached.
+Error reported from srm_ifce : 2 [SE][Ls][SRM_INVALID_PATH] SURL is not local: srm:/｟*｠/atlas/atlasscratchdisk/rucio/user/milu/｟*｠/｟*｠/user.milu.20194462.｟*｠
+"TRANSFER globus_ftp_client: the server responded with an error 500｟*｠ failed. : Failed to close file in HDFS. (host=｟*｠, user=cmsphedx, path=/store/data/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠)"
+TRANSFER globus_ftp_client: the server responded with an error 451 General problem: Failed to connect [2001:｟*｠:｟*｠:｟*｠:｟*｠:｟*｠]:｟*｠: Connection timed out
+[gfalt_copy_file][perform_copy][srm_plugin_filecopy] SOURCE｟*｠ [｟*｠][｟*｠][｟*｠][｟*｠] error on the turl request : [SE][StatusOfGetRequest][SRM_FAILURE]｟*｠ in PolicySource prevented PolicyCollector from establishing access rights! Processing failed!
+[gfalt_copy_file][perform_copy][srm_plugin_filecopy][srm_do_transfer][gfalt_copy_file][perform_copy][｟*｠][｟*｠] TRANSFER globus_xio: System error in send: Broken pipe globus_xio: A system call failed: Broken pipe
 [gfalt_copy_file][perform_copy][gfal_http_copy] DESTINATION CHECKSUM MISMATCH Source and destination ADLER32 do not match (｟*｠ !=｟*｠)
-error on the turl request : [SE][][SRM_AUTHORIZATION_FAILURE] access to srm:/se03.esc.qmul.ac.uk/atlas//rucio////. denied!
-DESTINATION SRM_PUTDONE Error on the surl srm:///data/atlas/atlasdatadisk/rucio////. while putdone : [SE][PutDone][SRM_ABORTED] The SURL has been aborted.
-[gfalt_copy_file][perform_copy][srm_plugin_filecopy] SOURCE [][｟*｠][｟*｠] error on the turl request : [SE][StatusOfGetRequest][SRM_FAILURE]｟*｠ in PolicySource prevented PolicyCollector from establishing access rights! Processing failed!
-"[gfalt_copy_file][perform_copy] TRANSFER [gfal_http_copy] ERROR: Copy failed with mode 3rd push, with error: [davix2gliberr] Transfer failed: failure:｟*｠: timed out while waiting for mover｟*｠"
-"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: connection failed for PUT: Connect to: [/2001::::0:0:] failed: (Connection refused); redirections [:/:////?sfn=%2Fdpm%%2Fhome%%%%%&token="
-TRANSFER globus_ftp_client: the server responded with an error 451 Unable to｟*｠ space: no｟*｠ configured.
-"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: Remote copy failed with status code 0: Failed to connect to port:"
-[gfalt_copy_file][perform_copy][gfal_xrootd_3rd_copy][gfal_xrootd_3rd_copy_bulk] Error on XrdCl:CopyProcess:Run(): [ERROR]: Got an error while querying the checksum!
-TRANSFER globus_ftp_client: the server responded with an error 500 500-Command failed. :｟*｠ not in the｟*｠ 500- 500 End.
-SOURCE SRM_GET_TURL error on the turl request : [SE][StatusOfGetRequest][SRM_FILE_BUSY] Requested file is busy ( ongoing putrequest on the same file
-"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: Remote copy failed with status code 0: Failed to connect to 2001::::::: port: Bad file descriptor"
-DESTINATION SRM_PUTDONE Error on the surl srm://pnfs//data/cms/store/PhEDEx_LoadTest07//// while putdone : [SE][PutDone][SRM_INVALID_PATH]:pnfs//data/cms/store/PhEDEx_LoadTest07///
+"TRANSFER globus_ftp_client: the server responded with an error 535 Authentication failed: The peers certificate with subjects DN｟*｠=1890179577,CN=1418979945,CN=899259129,CN=OLIVIER DEVROEDE omdevroe@vub.ac.be,O=Vrije Universiteit Brussel,C=BE,DC=tcs,DC=terena,DC=org was｟*｠. The peers certificate status is: FAILED The following validation errors were found: error at position 3 in chain, problematic certificate subject:｟*｠=OLIVIER DEVROEDE omdevroe@vub.ac.be,O=Vrije Universiteit Brussel,C=BE,DC=tcs"
+Error reported from srm_ifce : 2 [SE][Ls][SRM_INVALID_PATH] No such file or directory /pnfs/gridka.de/cms/disk-only/store/data/Run2017F/BTagMu/MINIAOD/31Mar2018-v1/100000/｟*｠
+DESTINATION SRM_PUTDONE Error on the surl srm:/｟*｠/pnfs/usatlas.bnl.gov/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠.｟*｠ while putdone : [SE][PutDone][SRM_INTERNAL_ERROR] Request to [>｟*｠@local] timed out.
+"globus_ftp_client: the server responded with an error 535 Authentication failed: The peers certificate with subjects DN｟*｠=1577875374,CN=969950366,CN=Jordi Delgado jdelgado@pic.es,O=Port dInformacio Cientifica,C=ES,DC=tcs,DC=terena,DC=org was｟*｠. The peers certificate status is: FAILED The following validation errors were found: error at position 0 in chain, problematic certificate subject:｟*｠=1577875374,CN=969950366,CN=Jordi Delgado jdelgado@pic.es,O=Port dInformacio Cientifica,C=ES,DC=tcs,DC=｟*｠"
+TRANSFER globus_ftp_client: the server responded with an error 451 Unable to reserve space: no｟*｠ configured.
+DESTINATION SRM_PUTDONE Error on the surl srm:/｟*｠/pnfs/｟*｠/data/atlas/atlasdatadisk/rucio/｟*｠/｟*｠/｟*｠/｟*｠.｟*｠ while putdone : [SE][PutDone][SRM_ABORTED] The｟*｠ has been aborted.
+SOURCE CHECKSUM HTTP｟*｠ : Permission refused
+TRANSFER globus_ftp_client: the server responded with an error 500 500-Command failed. : callback failed. 500-globus_xio: Unable to connect to｟*｠:｟*｠ 500-globus_xio:｟*｠ was canceled 500-globus_xio:｟*｠ timed out 500 End.
+SOURCE SRM_GET_TURL error on the turl request : [SE][StatusOfGetRequest][SRM_FILE_BUSY]｟*｠ file is busy ( ongoing｟*｠ on the same file
+DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][SRM_FILE_BUSY] The surl srm:/storm.ifca.es/cms/store/mc/PhaseIITDRFall17DR/EWKWMinus2Jets_WToLNu_M-50_14TeV-madgraph-pythia8/GEN-SIM-RECO/｟*｠/30000/｟*｠ is currently busy
 [gfalt_copy_file][perform_copy][srm_plugin_filecopy][｟*｠] SRM operation canceled
-DESTINATION CHECKSUM error on the turl request : [SE][StatusOfGetRequest][SRM_REQUEST_QUEUED] All chunks successfully handled!
-TRANSFER globus_ftp_client: the server responded with an error 500 500-Command failed. : callback failed. 500-globus_xio: Unable to connect to: 500-globus_xio:｟*｠ was canceled 500-globus_xio:｟*｠ timed out 500 End.
-Error reported from srm_ifce : 2 [SE][Ls][SRM_INVALID_PATH] No such file or directory /pnfs/gridka.de/cms/disk-only/store/data/Run2017F/BTagMu/MINIAOD/31Mar2018-v1/100000/1E2E29A7-B638-E811-BCD3-A4BF01125C30.root
-SOURCE CHECKSUM HTTP 403 : Permission refused
-Error reported from srm_ifce : 2 [SE][Ls][SRM_INVALID_PATH] SURL is not local: srm:/madhatter.csc.fi/pnfs/csc.fi/data/cms/store/data//////
-"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: Error pushing https:/dynafed-atlas.cern.ch:443/data/dteam/s3/domatest/: 404 Not Found"
-DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][SRM_FILE_BUSY] The surl srm:/storm-fe.cr.cnaf.infn.it/atlas/atlasmctape/mc16_13TeV/AOD/e7818_e7400_a875_r9364_r9315/mc16_13TeV.411180.PhPy8EG_A14_NNPDF30ME_ttbb_4FS_MS_lminus.merge.AOD.e7818_e7400_a875_r9364_r9315_tid19491618_00/AOD.19491618. is curr
-SOURCE CHECKSUM Connection Timeout during redirection on https:/:1094/store/PhEDEx_LoadTest07/LoadTest07_Debug_US_Florida/US_Nebraska/460/?authz=Bearer%
-SOURCE SRM_GET_TURL error on the turl request : [SE][PrepareToGet][SRM_FAILURE] srm:/srm-eoslhcb.cern.ch/eos/｟*｠/grid/prod/｟*｠/MC//ALLSTREAMS.DST//0000/ is not a supported url.
-Failed to stat file (No route to host)
-DESTINATION SRM_PUT_TURL error on the turl gsiftp:/:2811/gpfs/storage_3/atlas/atlasdatadisk/rucio/mc16_13TeV///HITS.19909364. request : [SE][StatusOfPutRequest][SRM_ABORTED] File has been｟*｠.
-DESTINATION OVERWRITE Result (Neon): Could not read status｟*｠: Connection reset by peer after 1 attempts
-DESTINATION OVERWRITE Result Could not connect to server after 1 attempts
-"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: failed to send PUT request: Cannot retry request with a non-repeatable request entity; caused by: java.nio.channels.ClosedChannelException; after sending B ( MiB) (100%); redirections [http:/:/pnfs//////?dcache-http-uuid=]"
-"DESTINATION OVERWRITE error reported from srm_ifce, [SE][srmRm][SRM_AUTHORIZATION_FAILURE] User is not｟*｠ to｟*｠ file"
-"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: Failed to open/read local data from file/｟*｠"
-globus_ftp_client: the server responded with an error 530 530-Login incorrect. : globus_gss_assist: Error invoking｟*｠ 530-globus_gridmap_callout_error: A GSSAPI call returned an error: Cert was not issued by correct CA. 530-globus_gridmap_callout_error: A GSSAPI call returned an error: Couldnt verify credential containing ePPN extension: unable to get local issuer certificate 530-an｟*｠ error occurred 530 End.
-"ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: failed to connect to server:::"
-globus_ftp_client: the server responded with an error 550 No such file or directory
-"globus_ftp_client: the server responded with an error 451 451-GlobusError: v=1 c=INTERNAL_ERROR 451-GridFTP-Errno: 22 451-GridFTP-Reason: System error in｟*｠ in connecting to HDFS for (host=, user=cmswriter, path=/cms/phedex/store/mc//////) 451-GridFTP-Error-String: Invalid argument 451"
+TRANSFER globus_ftp_client: the server responded with an error｟*｠ General problem: Problem while connected to [2a07:8504:120:e060:｟*｠]:｟*｠: Connection timed out
+SOURCE SRM_GET_TURL error on the turl request : [SE][PrepareToGet][SRM_INVALID_PATH] SURL is not local: srm:/｟*｠/atlas/atlasdatadisk/rucio/mc16_13TeV/｟*｠/｟*｠/｟*｠.｟*｠
+｟*｠ Result Could not connect to server after 1 attempts
+"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: Error pushing https:/｟*｠:443/data/dteam/｟*｠/domatest/｟*｠: 404 Not Found"
+"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: Remote copy failed with status code 0: Failed to connect to 2001:｟*｠:｟*｠:｟*｠:｟*｠:｟*｠:｟*｠:｟*｠ port｟*｠:｟*｠ file｟*｠"
+DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][SRM_INVALID_PATH] Parent /gpfs/group/belle2/grid/storm/TMP/belle/MC/release-03-01-00/DB00000547/MC12b/prod00009652/s00/e1003/4S/r00000/3410910000/mdst/sub00 doesnt exist!
+Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [3005] [ERROR] Received corrupted data
+TRANSFER globus_ftp_client: the server responded with an error 451 General problem: Problem while connected to｟*｠:｟*｠: Connection reset by peer
+TRANSFER globus_ftp_client: the server responded with an error｟*｠ General problem: Problem while connected to [2001:48a8:68f7:8001:192:41:236:｟*｠]:｟*｠: Connection reset by peer
+"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: rejected PUT:｟*｠; redirections [http:/｟*｠:80/mnt/｟*｠/dteam/｟*｠/｟*｠?sfn=%2Fdpm%2Ffarm.particle.cz%2Fhome%2Fdteam%2Ftpc-test%2Fhttps%2Ftest%｟*｠&token=｟*｠%3D%｟*｠%401]"
+"DESTINATION SRM_PUTDONE Error on the surl srm:/tape-sdrm.t1.grid.kiae.ru/t1.grid.kiae.ru/data/atlas/atlasmctape/mc16_13TeV/｟*｠/｟*｠/｟*｠/｟*｠.｟*｠ while putdone : [SE][PutDone][SRM_INTERNAL_ERROR] PreparedStatementCallback; SQL [UPDATE t_inodes SET inlink=inlink +?,imtime=?,ictime=?,igeneration=igeneration+1 WHERE inumber=?]; ERROR: deadlock detected; Detail: Process"
+DESTINATION SRM_PUTDONE Error on the surl srm:/eymir.grid.metu.edu.tr/dpm/grid.metu.edu.tr/home/cms/store/PhEDEx_LoadTest07/｟*｠/TR_METU/｟*｠/｟*｠ while putdone : [SE][PutDone][SRM_INTERNAL_ERROR] Timed out
+"DESTINATION OVERWRITE error reported from srm_ifce, [SE][srmRm][SRM_AUTHORIZATION_FAILURE] User is not authorized to delete｟*｠ file"
+DESTINATION SRM_PUT_TURL error on the turl request : [SE][PrepareToPut][SRM_ABORTED] Request aborted.
 [gfalt_copy_file][perform_copy][srm_plugin_filecopy][srm_resolve_turls] SOURCE SRM_GET_TURL [srm_resolve_get_turl][｟*｠][｟*｠] error on the turl request : [SE][StatusOfGetRequest][SRM_FAILURE] Unable to build the TURL for the provided transfer protocol
-"DESTINATION CHECKSUM error on the turl request : [SE][StatusOfGetRequest][SRM_INVALID_PATH] The requested file｟*｠ does not｟*｠, or it is a directory!"
-[gfalt_copy_file][perform_copy][gfal_xrootd_3rd_copy][gfal_xrootd_3rd_copy_bulk] Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [｟*｠] [ERROR] Server responded with an error: [3010]｟*｠ is no longer valid.
-DESTINATION SRM_PUTDONE Error on the surl srm:/se01.indiacms.res.in/dpm/indiacms.res.in/home/cms/store/user/////// while putdone : [SE][PutDone][SRM_INTERNAL_ERROR] Timed out
-TRANSFER globus_ftp_client: the server responded with an error 500 500-Command failed. : globus_xio: The GSI XIO driver failed to establish a connection via the underlying protocol. 500-globus_xio: Unable to connect to:2811 500-globus_xio: System error in connect: No route to host 500-globus_xio: A system call failed: No route to host 500 End.
-"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: Failed to select｟*｠:｟*｠ unavailable"
-DESTINATION CHECKSUM error on the turl request : [SE][StatusOfGetRequest][SRM_FAILURE] Local filesystem mask does not allow setting up correct ACLs for PtG!
-DESTINATION SRM_PUTDONE Error on the surl srm://dpm//home/atlas//rucio/user////. while putdone : [SE][PutDone][SRM_FILE_LIFETIME_EXPIRED] <none>
-"TRANSFER ERROR: Copy failed with mode 3rd push, with error: copy 0) Renewal failedSOAP 1.1 fault: SOAP-ENV:Server.generalException [no subcode] Unable to create delegated credential: Provided private key is not matching the certificate Detail: <ns1:DelegationException xmlns:ns1=http:/www.gridsite.org/namespaces/delegation-2><msg>Unable to create delegated credential: Provided private key is not matching the certificate</msg></ns1:DelegationException> ."
-"TRANSFER globus_ftp_client: the server responded with an error 500 500-Command failed. 500- : globus_xio_gsi: gss_init_sec_context failed.｟*｠: Unable to verify remote sides credentials｟*｠: SSL handshake problems: Couldnt do ssl handshake 500-OpenSSL Error: s3_pkt.c:1493: in library: SSL routines, function ssl3_read_bytes: sslv3 alert certificate expired SSL alert number 45 500 End."
-"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: verification failed: rejected｟*｠: 500 Server Error"
-"DESTINATION OVERWRITE error reported from srm_ifce, [SE][srmRm][SRM_AUTHORIZATION_FAILURE] File not｟*｠, permission denied."
-DESTINATION OVERWRITE｟*｠:｟*｠ HTTP 403 : Permission refused
-DESTINATION MAKE_PARENT srm:/:8444/srm/managerv2?SFN=//store/mc///// it is a file
-"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: failed to send PUT request: Cannot retry request with a non-repeatable request entity; caused by: Connection timed out (Write failed); after sending B ( MiB) (%); redirections [http:/145.100.33.46:/groups/dteam/DOMA-TPC/domatest/file14_59b77257-48eb-41f9-9e4f-6219f7001050?dcache-http-uuid=]"
-"[gfalt_copy_file][perform_copy][srm_plugin_filecopy][srm_resolve_turls] SOURCE SRM_GET_TURL [srm_resolve_get_turl][｟*｠][gfal_srm_mTURLS_internal][gfal_srm_getTURLS_srmv2_internal][gfal_srmv2_get_global][gfal_srm_report_error] srm-ifce err: Connection timed out, err: [SE][StatusOfGetRequest][ETIMEDOUT] httpg:/storm-se-01.ba.infn.it:8444/srm/managerv2: User timeout over"
-"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: failed to send PUT request: Cannot retry request with a non-repeatable request entity; caused by: (Write failed); after sending B () (%)"
-DESTINATION CHECKSUM globus_ftp_client: the server responded with an error 500 500-Command failed : globus_xio_register_open failed. 500-globus_xio: Unable to open file /lustre/cms/store/user////// 500-globus_xio: System error in open: No such file or directory 500-globus_xio: A system call failed: No such file or directory 500 End.
-DESTINATION SRM_PUTDONE Error on the surl srm:/storm-se-01.ba.infn.it/cms/store/user/raly/MonoHiggs/FullRunII/Data2017processing///// while putdone : [SE][PutDone][SRM_INVALID_PATH] PtP status for this SURL is SRM_ABORTED
-TRANSFER globus_ftp_client: the server responded with an error 451 General problem: Problem while connected to [2001:4ca0:0:201:a:0:2:]:: Network is unreachable
-TRANSFER globus_ftp_client: the server responded with an error 500 Command failed. : open/create : [ERROR] Server responded with an error: [3009] Unable to get free physical space /eos///////; No space left on device
-TRANSFER globus_ftp_client: the server responded with an error 500 Command failed. : [｟*｠] Failed to open file.
-DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][] error accessing belle2grid4.cc.ntu.edu.tw://belle/2020-01-02: out
-[gfal2_stat][gfal_plugin_statG][gfal_srm_statG][gfal_statG_srmv2__generic_internal][gfal_statG_srmv2__generic_internal] Error reported from srm_ifce : 13 [SE][Ls][SRM_AUTHORIZATION_FAILURE] User does not have valid permissions
-"TRANSFER globus_ftp_client: the server responded with an error 451｟*｠ failed: PreparedStatementCallback; SQL [SELECT f_create_inode(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]; ERROR: insert or update on table t_dirs violates foreign key constraint t_dirs_iparent_fkey; Detail: Key (iparent)=() is not present in table t_inodes.; Where: SQL statement INSERT INTO t_dirs VALUES (parent, newid, name);PL/pgSQL function f_create_inode(bigint,character varying,character"
+DESTINATION SRM_PUT_TURL error on the turl gsiftp:/｟*｠:2811/gpfs/storage_3/atlas/atlasdatadisk/rucio/mc16_13TeV/｟*｠/｟*｠/HITS.19909364.｟*｠ request : [SE][StatusOfPutRequest][SRM_ABORTED] File has been removed.
+TRANSFER globus_ftp_client: the server responded with an error｟*｠ General problem: Failed to connect [2001:48a8:68f7:1:192:41:230:36]:｟*｠: La connexi ha｟*｠
+DESTINATION SRM_PUTDONE Error on the surl srm:/storm.mib.infn.it/cms/store/user/dzuolo/HHbbtautauNtuples/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/0000/｟*｠ while putdone : [SE][PutDone][SRM_FAILURE] Check StatusOfPutRequest for more｟*｠
+"｟*｠ globus_ftp_client: the server responded with an error｟*｠ 451-GlobusError: v=1 c=INTERNAL_ERROR 451-GridFTP-Errno: 22 451-GridFTP-Reason: System error in｟*｠ in｟*｠ to HDFS for｟*｠ (host=｟*｠, user=cmswriter, path=/cms/｟*｠/store/mc/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠) 451-GridFTP-Error-String:｟*｠ argument｟*｠"
+DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][SRM_FILE_BUSY] The surl srm:/storm-fe.cr.cnaf.infn.it/atlas/atlasmctape/mc16_13TeV/AOD/｟*｠/｟*｠/｟*｠.｟*｠ is curr
+"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: problem sending data:｟*｠:｟*｠"
+"TRANSFER globus_ftp_client: the server responded with an error 500｟*｠ failed. : Failed to close file in HDFS. (host=｟*｠, user=cmsphedx, path=/store/data/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠)"
+"TRANSFER globus_ftp_client: the server responded with an error 535 Authentication failed: The peers certificate with subjects DN CN=｟*｠=｟*｠=｟*｠=｟*｠=｟*｠=｟*｠=｟*｠=｟*｠=｟*｠=Users,OU=Organic Units,DC=cern,DC=ch was rejected. The peers certificate status is: FAILED The following validation errors were found: error at position 6 in chain, problematic certificate subject: CN=｟*｠=｟*｠=｟*｠"
+SOURCE CHECKSUM Connection｟*｠ during redirection on https:/｟*｠:1094/store/PhEDEx_LoadTest07/LoadTest07_Debug_US_Florida/US_Nebraska/460/｟*｠?authz=Bearer%｟*｠
+TRANSFER globus_ftp_client: the server responded with an error｟*｠ General problem: Problem while connected to [2001:630:3c1:662:｟*｠]:｟*｠: Connection timed out
+"DESTINATION CHECKSUM error on the turl request : [SE][StatusOfGetRequest][SRM_INVALID_PATH] The requested file either does not exist, or it is a directory!"
+"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: Failed to open/read local data from file/application"
+"TRANSFER globus_ftp_client: the server responded with an error 530 530-globus_xio: Authentication Error 530-OpenSSL Error: s3_srvr.c:3327: in library: SSL routines, function ssl3_get_client_certificate: certificate verify failed 530-globus_gsi_callback_module: Could not verify credential 530-globus_gsi_callback_module: The certificate has expired: Credential with subject: /C=UK/O=eScience/OU=CLRC/L=RAL/｟*｠=katy ellis/｟*｠=637767791/｟*｠=1355375673/｟*｠=1752785840/｟*｠=1385194373/｟*｠=1541856221 has expired. 530"
+DESTINATION SRM_PUTDONE Error on the surl srm:/｟*｠/dpm/｟*｠/home/atlas/atlasdatadisk/rucio/mc16_13TeV/｟*｠/｟*｠/｟*｠.｟*｠ while putdone : [SE][PutDone][SRM_INTERNAL_ERROR] Timed out
+"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: connection failed for PUT: Connect to storage1.nipne.ro:443 [storage1.nipne.ro/｟*｠, storage1.nipne.ro/2001:b30:4202:100:0:0:0:｟*｠] failed: Connection refused (Connection refused); redirections [https:/storage1.nipne.ro:443/｟*｠/atlas/2020-01-05/｟*｠?sfn=%2Fdpm%2Fnipne.ro%2Fhome%2Fatlas%2Fatlasscratchdisk%2Frucio%2Ftests%｟*｠%｟*｠%｟*｠&token=｟*｠%3D%｟*｠"
+DESTINATION SRM_PUTDONE Error on the surl srm:/se01.indiacms.res.in/dpm/indiacms.res.in/home/cms/store/user/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠ while putdone : [SE][PutDone][SRM_INTERNAL_ERROR] Timed out
+DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][SRM_AUTHORIZATION_FAILURE]｟*｠/Write access to srm:/se03.esc.qmul.ac.uk/atlas/｟*｠/rucio/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠.｟*｠ denied!
+TRANSFER globus_ftp_client: the server responded with an error 500 500-Command failed. :｟*｠: Unable to connect to 2001:610:108:203A:0:0:｟*｠:｟*｠:22224 500-globus_xio: System error in connect:｟*｠ denied 500-globus_xio: A system call failed:｟*｠ denied 500 End.
+globus_ftp_client: the server responded with an error 530 530-Login incorrect. : globus_gss_assist: Error invoking｟*｠: A｟*｠ call returned an error: Cert was not issued by correct CA.｟*｠: A｟*｠ call returned an error: Couldnt verify credential containing ePPN extension: unable to get local issuer certificate 530-an unknown error occurred 530 End.
+DESTINATION SRM_PUT_TURL error on the turl request : [SE][PrepareToPut][SRM_INVALID_PATH] SURL is not local: srm:/lcg-se1.sfu.computecanada.ca/atlas/atlasdatadisk/rucio/｟*｠/｟*｠/｟*｠/｟*｠
+globus_ftp_client: the server responded with an error 550 No such file or directory
+Error reported from srm_ifce : 2 [SE][Ls][SRM_INVALID_PATH] SURL is not local: srm:/｟*｠/pnfs/csc.fi/data/cms/store/data/Run2017D/SingleElectron/RAW/v1/000/302/｟*｠/00000/｟*｠
+TRANSFER globus_ftp_client: the server responded with an error 451 General problem: Failed to connect [2a00:139c:5:｟*｠:0:41:｟*｠:｟*｠]:｟*｠: Connection timed out
+"TRANSFER globus_ftp_client: the server responded with an error 535 Authentication failed: The peers certificate with subjects DN CN=1578081295,CN=1741073289,CN=3771983346,CN=902771388,CN=1204222652,CN=1970506646,CN=Tim Lukas Bruckler,CN=837717,CN=tbruckle,OU=Users,OU=Organic Units,DC=cern,DC=ch was rejected. The peers certificate status is: FAILED The following validation errors were found: error at position 6 in chain, problematic certificate subject: CN=Tim Lukas Bruckler,CN=837717,CN=tbruckle,OU=Use"
+SOURCE SRM_GET_TURL error on the turl request : [SE][PrepareToGet][SRM_FAILURE] srm:/srm-eoslhcb.cern.ch/eos/｟*｠/grid/prod/｟*｠/MC/｟*｠/ALLSTREAMS.DST/｟*｠/0000/｟*｠ is not a supported url.
+DESTINATION SRM_PUTDONE Error on the surl srm:/｟*｠/pnfs/jinr-t1.ru/data/cms/store/PhEDEx_LoadTest07/｟*｠/｟*｠/｟*｠/｟*｠ while putdone : [SE][PutDone][SRM_INVALID_PATH] No such file or directory: /pnfs/jinr-t1.ru/data/cms/store/PhEDEx_LoadTest07/｟*｠/｟*｠/｟*｠
+"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: failed to send｟*｠ request:｟*｠ retry request with a non-repeatable request entity; caused by: java.nio.channels.ClosedChannelException; after sending｟*｠ B (｟*｠ MiB) (100%); redirections [http:/｟*｠:｟*｠/pnfs/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠?dcache-http-uuid=｟*｠]"
+Failed to stat file (No route to host)
+TRANSFER globus_ftp_client: the server responded with an error｟*｠ General problem: Problem while connected to｟*｠:｟*｠: La canonada s ha trencat
+"TRANSFER globus_ftp_client: the server responded with an error 535 Authentication failed: The peers certificate with subjects DN CN=1577804259,CN=435650081,CN=2737643560,CN=1275180752,CN=135915140,CN=536306803,CN=Nan Lu,CN=738118,CN=nlu,OU=Users,OU=Organic Units,DC=cern,DC=ch was rejected. The peers certificate status is: FAILED The following validation errors were found: error at position 6 in chain, problematic certificate subject: CN=Nan Lu,CN=738118,CN=nlu,OU=Users,OU=Organic Units,DC=cern,DC=ch (c"
+｟*｠ Connection｟*｠ during redirection on https:/｟*｠:1094/cephfs/grid/atlas/｟*｠/rucio/user/amelzer/｟*｠/｟*｠/user.amelzer.20070922.EXT0.｟*｠?authz=Bearer%｟*｠
+DESTINATION OVERWRITE Result (Neon): Could not read status line: Connection reset by peer after 1 attempts
+DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][SRM_INVALID_PATH] Parent /gpfs/group/belle2/grid/storm/DATA/belle/Data/release-04-00-03/DB00000677/SKIMDATAx1/｟*｠/｟*｠/4S/｟*｠ doesnt exist!
+[gfalt_copy_file][perform_copy][gfal_xrootd_3rd_copy][gfal_xrootd_3rd_copy_bulk] Error on XrdCl:CopyProcess:Run(): [ERROR] Server responded with an error: [3005] [ERROR] Server responded with an error: [3010]｟*｠ is no longer valid.
+"DESTINATION OVERWRITE error reported from srm_ifce, [SE][srmRm][SRM_AUTHORIZATION_FAILURE] File not removed, permission denied."
+TRANSFER globus_ftp_client: the server responded with an error｟*｠ General problem: Problem while connected to [｟*｠:8504:120:｟*｠:｟*｠]:｟*｠: La connexi ha｟*｠
+DESTINATION SRM_PUTDONE Error on the surl srm:/storm-se-01.ba.infn.it/cms/store/user/raly/MonoHiggs/FullRunII/Data2017processing/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠ while putdone : [SE][PutDone][SRM_INVALID_PATH] PtP status for this｟*｠ is SRM_ABORTED
 SOURCE SRM_GET_TURL The source file is not｟*｠
-"DESTINATION EXISTS Destination already｟*｠ gsiftp:/eoscmsftp.cern.ch/eos/cms/store/mc///GEN/106X_upgrade2018_realistic_v4-v1//, Cancel"
-DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][SRM_DUPLICATION_ERROR] File exists and overwrite｟*｠ is｟*｠
+"TRANSFER globus_ftp_client: the server responded with an error 535 Authentication failed: The peers certificate with subjects DN CN=1577888829,CN=1837444836,CN=3900621060,CN=607664097,CN=179005658,CN=707756616,CN=Steven Clark,CN=834957,CN=stclark,OU=Users,OU=Organic Units,DC=cern,DC=ch was rejected. The peers certificate status is: FAILED The following validation errors were found: error at position 6 in chain, problematic certificate subject: CN=Steven Clark,CN=834957,CN=stclark,OU=Users,OU=Organic Un"
+｟*｠ : [SE][｟*｠][SRM_INVALID_PATH] SURL is not local: srm:/｟*｠/pnfs/csc.fi/data/cms/store/data/Run2017F/JetHT/RAW-RECO/JetHTJetPlusHOFilter-09May2018-v1/｟*｠/｟*｠
+｟*｠ globus_ftp_client: the server responded with an error 530 530-Login incorrect. : globus_gss_assist: Gridmap｟*｠ failure: Could not map /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=｟*｠/CN=｟*｠/CN=｟*｠:｟*｠ 530- 530 End.
+"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: failed to send｟*｠ request:｟*｠ retry request with a non-repeatable request entity; caused by: Connection timed out (｟*｠ failed); after sending｟*｠ B (｟*｠ MiB) (｟*｠%); redirections [http:/145.100.33.46:｟*｠/groups/dteam/DOMA-TPC/domatest/file14_59b77257-48eb-41f9-9e4f-6219f7001050?dcache-http-uuid=｟*｠]"
 DESTINATION MAKE_PARENT srm:/｟*｠:8444/srm/managerv2?SFN=/cms/store/data/Run2018D/MuOnia/RAW-RECO/LogError-PromptReco-v2/000/321/393/00000 it is a file
+"TRANSFER globus_ftp_client: the server responded with an error 500｟*｠ failed. : Failed to close file in HDFS. (host=｟*｠, user=cmsphedex, path=/user/uscms01/pnfs/unl.edu/data4/cms/store/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠)"
+TRANSFER globus_xio: Unable to connect to｟*｠:2811 globus_xio: globus_xio_system_socket_register_connect failed. globus_xio: System error in connect:｟*｠ is unreachable globus_xio: A system call failed:｟*｠ is unreachable
+DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][SRM_INTERNAL_ERROR] Failed to abort transfers
 DESTINATION CHECKSUM globus_ftp_client: the server responded with an error 500 500-Command failed : System error in name: Connection timed out 500-A system call failed: Connection timed out 500 End.
-DESTINATION OVERWRITE｟*｠:｟*｠ HTTP 500 :｟*｠ server error: 500 with url davs:/dcgftp.usatlas.bnl.gov:443/pnfs/usatlas.bnl.gov/atlasscratchdisk/rucio/tests///
-"SOURCE CHECKSUM globus_ftp_client: the server responded with an error 550 550-GlobusError: v=1 c=PATH_NOT_FOUND 550-GridFTP-Errno: 2 550-GridFTP-Reason: System error in Failed to open file for checksumming (host=, user=cmsu0982, path=/cms/store/temp/user/fbrivio.39c47ce16ae86ca0e76dd41b21a1e05263edba45/Hhh_1718///"
-DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][SRM_INTERNAL_ERROR] Failed to｟*｠ transfers
-[gfalt_copy_file][perform_copy][gfal_http_copy] DESTINATION OVERWRITE [gfal_http_copy_overwrite][davix2gliberr]｟*｠:｟*｠ HTTP 403 : Permission refused
-: the server responded with an error 530 530-Login incorrect. : globus_gss_assist: Gridmap｟*｠ failure: Could not map /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=/CN=/CN= 530- 530 End.
-"SOURCE SRM_GET_TURL srm-ifce err: Connection reset by peer, err: [SE][｟*｠][] httpg:/srm-eoslhcb.cern.ch:8443/srm/v2/server: CGSI-gSOAP running on reports Error reading token data header: Connection reset by peer"
-"DESTINATION SRM_PUT_TURL srm-ifce err: Communication error on send, err: [SE][｟*｠][SRM_INTERNAL_ERROR] httpg:/｟*｠:8443/srm/managerv2: SRM backend serving this request is currently offline."
-DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][SRM_FAILURE] error accessing grid30.physics.uoi.gr://102/2020-01-03: Connection closed by remote end
-"[gfal2_stat][gfal_plugin_statG][｟*｠][｟*｠] globus_ftp_client: the server responded with an error 530 Login incorrect. : Server over the global connection limit of 250 (user has 0 transfers) (host=, user=cms, path=(null)"
-DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][SRM_FILE_BUSY]｟*｠ is ongoing for this file
+DESTINATION CHECKSUM globus_ftp_client: the server responded with an error 500 500-Command failed : globus_xio_register_open failed. 500-globus_xio: Unable to open file /lustre/cms/store/user/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠ 500-globus_xio: System error in open: No such file or directory 500-globus_xio: A system call failed: No such file or directory 500 End.
+TRANSFER globus_ftp_client: the server responded with an error 451 General problem: Failed to connect [2001:610:108:203a:1:｟*｠]:22224: Connection timed out
+"DESTINATION EXISTS｟*｠ already exist gsiftp:/eoscmsftp.cern.ch/eos/cms/store/mc/｟*｠/｟*｠/GEN/106X_upgrade2018_realistic_v4-v1/｟*｠/｟*｠, Cancel"
+Error reported from srm_ifce : 2 [SE][Ls][SRM_INVALID_PATH] No such file or directory /pnfs/desy.de/cms/tier2/temp/user/welmeten.3257b2c1348f232024e043daaeb0ca1bdcc78c41/HiggsNtuples2018DataLegacy/SingleMuon/SingleMuon_Run2018A-17Sep2018-v2_part10_Recovery/191225_200952/｟*｠/｟*｠/｟*｠
+[gfalt_copy_file][perform_copy][gfal_http_copy] DESTINATION OVERWRITE [gfal_http_copy_overwrite][davix2gliberr]｟*｠:unlink HTTP 403 : Permission refused
+DESTINATION OVERWRITE｟*｠:unlink HTTP 500 :｟*｠ server error: 500 with url davs:/dcgftp.usatlas.bnl.gov:443/pnfs/usatlas.bnl.gov/atlasscratchdisk/rucio/tests/｟*｠/｟*｠/｟*｠
+"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: failed to send｟*｠ request: Cannot retry request with a non-repeatable request entity; caused by:｟*｠ (｟*｠ failed); after sending｟*｠ B (｟*｠) (｟*｠%)"
+[gfal2_stat][gfal_plugin_statG][gfal_srm_statG][gfal_statG_srmv2__generic_internal][gfal_statG_srmv2__generic_internal] Error reported from srm_ifce : 13 [SE][Ls][SRM_AUTHORIZATION_FAILURE] User does not have valid permissions
+"TRANSFER globus_ftp_client: the server responded with an error 451｟*｠ failed: PreparedStatementCallback; SQL [SELECT f_create_inode(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]; ERROR: insert or update on table t_dirs violates foreign key constraint t_dirs_iparent_fkey; Detail: Key (iparent)=(｟*｠) is not present in table t_inodes.; Where: SQL statement INSERT INTO t_dirs VALUES (parent, newid, name);PL/pgSQL function f_create_inode(bigint,character varying,character｟*｠"
+"DESTINATION SRM_PUT_TURL srm-ifce err: Communication error on send, err: [SE][｟*｠][SRM_INTERNAL_ERROR] httpg:/｟*｠:8443/srm/managerv2: SRM｟*｠ serving this request is currently｟*｠."
+DESTINATION SRM_PUTDONE Error on the surl srm:/｟*｠/dpm/｟*｠/home/atlas/｟*｠/rucio/user/｟*｠/｟*｠/｟*｠/｟*｠.｟*｠ while putdone : [SE][PutDone][SRM_FILE_LIFETIME_EXPIRED] <none>
+"SOURCE CHECKSUM globus_ftp_client: the server responded with an error｟*｠ 550-GlobusError: v=1 c=PATH_NOT_FOUND 550-GridFTP-Errno: 2 550-GridFTP-Reason: System error in Failed to open file for checksumming (host=｟*｠, user=cmsu0982, path=/cms/store/temp/user/fbrivio.39c47ce16ae86ca0e76dd41b21a1e05263edba45/Hhh_1718/｟*｠/｟*｠/｟*｠"
+DESTINATION OVERWRITE DavPosix:unlink HTTP 403 : Permission refused
+"[gfalt_copy_file][perform_copy][srm_plugin_filecopy][srm_resolve_turls] SOURCE SRM_GET_TURL [srm_resolve_get_turl][｟*｠][gfal_srm_mTURLS_internal][gfal_srm_getTURLS_srmv2_internal][gfal_srmv2_get_global][｟*｠] srm-ifce err: Connection timed out, err: [SE][｟*｠][｟*｠] httpg:/｟*｠:8444/srm/managerv2: User timeout over"
+DESTINATION SRM_PUTDONE Error on the surl srm:/grid02.physics.uoi.gr/dpm/physics.uoi.gr/home/cms/store/data/Run2018B/HLTPhysics2/RAW/v1/000/318/714/00000/｟*｠ while putdone : [SE][PutDone][SRM_INTERNAL_ERROR] <none>
+TRANSFER globus_ftp_client: the server responded with an error｟*｠ General problem: Failed to connect [2001:660:5009:9:193:48:99:｟*｠]:｟*｠: Connection timed out
 [gfalt_copy_file][perform_copy][srm_plugin_filecopy] SOURCE CHECKSUM [srm_validate_source_checksum][gfal_srm_checksumG_fallback][gfal_srm_cheksumG_internal][｟*｠][｟*｠] Error reported from srm_ifce : 13 [SE][Ls][SRM_AUTHORIZATION_FAILURE] User does not have valid permissions
+DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][SRM_INVALID_PATH] Parent /｟*｠/｟*｠/cms/store/hidata/｟*｠/｟*｠/RAW/v1/000/｟*｠/｟*｠ doesnt exist!
+DESTINATION CHECKSUM checksum calculation for ADLER32 not supported for davs:/｟*｠:443/dpm/｟*｠/home/atlas/atlasscratchdisk/rucio/tests/｟*｠/｟*｠/｟*｠
+TRANSFER globus_ftp_client: the server responded with an error 500 500-Command failed. : globus_ftp_control_data_write failed. 500-globus_xio: Unable to connect to｟*｠:｟*｠ 500-globus_xio: System error in connect: No route to host 500-globus_xio: A system call failed: No route to host｟*｠ 500 End.
+TRANSFER globus_ftp_client: the server responded with an error｟*｠ General problem: Problem while connected to 152.84.101.18:｟*｠: La｟*｠ s｟*｠
+TRANSFER globus_ftp_client: the server responded with an error 500｟*｠ failed. : open/create : [ERROR] Server responded with an error: [｟*｠] Unable to get free physical space /eos/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠/｟*｠.｟*｠; No space left on device
+TRANSFER globus_ftp_client: the server responded with an error 451 General problem: Problem while connected to [2001:｟*｠:｟*｠:｟*｠:｟*｠:｟*｠]:｟*｠:｟*｠ pipe
+"TRANSFER globus_ftp_client: the server responded with an error 500 500-Command failed. 500- : globus_xio_gsi: gss_init_sec_context failed.｟*｠: Unable to verify remote sides credentials｟*｠: SSL handshake problems: Couldnt do ssl handshake 500-OpenSSL Error: s3_pkt.c:1493: in library: SSL routines, function ssl3_read_bytes: sslv3 alert certificate expired SSL alert number 45 500 End."
+TRANSFER globus_ftp_client: the server responded with an error 451 General problem: Problem while connected to [2001:｟*｠:0:201:a:0:2:｟*｠]:｟*｠:｟*｠ is unreachable
+SOURCE SRM_GET_TURL error on the turl request : [SE][StatusOfGetRequest][SRM_AUTHORIZATION_FAILURE] Read access to srm:/se03.esc.qmul.ac.uk/atlas/atlasdatadisk/rucio/mc16_13TeV/｟*｠/｟*｠/｟*｠.｟*｠ denied!
+DESTINATION SRM_PUT_TURL error on the turl request : [SE][StatusOfPutRequest][SRM_DUPLICATION_ERROR] File exists and overwrite option is｟*｠
+"TRANSFER ERROR: Copy failed with mode｟*｠, with error: (Neon): SSL handshake failed: Connection timed out during SSL handshake"
+"TRANSFER ERROR: Copy failed with mode 3rd push, with error: copy 0) Renewal failedSOAP 1.1 fault: SOAP-ENV:Server.generalException [no subcode] Unable to create delegated credential: Provided private key is not matching the certificate Detail: <ns1:DelegationException xmlns:ns1=http:/www.gridsite.org/namespaces/delegation-2><msg>Unable to create delegated credential: Provided private key is not matching the certificate</msg></ns1:DelegationException> ."
+"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: problem sending data: atlasse25.na.infn.it: El nom o servei no s conegut; redirections [http:/atlasse25.na.infn.it:9001/｟*｠/dteam/｟*｠/｟*｠?sfn=%2Fdpm%2Fna.infn.it%2Fhome%2Fdteam%2Ftpc%2Fhttps%2Fdomatest%｟*｠&token=｟*｠%｟*｠%3D%｟*｠%401]"
+"SOURCE SRM_GET_TURL srm-ifce err: Connection reset by peer, err: [SE][｟*｠][] httpg:/srm-eoslhcb.cern.ch:8443/srm/v2/server: CGSI-gSOAP running on｟*｠ reports Error reading token data header: Connection reset by peer"
+"TRANSFER ERROR: Copy failed with mode 3rd push, with error: Transfer failed: failure: verification failed: rejected｟*｠: 500 Server Error"

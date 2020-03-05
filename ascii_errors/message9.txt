@@ -1,0 +1,2 @@
+time,error_message,src_host,dst_host,cleaned,cluster_pattern
+2020-01-05 20:09:00,an end-of-file was reached globus_xio: An end of file occurred ,criedl@ie05.ncsa.illinois.edu,castorpublic.cern.ch,an end-of-file was reached ｟*｠: An end of file occurred,an end-of-file was reached｟*｠: An end of file occurred
