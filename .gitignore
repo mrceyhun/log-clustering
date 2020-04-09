@@ -2,4 +2,4 @@ error*
 preproc/clusterlogs/*
 word2vec*
 ascii_errors.txt
-clusterlogs/*
+clusterlogs*
