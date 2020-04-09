@@ -69,6 +69,8 @@ def main():
     df = fts_df.toPandas()
     cluster = pipeline.Chain(df, target='error_message', mode='create')
     cluster.process()
+    df.loc[:,'cluster_id']=int(1)
+    df.loc[:,'model']='Levenshtein'
     a=cluster.result.index
     for el in a:
         df.loc[cluster.result.loc[el,'indices'],'cluster_id'] = uuid.uuid4()
