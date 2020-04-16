@@ -1,0 +1,12 @@
+#!/afs/cern.ch/user/n/ntuckus/public/log-clustering/workflow/log-clustering/bin/python3
+# EASY-INSTALL-ENTRY-SCRIPT: 'stomp.py==4.1.21','console_scripts','stomp'
+__requires__ = 'stomp.py==4.1.21'
+import re
+import sys
+from pkg_resources import load_entry_point
+
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
+    sys.exit(
+        load_entry_point('stomp.py==4.1.21', 'console_scripts', 'stomp')()
+    )

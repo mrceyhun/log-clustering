@@ -229,7 +229,7 @@ class Chain(object):
 
 
     def garbage_collector(self, df):
-        stop = list(punctuation) + ['｟*｠']
+        stop = list(punctuation) + ['[ * ]']
         garbage = []
         for row in df.itertuples():
             elements = set(row.sequence)

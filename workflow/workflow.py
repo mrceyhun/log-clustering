@@ -4,6 +4,8 @@ import sys
 import time
 import logging
 import json
+import site
+#sys.path.insert(0,site.getusersitepackages())
 from datetime import datetime as dt
 from datetime import timedelta
 from subprocess import Popen, PIPE
@@ -18,6 +20,7 @@ import pandas as pd
 from clusterlogs import pipeline
 import nltk
 import uuid
+from CMSMonitoring.StompAMQ import StompAMQ
 
 def spark_context(appname='cms', yarn=None, verbose=False, python_files=[]):
     # define spark context, it's main object which allow
@@ -49,6 +52,13 @@ def fts_tables(spark,schema,
     fts_df = spark.read.json(hpath, schema)
     return fts_df
 
+def df_to_batches(data, samples=1000):
+    """
+    """
+    #data = data.to_dict('records')
+    leng = len(data)
+    for i in range(0, leng, samples):
+        yield data[i:i + samples].to_dict('records')
 def main():
     _schema = StructType([
         StructField('metadata', StructType([StructField('timestamp',LongType(), nullable=True)])),
@@ -76,7 +86,24 @@ def main():
         df.loc[cluster.result.loc[el,'indices'],'cluster_id'] = uuid.uuid4()
         df.loc[cluster.result.loc[el,'indices'],'cluster_pattern'] = cluster.result.loc[el,'pattern']
     res = df[['timestamp','cluster_id','cluster_pattern','model','src_hostname','dst_hostname','error_message']]
-    res.to_json(r'results.json',orient='records',default_handler=str)
+    #res.to_json(r'results.json',orient='records',default_handler=str)
+    username = ""
+    password = ""
+    producer = "cms-training"
+    topic = "/topic/cms.training"
+    host = "cms-test-mb.cern.ch"
+    port = 61323
+    cert = "/eos/user/n/ntuckus/SWAN_projects/training/globus/robot-training-cert.pem"
+    ckey = "/eos/user/n/ntuckus/SWAN_projects/training/globus/robot-training-key.pem"
+    stomp_amq = StompAMQ(username, password, producer, topic, key=ckey, cert=cert, validation_schema=None, host_and_ports=[(host, port)])
+    for d in df_to_batches(res,10000):
+        messages = []
+        for msg in d:
+            notif,_,_ = stomp_amq.make_notification(msg, "training_document", metadata={"version":"129"}, dataSubfield=None)#, ts=msg['timestamp'])
+            messages.append(notif)
+        stomp_amq.send(messages)
+        time.sleep(0.1)
+        print(len(messages))
 if __name__ == "__main__":
     main()
     
