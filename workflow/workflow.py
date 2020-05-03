@@ -22,6 +22,7 @@ import nltk
 import uuid
 from CMSMonitoring.StompAMQ import StompAMQ
 
+
 def spark_context(appname='cms', yarn=None, verbose=False, python_files=[]):
     # define spark context, it's main object which allow
     # to communicate with spark
@@ -69,7 +70,7 @@ def main():
         ])),
     ])    
     sc = spark_session()
-    fts_df = fts_tables(sc,date="2020/01/05",schema=_schema).select(
+    fts_df = fts_tables(sc,date="2020/03/19",schema=_schema).select(#,date="2020/03/19"
         col('metadata.timestamp').alias('timestamp'),
         col('data.src_hostname').alias('src_hostname'),
         col('data.dst_hostname').alias('dst_hostname'),
@@ -77,33 +78,41 @@ def main():
     ).where('error_message <> ""')
     fts_df.show()
     df = fts_df.toPandas()
-    cluster = pipeline.Chain(df, target='error_message', mode='create')
+    mod_name = 'word2vec_'+time.strftime("%Y_%m_%d_%H_%M_%S", time.localtime(time.time()))+'.model'
+    cluster = pipeline.Chain(df, target='error_message', mode='create', model_name=mod_name)
     cluster.process()
     df.loc[:,'cluster_id']=int(1)
-    df.loc[:,'model']='Levenshtein'
+    print(cluster.model_name)
+    if cluster.clustering_type == 'SIMILARITY':
+        df.loc[:,'model']='Levenshtein'
+    else:
+        df.loc[:,'model']=cluster.model_name
+    print(df.head())
     a=cluster.result.index
     for el in a:
-        df.loc[cluster.result.loc[el,'indices'],'cluster_id'] = uuid.uuid4()
+        df.loc[cluster.result.loc[el,'indices'],'cluster_id'] = str(uuid.uuid4())
         df.loc[cluster.result.loc[el,'indices'],'cluster_pattern'] = cluster.result.loc[el,'pattern']
     res = df[['timestamp','cluster_id','cluster_pattern','model','src_hostname','dst_hostname','error_message']]
+    print(res.shape)
     #res.to_json(r'results.json',orient='records',default_handler=str)
     username = ""
     password = ""
-    producer = "cms-training"
-    topic = "/topic/cms.training"
-    host = "cms-test-mb.cern.ch"
+    producer = "cms-fts-logsanalysis"
+    topic = "/topic/cms.fts.logsanalysis"
+    host = "cms-mb.cern.ch"
     port = 61323
-    cert = "/eos/user/n/ntuckus/SWAN_projects/training/globus/robot-training-cert.pem"
-    ckey = "/eos/user/n/ntuckus/SWAN_projects/training/globus/robot-training-key.pem"
-    stomp_amq = StompAMQ(username, password, producer, topic, key=ckey, cert=cert, validation_schema=None, host_and_ports=[(host, port)])
+    cert = "/afs/cern.ch/user/n/ntuckus/.globus/usercert.pem"#"/afs/cern.ch/user/n/ntuckus/public/log-clustering/workflow/certs/usercert.pem"
+    ckey = "/afs/cern.ch/user/n/ntuckus/.globus/userkey.pem"#"/afs/cern.ch/user/n/ntuckus/public/log-clustering/workflow/certs/userkey.pem"
+    stomp_amq = StompAMQ(username, password, producer, topic, key=ckey, cert=cert, validation_schema=None, host_and_ports=[(host, port)])    
     for d in df_to_batches(res,10000):
         messages = []
         for msg in d:
-            notif,_,_ = stomp_amq.make_notification(msg, "training_document", metadata={"version":"129"}, dataSubfield=None)#, ts=msg['timestamp'])
+            notif,_,_ = stomp_amq.make_notification(msg, "training_document", metadata={"version":"997"}, dataSubfield=None, ts=msg['timestamp'])
             messages.append(notif)
         stomp_amq.send(messages)
         time.sleep(0.1)
         print(len(messages))
+        #break
 if __name__ == "__main__":
     main()
     
