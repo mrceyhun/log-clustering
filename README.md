@@ -6,7 +6,7 @@ In the "workflow" folder one can see my attempts of putting information from jup
 
 By running the "workflow.py" script from lxplus machine the FTS error messages are taken from HDFS, grouped into clusters and then sent to MonIT.
 
-##Prerequisites
+## Prerequisites
 
 User should have an access to the Analytix cluster in order to be able to extract the messages.
 Before running the script from lxplus machine user should setup environment to use HADOOP with the following commands:
@@ -14,7 +14,7 @@ Before running the script from lxplus machine user should setup environment to u
  source "/cvmfs/sft.cern.ch/lcg/views/LCG_96python3/x86_64-centos7-gcc8-opt/setup.sh"
  source "/cvmfs/sft.cern.ch/lcg/etc/hadoop-confext/hadoop-swan-setconf.sh" analytix
 ```
-##Possible issues
+## Possible issues
 
 One issue that I have experienced was not being able to connect to MonIT receiving the following error:
 ```
