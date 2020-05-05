@@ -76,7 +76,7 @@ def main():
         ])),
     ]) #schema of the FTS data that is taken
     sc = spark_session()
-    fts_df = fts_tables(sc,schema=_schema).select(#,date="2020/03/19"
+    fts_df = fts_tables(sc,date="2020/04/30",schema=_schema).select(#,date="2020/03/19"
         col('metadata.timestamp').alias('timestamp'),
         col('data.src_hostname').alias('src_hostname'),
         col('data.dst_hostname').alias('dst_hostname'),
