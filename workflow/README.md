@@ -2,7 +2,7 @@
 
 I will be assuming that the user has access to the Analytix cluster.
 
-After cloning the repo go to workflow directory:
+After cloning the repo to lxplus go to the workflow directory:
 ```
 cd log-clustering/workflow/
 ```
