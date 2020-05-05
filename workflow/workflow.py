@@ -1,23 +1,39 @@
+#!/usr/bin/env python3
+
+# system modules
 import os
 import re
 import sys
 import time
-import logging
 import json
 import site
-from pyspark import SparkContext, StorageLevel
-from pyspark.sql import Row
-from pyspark.sql import SparkSession
-from pyspark.sql import DataFrame
-from pyspark.sql.types import DoubleType, IntegerType, StructType, StructField, StringType, BooleanType, LongType
-from pyspark.sql.functions import col, lit, regexp_replace, trim, lower, concat, count
-import numpy as np
-import pandas as pd
-from clusterlogs import pipeline
-import nltk
-import uuid
-from CMSMonitoring.StompAMQ import StompAMQ
+import logging
+import argparse
+try:
+    from pyspark import SparkContext, StorageLevel
+    from pyspark.sql import Row
+    from pyspark.sql import SparkSession
+    from pyspark.sql import DataFrame
+    from pyspark.sql.types import DoubleType, IntegerType, StructType, StructField, StringType, BooleanType, LongType
+    from pyspark.sql.functions import col, lit, regexp_replace, trim, lower, concat, count
+    import numpy as np
+    import pandas as pd
+    from clusterlogs import pipeline
+    import nltk
+    import uuid
+    from CMSMonitoring.StompAMQ import StompAMQ
+except ImportError:
+    pass
 
+
+class OptionParser():
+    def __init__(self):
+        "User based option parser"
+        self.parser = argparse.ArgumentParser(prog='PROG')
+        self.parser.add_argument("--creds", action="store",
+            dest="creds", default="", help="Stomp AMQ credentials file, if provided the data will be send to MONIT")
+        self.parser.add_argument("--verbose", action="store_true",
+            dest="verbose", default=False, help="verbose output")
 
 def spark_context(appname='cms', yarn=None, verbose=False, python_files=[]):
     # define spark context, it's main object which allow
@@ -65,8 +81,7 @@ def df_to_batches(data, samples=1000):
         yield data[i:i + samples].to_dict('records')
         
 
-def main():
-
+def run(creds):
     _schema = StructType([
         StructField('metadata', StructType([StructField('timestamp',LongType(), nullable=True)])),
         StructField('data', StructType([
@@ -108,24 +123,38 @@ def main():
 
     print("Number of messages: ",res.shape[0])
 
-    username = ""
-    password = ""
-    producer = "cms-fts-logsanalysis"
-    topic = "/topic/cms.fts.logsanalysis"
-    host = "cms-mb.cern.ch"
-    port = 61323
-    cert = "/afs/cern.ch/user/n/ntuckus/.globus/usercert.pem"
-    ckey = "/afs/cern.ch/user/n/ntuckus/.globus/userkey.pem" #using StompAMQ module connection to MonIT is created
+    creds = credentials(opts.creds)
+    if creds:
+        username = creds.get('username', '')
+        password = creds.get('password', '')
+        producer = creds.get('producer', 'cms-fts-logsanalysis')
+        topic = creds.get('topic', '/topic/cms.fts.logsanalysis')
+        host = creds.get('host', 'cms-mb.cern.ch')
+        port = int(creds.get('port', 61323))
+        cert = creds.get('cert', '%s/.globus/usercert.pem' % os.getenv('USER'))
+        ckey = creds.get('ckey', '%s/.globus/userkey.pem' % os.getenv('USER'))
+        stomp_amq = StompAMQ(username, password, producer, topic, key=ckey, cert=cert, validation_schema=None, host_and_ports=[(host, port)])
+        for d in df_to_batches(res,10000):
+            messages = []
+            for msg in d:
+                notif,_,_ = stomp_amq.make_notification(msg, "training_document", metadata={"version":"997"}, dataSubfield=None, ts=msg['timestamp'])
+                messages.append(notif)
+            stomp_amq.send(messages)
+            time.sleep(0.1) #messages are sent to AMQ queue in batches of 10000
 
-    stomp_amq = StompAMQ(username, password, producer, topic, key=ckey, cert=cert, validation_schema=None, host_and_ports=[(host, port)])
-    for d in df_to_batches(res,10000):
-        messages = []
-        for msg in d:
-            notif,_,_ = stomp_amq.make_notification(msg, "training_document", metadata={"version":"997"}, dataSubfield=None, ts=msg['timestamp'])
-            messages.append(notif)
-        stomp_amq.send(messages)
-        time.sleep(0.1) #messages are sent to AMQ queue in batches of 10000
+        print("Message sending is finished")
 
-    print("Message sending is finished")
+def credentials(fname):
+    if os.path.exists(fname):
+        data = json.load(open(fname))
+        return data
+    return {}
+
+def main():
+    "Main function"
+    optmgr  = OptionParser()
+    opts = optmgr.parser.parse_args()
+    run(opts.creds)
+
 if __name__ == "__main__":
     main()
