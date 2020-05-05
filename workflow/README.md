@@ -27,7 +27,7 @@ One issue that I have experienced was not being able to connect to MonIT receivi
 ```
 Error: 'Connection' object has no attribute 'set_ssl'
 ```
-In my case it could be solved by running this command after the `analytix` command:
+In my case it could be solved by running this command after the `source "/cvmfs/sft.cern.ch/lcg/views/LCG_96python3/x86_64-centos7-gcc8-opt/setup.sh"` command:
 ```
 export PYTHONPATH="$(python3 -m site --user-site):$PYTHONPATH"
 ```
