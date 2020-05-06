@@ -16,14 +16,14 @@ try:
     from pyspark.sql import DataFrame
     from pyspark.sql.types import DoubleType, IntegerType, StructType, StructField, StringType, BooleanType, LongType
     from pyspark.sql.functions import col, lit, regexp_replace, trim, lower, concat, count
-    import numpy as np
-    import pandas as pd
-    from clusterlogs import pipeline
-    import nltk
-    import uuid
-    from CMSMonitoring.StompAMQ import StompAMQ
 except ImportError:
     pass
+import numpy as np
+import pandas as pd
+from clusterlogs import pipeline
+import nltk
+import uuid
+from CMSMonitoring.StompAMQ import StompAMQ
 
 
 class OptionParser():
@@ -123,7 +123,7 @@ def run(creds):
 
     print("Number of messages: ",res.shape[0])
 
-    creds = credentials(opts.creds)
+    creds = credentials(creds)
     if creds:
         username = creds.get('username', '')
         password = creds.get('password', '')
