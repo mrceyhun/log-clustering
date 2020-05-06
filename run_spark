@@ -1,0 +1,173 @@
+#!/bin/sh
+# Author: Valentin Kuznetsov <vkuznet AT gmail [DOT] com>
+# A wrapper script to submit spark job with CMSSpark python script.
+
+# on vocms092 spark-submit resides in non-standard location
+export PATH=$PATH:/usr/hdp/spark/bin
+
+# test arguments
+if [ "$#" -eq 0 ]; then
+    echo "Usage: run_spark <pyspark_script> <options>"
+    exit 1
+fi
+
+cmsspark=$1
+
+# enable simple secret to run in non-yarn mode
+conf=""
+hostname=`hostname -s`
+if [ "$hostname" != "vocms092" ]; then
+#conf="--conf spark.authenticate.secret=cmsspark --conf spark.yarn.security.tokens.hive.enabled=false --conf spark.driver.port=5001 --conf spark.blockManager.port=5101 --conf spark.ui.port=5201"
+conf="--conf spark.authenticate.secret=cmsspark --conf spark.yarn.security.credentials.hive.enabled=false --conf spark.driver.port=5001 --conf spark.blockManager.port=5101 --conf spark.ui.port=5201"
+fi
+
+# look if we requested to show full log output, to disable spark output
+# client should setup his/her own log4j.properties via WMA_LOG4J environment variable
+if [[ "$@" =~ "--no-log4j" ]]; then
+    conf=" --conf spark.ui.showConsoleProgress=false "
+    if [ -n "$LOG4J_CONF" ] && [ -f $LOG4J_CONF ]; then
+        conf="$conf --conf spark.driver.extraJavaOptions='-Dlog4j.configuration=file:$LOG4J_CONF'"
+    fi
+fi
+
+# read spark options from configuration file if it exists
+# the SPARK_OPTIONS file should provide <option=value> line for every option
+# spark.network.timeout=120s
+# spark.rpc.numRetries=3
+if [ -n "$SPARK_OPTIONS" ]; then
+    conf="$conf `cat $SPARK_OPTIONS | awk '{ORS=" "; print "--conf "$0""}'`"
+fi
+
+# from https://cern.service-now.com/service-portal/view-request.do?n=RQF0876659
+# we can specify in jar files as following (before Spark 2.0):
+# --packages com.databricks:spark-csv_2.11:1.6.0
+
+# check if we're on lxplus7
+lxplus7=`cat /etc/redhat-release  | grep 7`
+lxplus7_setup=""
+if [ -n "$lxplus7" ] && [ -n "`hostname -s | grep ^lxplus`" ]; then
+    if [ -f /cvmfs/sft.cern.ch/lcg/views/LCG_94/x86_64-centos7-gcc7-opt/setup.sh ] && \
+        [ -f /cvmfs/sft.cern.ch/lcg/etc/hadoop-confext/hadoop-setconf.sh ]; then
+        source /cvmfs/sft.cern.ch/lcg/views/LCG_94/x86_64-centos7-gcc7-opt/setup.sh
+        source /cvmfs/sft.cern.ch/lcg/etc/hadoop-confext/hadoop-setconf.sh analytix
+        lxplus7_setup="true"
+    fi
+fi
+
+# set avro jars
+spark2=`spark-submit --version 2>&1 | grep "version 2"`
+if [ -n "$spark2" ] || [ -f $lxplus7_spark ]; then
+    echo "Using spark 2.X"
+    sparkexjar=`ls /usr/hdp/spark/jars/spark-examples* /usr/hdp/spark-2/examples/jars/spark-examples* 2> /dev/null | tail -1`
+    if [ -n "$sparkexjar" ]; then
+        jars="$sparkexjar"
+    else
+        jars="/afs/cern.ch/user/v/valya/public/spark/spark-examples-1.6.0-cdh5.15.1-hadoop2.6.0-cdh5.15.1.jar"
+    fi
+    conf="$conf --packages com.databricks:spark-avro_2.11:4.0.0"
+else
+    echo "Using spark 1.X"
+    csvjar=/afs/cern.ch/user/v/valya/public/spark/spark-csv-assembly-1.4.0.jar
+    avrojar=/afs/cern.ch/user/v/valya/public/spark/avro-mapred-1.7.6-cdh5.7.6.jar
+    jars="$csvjar,$avrojar"
+    if [ -f /usr/hdp/spark-2/examples/jars/spark-examples_2.11-2.3.2.jar ]; then
+        sparkexjar=/usr/hdp/spark-2/examples/jars/spark-examples_2.11-2.3.2.jar
+        jars="$jars,$sparkexjar"
+    else
+        sparkexjar=`ls /usr/lib/spark/examples/lib/spark-examples* 2> /dev/null | tail -1`
+        if [ -n "$sparkexjar" ]; then
+            jars="$jars,$sparkexjar"
+        else
+            sparkexjar=/afs/cern.ch/user/v/valya/public/spark/spark-examples-1.6.0-cdh5.15.1-hadoop2.6.0-cdh5.15.1.jar
+            jars="$jars,$sparkexjar"
+        fi
+    fi
+    mapreduce=/eos/project/s/swan/public/hadoop-mapreduce-client-core-2.6.0-cdh5.7.6.jar
+    if [ ! -f $mapreduce ]; then
+        mapreduce=/usr/lib/hadoop-mapreduce/hadoop-mapreduce-client-core-2.6.0-cdh5.7.6.jar
+    fi
+fi
+
+if [ -n "$jars" ]; then
+    jars="--jars $jars"
+fi
+
+args="${@:2}"
+echo "$cmsspark $args"
+yarn=`echo $args | grep -- "--yarn"`
+
+# determine if we can load CVMFS
+# https://cern.service-now.com/service-portal/article.do?n=KB0005361
+cvmfs=""
+ctest=`echo $args | grep -- "--cvmfs"`
+if [ -z "$lxplus7_setup" ]; then
+    if [ -n "`hostname -s | grep ^lxplus`" ] || [ -n "$ctest" ]; then
+        if [ -f /cvmfs/sft.cern.ch/lcg/views/LCG_93/x86_64-centos7-gcc62-opt/setup.sh ] && \
+           [ -f /cvmfs/sft.cern.ch/lcg/etc/hadoop-confext/hadoop-setconf.sh ]; then
+            echo "Enable CVMFS ..."
+            source /cvmfs/sft.cern.ch/lcg/views/LCG_93/x86_64-centos7-gcc62-opt/setup.sh
+            source /cvmfs/sft.cern.ch/lcg/etc/hadoop-confext/hadoop-setconf.sh analytix
+            cvmfs="true"
+        fi
+    fi
+fi
+# source proper environemnt for it-hadoop-client machines
+if [ -n "`hostname -s | grep ithdp`" ]; then
+    source hadoop-setconf.sh analytix
+fi
+
+if [ "$2" == "-h" ] || [ "$2" == "--help" ] || [ "$2" == "-help" ]; then
+    # run help
+    python3 $cmsspark --help
+    exit 0
+fi
+echo "PYTHONPATH: $PYTHONPATH"
+echo "cmsspark: $cmsspark $args"
+if [ -n "$yarn" ]; then
+    # to tune up these numbers:
+    #  - executor-memory not more than 5G
+    #  - num-executor can be increased (suggested not more than 10)
+    #  - cores = 2/4/8
+    # Temp solution to have a wrapper for python27 on spark cluster
+    # once CERN IT will resolve python version we can remove PYSPARK_PYTHON
+    echo "YARN execution: $conf"
+    echo "conf=$conf cmsspark=$cmsspark args=$args cvmfs=$cvmfs"
+    if [ "$cvmfs" == "true" ]; then
+        spark-submit $jars \
+            --master yarn \
+            --executor-memory 5g \
+            --conf spark.pyspark.python=/cvmfs/sft.cern.ch/lcg/views/LCG_93/x86_64-centos7-gcc62-opt/bin/python \
+            --conf spark.driver.extraClassPath=$mapreduce \
+            --conf spark.executorEnv.LD_LIBRARY_PATH=$LD_LIBRARY_PATH \
+            $conf $cmsspark $args
+    else
+        spark-submit $jars \
+            --master yarn \
+            --executor-memory 5g \
+            $conf $cmsspark $args
+    fi
+else
+    # submit spark job with our file, please note
+    # that user may increase memory options if necessary
+    # the executor and driver memory options can be given in human readable form
+    # while spark yarn option should use memoryOverhead as KB value.
+
+    # Modify with local[*] to use all the available cores in the node
+    #   optionally increase driver memory with --driver-memory 2G (default 1G)
+    echo "LOCAL (NO-YARN) execution"
+    echo "conf=$conf cmsspark=$cmsspark args=$args cvmfs=$cvmfs"
+    if [ "$cvmfs" == "true" ]; then
+        spark-submit $jars \
+            --executor-memory $((`nproc`/4))G \
+            --master local[$((`nproc`/4))] \
+            --conf spark.pyspark.python=/cvmfs/sft.cern.ch/lcg/views/LCG_93/x86_64-centos7-gcc62-opt/bin/python \
+            --conf spark.driver.extraClassPath=$mapreduce \
+            --conf spark.executorEnv.LD_LIBRARY_PATH=$LD_LIBRARY_PATH \
+            $conf $cmsspark $args
+    else
+        spark-submit $jars \
+            --executor-memory $((`nproc`/4))G \
+            --master local[$((`nproc`/4))] \
+            $conf $cmsspark $args
+    fi
+fi
