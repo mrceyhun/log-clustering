@@ -125,11 +125,17 @@ def run(creds, fout):
 
     print("Number of messages: ",res.shape[0])
     if fout:
+        nrows = df.shape[0]
+        count = 0
         with open(fout, 'w') as ostream:
             ostream.write('[' + '\n')
             for d in df_to_batches(res, 10000):
                 for r in d:
-                    ostream.write(json.dumps(r))
+                    if nrows - count == 1: # last row to write
+                        ostream.write(json.dumps(r)+'\n')
+                    else:
+                        ostream.write(json.dumps(r)+',\n')
+                    count += 1
             ostream.write(']' + '\n')
 
     creds = credentials(creds)
