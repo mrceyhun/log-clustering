@@ -32,6 +32,8 @@ class OptionParser():
         self.parser = argparse.ArgumentParser(prog='PROG')
         self.parser.add_argument("--creds", action="store",
             dest="creds", default="", help="Stomp AMQ credentials file, if provided the data will be send to MONIT")
+        self.parser.add_argument("--fout", action="store",
+            dest="fout", default="", help="Write results into file")
         self.parser.add_argument("--verbose", action="store_true",
             dest="verbose", default=False, help="verbose output")
 
@@ -81,7 +83,7 @@ def df_to_batches(data, samples=1000):
         yield data[i:i + samples].to_dict('records')
         
 
-def run(creds):
+def run(creds, fout):
     _schema = StructType([
         StructField('metadata', StructType([StructField('timestamp',LongType(), nullable=True)])),
         StructField('data', StructType([
@@ -122,6 +124,13 @@ def run(creds):
     res = df[['timestamp','cluster_id','cluster_pattern','model','src_hostname','dst_hostname','error_message']]
 
     print("Number of messages: ",res.shape[0])
+    if fout:
+        with open(fout, 'w') as ostream:
+            ostream.write('[' + '\n')
+            for d in df_to_batches(res, 10000):
+                for r in d:
+                    ostream.write(json.dumps(r))
+            ostream.write(']' + '\n')
 
     creds = credentials(creds)
     if creds:
@@ -131,8 +140,8 @@ def run(creds):
         topic = creds.get('topic', '/topic/cms.fts.logsanalysis')
         host = creds.get('host', 'cms-mb.cern.ch')
         port = int(creds.get('port', 61323))
-        cert = creds.get('cert', '%s/.globus/usercert.pem' % os.getenv('USER'))
-        ckey = creds.get('ckey', '%s/.globus/userkey.pem' % os.getenv('USER'))
+        cert = creds.get('cert', '')
+        ckey = creds.get('ckey', '')
         stomp_amq = StompAMQ(username, password, producer, topic, key=ckey, cert=cert, validation_schema=None, host_and_ports=[(host, port)])
         for d in df_to_batches(res,10000):
             messages = []
@@ -154,7 +163,7 @@ def main():
     "Main function"
     optmgr  = OptionParser()
     opts = optmgr.parser.parse_args()
-    run(opts.creds)
+    run(opts.creds, opts.fout)
 
 if __name__ == "__main__":
     main()
