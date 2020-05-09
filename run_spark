@@ -52,60 +52,14 @@ fi
 # we can specify in jar files as following (before Spark 2.0):
 # --packages com.databricks:spark-csv_2.11:1.6.0
 
-# check if we're on lxplus7
-lxplus7=`cat /etc/redhat-release  | grep 7`
-lxplus7_setup=""
-if [ -n "$lxplus7" ] && [ -n "`hostname -s | grep ^lxplus`" ]; then
-    if [ -f /cvmfs/sft.cern.ch/lcg/views/LCG_94/x86_64-centos7-gcc7-opt/setup.sh ] && \
-        [ -f /cvmfs/sft.cern.ch/lcg/etc/hadoop-confext/hadoop-setconf.sh ]; then
-        source /cvmfs/sft.cern.ch/lcg/views/LCG_94/x86_64-centos7-gcc7-opt/setup.sh
-        source /cvmfs/sft.cern.ch/lcg/etc/hadoop-confext/hadoop-setconf.sh analytix
-        lxplus7_setup="true"
-    fi
-fi
-
 # set avro jars
-spark2=`spark-submit --version 2>&1 | grep "version 2"`
-if [ -n "$spark2" ] || [ -f $lxplus7_spark ]; then
-    echo "Using spark 2.X"
-    jars=""
-    conf="$conf --packages com.databricks:spark-avro_2.11:4.0.0"
-else
-    echo "Using spark 1.X"
-    jars=""
-    mapreduce=/eos/project/s/swan/public/hadoop-mapreduce-client-core-2.6.0-cdh5.7.6.jar
-    if [ ! -f $mapreduce ]; then
-        mapreduce=/usr/lib/hadoop-mapreduce/hadoop-mapreduce-client-core-2.6.0-cdh5.7.6.jar
-    fi
-fi
-
-if [ -n "$jars" ]; then
-    jars="--jars $jars"
-fi
+echo "Using spark 2.X"
+jars=""
+conf="$conf --packages com.databricks:spark-avro_2.11:4.0.0"
 
 args="${@:2}"
 echo "$cmsspark $args"
-yarn=`echo $args | grep -- "--yarn"`
-
-# determine if we can load CVMFS
-# https://cern.service-now.com/service-portal/article.do?n=KB0005361
-cvmfs=""
-ctest=`echo $args | grep -- "--cvmfs"`
-if [ -z "$lxplus7_setup" ]; then
-    if [ -n "`hostname -s | grep ^lxplus`" ] || [ -n "$ctest" ]; then
-        if [ -f /cvmfs/sft.cern.ch/lcg/views/LCG_93/x86_64-centos7-gcc62-opt/setup.sh ] && \
-           [ -f /cvmfs/sft.cern.ch/lcg/etc/hadoop-confext/hadoop-setconf.sh ]; then
-            echo "Enable CVMFS ..."
-            source /cvmfs/sft.cern.ch/lcg/views/LCG_93/x86_64-centos7-gcc62-opt/setup.sh
-            source /cvmfs/sft.cern.ch/lcg/etc/hadoop-confext/hadoop-setconf.sh analytix
-            cvmfs="true"
-        fi
-    fi
-fi
-# source proper environemnt for it-hadoop-client machines
-if [ -n "`hostname -s | grep ithdp`" ]; then
-    source hadoop-setconf.sh analytix
-fi
+yarn="--yarn"
 
 if [ "$2" == "-h" ] || [ "$2" == "--help" ] || [ "$2" == "-help" ]; then
     # run help
@@ -114,51 +68,14 @@ if [ "$2" == "-h" ] || [ "$2" == "--help" ] || [ "$2" == "-help" ]; then
 fi
 echo "PYTHONPATH: $PYTHONPATH"
 echo "cmsspark: $cmsspark $args"
-if [ -n "$yarn" ]; then
-    # to tune up these numbers:
-    #  - executor-memory not more than 5G
-    #  - num-executor can be increased (suggested not more than 10)
-    #  - cores = 2/4/8
-    # Temp solution to have a wrapper for python27 on spark cluster
-    # once CERN IT will resolve python version we can remove PYSPARK_PYTHON
-    echo "YARN execution: $conf"
-    echo "conf=$conf cmsspark=$cmsspark args=$args cvmfs=$cvmfs"
-    if [ "$cvmfs" == "true" ]; then
-        spark-submit $jars \
-            --master yarn \
-            --executor-memory 5g \
-            --conf spark.pyspark.python=/cvmfs/sft.cern.ch/lcg/views/LCG_93/x86_64-centos7-gcc62-opt/bin/python \
-            --conf spark.driver.extraClassPath=$mapreduce \
-            --conf spark.executorEnv.LD_LIBRARY_PATH=$LD_LIBRARY_PATH \
-            $conf $cmsspark $args
-    else
-        spark-submit $jars \
-            --master yarn \
-            --executor-memory 5g \
-            $conf $cmsspark $args
-    fi
-else
-    # submit spark job with our file, please note
-    # that user may increase memory options if necessary
-    # the executor and driver memory options can be given in human readable form
-    # while spark yarn option should use memoryOverhead as KB value.
-
-    # Modify with local[*] to use all the available cores in the node
-    #   optionally increase driver memory with --driver-memory 2G (default 1G)
-    echo "LOCAL (NO-YARN) execution"
-    echo "conf=$conf cmsspark=$cmsspark args=$args cvmfs=$cvmfs"
-    if [ "$cvmfs" == "true" ]; then
-        spark-submit $jars \
-            --executor-memory $((`nproc`/4))G \
-            --master local[$((`nproc`/4))] \
-            --conf spark.pyspark.python=/cvmfs/sft.cern.ch/lcg/views/LCG_93/x86_64-centos7-gcc62-opt/bin/python \
-            --conf spark.driver.extraClassPath=$mapreduce \
-            --conf spark.executorEnv.LD_LIBRARY_PATH=$LD_LIBRARY_PATH \
-            $conf $cmsspark $args
-    else
-        spark-submit $jars \
-            --executor-memory $((`nproc`/4))G \
-            --master local[$((`nproc`/4))] \
-            $conf $cmsspark $args
-    fi
-fi
+# to tune up these numbers:
+#  - executor-memory not more than 5G
+#  - num-executor can be increased (suggested not more than 10)
+#  - cores = 2/4/8
+# Temp solution to have a wrapper for python27 on spark cluster
+# once CERN IT will resolve python version we can remove PYSPARK_PYTHON
+echo "YARN execution: $conf"
+spark-submit $jars \
+    --master yarn \
+    --executor-memory 5g \
+    $conf $cmsspark $args
