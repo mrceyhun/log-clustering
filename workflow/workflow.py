@@ -145,9 +145,9 @@ def run(creds, fout):
         producer = creds.get('producer', 'cms-fts-logsanalysis')
         topic = creds.get('topic', '/topic/cms.fts.logsanalysis')
         host = creds.get('host', 'cms-mb.cern.ch')
-        port = int(creds.get('port', 61323))
-        cert = creds.get('cert', '')
-        ckey = creds.get('ckey', '')
+        port = int(creds.get('port', 61313))
+        cert = creds.get('cert', None)
+        ckey = creds.get('ckey', None)
         stomp_amq = StompAMQ(username, password, producer, topic, key=ckey, cert=cert, validation_schema=None, host_and_ports=[(host, port)])
         for d in df_to_batches(res,10000):
             messages = []
