@@ -152,7 +152,7 @@ def run(creds, fout):
         for d in df_to_batches(res,10000):
             messages = []
             for msg in d:
-                notif,_,_ = stomp_amq.make_notification(msg, "training_document", metadata={"version":"997"}, dataSubfield=None, ts=msg['timestamp'])
+                notif,_,_ = stomp_amq.make_notification(msg, "training_document", producer=producer, dataSubfield=None, ts=msg['timestamp'])
                 messages.append(notif)
             stomp_amq.send(messages)
             time.sleep(0.1) #messages are sent to AMQ queue in batches of 10000
