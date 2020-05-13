@@ -94,7 +94,7 @@ def run(creds, fout):
     ]) #schema of the FTS data that is taken
     sc = spark_session()
     fts_df = fts_tables(sc,date="2020/04/30",schema=_schema).select(#,date="2020/03/19"
-        col('metadata.timestamp').alias('timestamp'),
+        col('metadata.timestamp').alias('tstamp'),
         col('data.src_hostname').alias('src_hostname'),
         col('data.dst_hostname').alias('dst_hostname'),
         col('data.t__error_message').alias('error_message')
@@ -121,7 +121,7 @@ def run(creds, fout):
         df.loc[cluster.result.loc[el,'indices'],'cluster_id'] = str(uuid.uuid4())
         df.loc[cluster.result.loc[el,'indices'],'cluster_pattern'] = cluster.result.loc[el,'pattern'] #info about the clusters is added to the error messages
 
-    res = df[['timestamp','cluster_id','cluster_pattern','model','src_hostname','dst_hostname','error_message']]
+    res = df[['tstamp','cluster_id','cluster_pattern','model','src_hostname','dst_hostname','error_message']]
 
     print("Number of messages: ",res.shape[0])
     if fout:
@@ -152,7 +152,7 @@ def run(creds, fout):
         for d in df_to_batches(res,10000):
             messages = []
             for msg in d:
-                notif,_,_ = stomp_amq.make_notification(msg, "training_document", producer=producer, dataSubfield=None, ts=msg['timestamp'])
+                notif,_,_ = stomp_amq.make_notification(msg, "training_document", producer=producer, dataSubfield=None)
                 messages.append(notif)
             stomp_amq.send(messages)
             time.sleep(0.1) #messages are sent to AMQ queue in batches of 10000
