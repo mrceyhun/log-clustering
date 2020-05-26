@@ -36,6 +36,8 @@ class OptionParser():
             dest="fout", default="", help="Write results into file")
         self.parser.add_argument("--date", action="store",
             dest="date", default="", help="date for scraping FTS logs in YYYY/MM/DD format")
+        self.parser.add_argument("--filter", action="store",
+            dest="filter", default="", help="filter condition to apply to FTS logs, e.g. vo == 'cms'")
         self.parser.add_argument("--verbose", action="store_true",
             dest="verbose", default=False, help="verbose output")
 
@@ -85,7 +87,7 @@ def df_to_batches(data, samples=1000):
         yield data[i:i + samples].to_dict('records')
         
 
-def run(creds, fout, date=None):
+def run(creds, fout, date=None, ifilter=None):
     _schema = StructType([
         StructField('metadata', StructType([StructField('timestamp',LongType(), nullable=True)])),
         StructField('data', StructType([
@@ -104,6 +106,8 @@ def run(creds, fout, date=None):
         col('data.dst_hostname').alias('dst_hostname'),
         col('data.t__error_message').alias('error_message')
     ).where('error_message <> ""') #taking non-empty messages, if date is not given then the records from yesterday are taken
+    if ifilter:
+        fts_df = fts_df.where(ifilter)
 
     fts_df.show()
 
@@ -174,7 +178,7 @@ def main():
     "Main function"
     optmgr  = OptionParser()
     opts = optmgr.parser.parse_args()
-    run(opts.creds, opts.fout, opts.date)
+    run(opts.creds, opts.fout, opts.date, opts.filter)
 
 if __name__ == "__main__":
     main()
