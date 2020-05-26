@@ -34,6 +34,8 @@ class OptionParser():
             dest="creds", default="", help="Stomp AMQ credentials file, if provided the data will be send to MONIT")
         self.parser.add_argument("--fout", action="store",
             dest="fout", default="", help="Write results into file")
+        self.parser.add_argument("--date", action="store",
+            dest="date", default="", help="date for scraping FTS logs in YYYY/MM/DD format")
         self.parser.add_argument("--verbose", action="store_true",
             dest="verbose", default=False, help="verbose output")
 
@@ -83,7 +85,7 @@ def df_to_batches(data, samples=1000):
         yield data[i:i + samples].to_dict('records')
         
 
-def run(creds, fout):
+def run(creds, fout, date=None):
     _schema = StructType([
         StructField('metadata', StructType([StructField('timestamp',LongType(), nullable=True)])),
         StructField('data', StructType([
@@ -93,7 +95,10 @@ def run(creds, fout):
         ])),
     ]) #schema of the FTS data that is taken
     sc = spark_session()
-    fts_df = fts_tables(sc,date="2020/04/30",schema=_schema).select(#,date="2020/03/19"
+    if not date:
+        tstamp = time.time()-7*24*60*60 # one week ago
+        date = time.strftime("%Y/%m/%d", time.gmtime(tstamp))
+    fts_df = fts_tables(sc, date=date, schema=_schema).select(
         col('metadata.timestamp').alias('tstamp'),
         col('data.src_hostname').alias('src_hostname'),
         col('data.dst_hostname').alias('dst_hostname'),
@@ -169,7 +174,7 @@ def main():
     "Main function"
     optmgr  = OptionParser()
     opts = optmgr.parser.parse_args()
-    run(opts.creds, opts.fout)
+    run(opts.creds, opts.fout, opts.date)
 
 if __name__ == "__main__":
     main()
