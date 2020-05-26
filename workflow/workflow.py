@@ -96,7 +96,7 @@ def run(creds, fout, date=None):
     ]) #schema of the FTS data that is taken
     sc = spark_session()
     if not date:
-        tstamp = time.time()-7*24*60*60 # one week ago
+        tstamp = time.time()-24*60*60 # one day ago
         date = time.strftime("%Y/%m/%d", time.gmtime(tstamp))
     fts_df = fts_tables(sc, date=date, schema=_schema).select(
         col('metadata.timestamp').alias('tstamp'),
