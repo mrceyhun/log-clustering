@@ -69,9 +69,11 @@ def fts_tables(spark,schema,
     """
     if  not date:
         # by default we read yesterdate data
-        date = time.strftime("%Y/%m/%d", time.gmtime(time.time()-60*60*24))
+#         date = time.strftime("%Y/%m/%d", time.gmtime(time.time()-60*60*24))
+        # new default is today date
+        date = time.strftime("%Y/%m/%d", time.gmtime(time.time()))
 
-    hpath = '%s/%s' % (hdir, date)
+    hpath = '%s/%s*' % (hdir, date)
     # create new spark DataFrame
     fts_df = spark.read.json(hpath, schema)
     return fts_df
