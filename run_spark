@@ -1,13 +1,13 @@
-#!/bin/sh
+#!/bin/bash
 # Author: Valentin Kuznetsov <vkuznet AT gmail [DOT] com>
 # A wrapper script to submit spark job with python script.
 
 # Kerberos
 keytab=/etc/secrets/keytab
 if [ -f $keytab ]; then
-    principal=`klist -k "$keytab" | tail -1 | awk '{print $2}'`
+    principal=$(klist -k "$keytab" | tail -1 | awk '{print $2}')
     echo "principal=$principal"
-    kinit $principal -k -t "$keytab"
+    kinit "$principal" -k -t "$keytab"
     if [ $? == 1 ]; then
         echo "Unable to perform kinit"
         exit 1
@@ -15,67 +15,56 @@ if [ -f $keytab ]; then
     klist -k "$keytab"
 fi
 
-# add non-standard location of hadoop
-export PATH=$PATH:/usr/hdp/spark/bin
-
 # test arguments
 if [ "$#" -eq 0 ]; then
-    echo "Usage: run_spark <pyspark_script> <options>"
+    echo "Usage: run_spark <pyspark_script> <port1> <port2> <port3> <options>"
+    echo "Usage: Ports are spark.driver, spark.blockManager, spark.ui which will be of K8s host ports!"
     exit 1
 fi
-
 cmsspark=$1
+if [ "$2" == "-h" ] || [ "$2" == "--help" ] || [ "$2" == "-help" ]; then
+    python3 "$cmsspark" --help
+    exit 0
+fi
+p1=$2
+p2=$3
+p3=$4
+shift 4
+args=("$@")
 
-# enable simple secret to run in non-yarn mode
-conf="--conf spark.hadoop.dfs.client.socket-timeout=120000"
-hostname=`hostname -s`
-conf="$conf --conf spark.authenticate.secret=cmsspark --conf spark.yarn.security.credentials.hive.enabled=false --conf spark.driver.port=5001 --conf spark.blockManager.port=5101 --conf spark.ui.port=5201"
-
-# look if we requested to show full log output, to disable spark output
-# client should setup his/her own log4j.properties via WMA_LOG4J environment variable
-if [[ "$@" =~ "--no-log4j" ]]; then
-    conf=" --conf spark.ui.showConsoleProgress=false "
-    if [ -n "$LOG4J_CONF" ] && [ -f $LOG4J_CONF ]; then
-        conf="$conf --conf spark.driver.extraJavaOptions='-Dlog4j.configuration=file:$LOG4J_CONF'"
+conf=(
+    --master yarn
+    --conf spark.security.credentials.hive.enabled=false --conf spark.hadoop.dfs.client.socket-timeout=120000
+    --conf spark.ui.showConsoleProgress=false --executor-memory=5g
+    --packages org.apache.spark:spark-avro_2.12:3.3.1
+    --conf spark.authenticate.secret=cmsspark
+    --conf spark.driver.port="$p1" --conf spark.blockManager.port="$p2" --conf spark.ui.port="$p3"
+)
+# Set Java Home
+if [ -n "$JAVA_HOME" ]; then
+    if [ -e "/usr/lib/jvm/java-1.8.0" ]; then
+        export JAVA_HOME="/usr/lib/jvm/java-1.8.0"
+    elif ! (java -XX:+PrintFlagsFinal -version 2>/dev/null | grep -E -q 'UseAES\s*=\s*true'); then
+        util4loge "this script requires a java version with AES enabled"
+        exit 1
     fi
 fi
 
-# read spark options from configuration file if it exists
-# the SPARK_OPTIONS file should provide <option=value> line for every option
-# spark.network.timeout=120s
-# spark.rpc.numRetries=3
-if [ -n "$SPARK_OPTIONS" ]; then
-    conf="$conf `cat $SPARK_OPTIONS | awk '{ORS=" "; print "--conf "$0""}'`"
-fi
-
-# from https://cern.service-now.com/service-portal/view-request.do?n=RQF0876659
-# we can specify in jar files as following (before Spark 2.0):
-# --packages com.databricks:spark-csv_2.11:1.6.0
-
-# set avro jars
-echo "Using spark 2.X"
-jars=""
-conf="$conf --packages com.databricks:spark-avro_2.11:4.0.0"
-
-args="${@:2}"
-echo "$cmsspark $args"
-yarn="--yarn"
-
-if [ "$2" == "-h" ] || [ "$2" == "--help" ] || [ "$2" == "-help" ]; then
-    # run help
-    python3 $cmsspark --help
-    exit 0
-fi
 echo "PYTHONPATH: $PYTHONPATH"
-echo "cmsspark: $cmsspark $args"
-# to tune up these numbers:
-#  - executor-memory not more than 5G
-#  - num-executor can be increased (suggested not more than 10)
-#  - cores = 2/4/8
-# Temp solution to have a wrapper for python27 on spark cluster
-# once CERN IT will resolve python version we can remove PYSPARK_PYTHON
-echo "YARN execution: $conf"
-spark-submit $jars \
-    --master yarn \
-    --executor-memory 5g \
-    $conf $cmsspark $args
+echo cmsspark: "$cmsspark" args: "${args[@]}"
+echo YARN execution: "${conf[@]}"
+
+# Setup hadoop and spark
+export PYSPARK_DRIVER_PYTHON=/usr/bin/python
+export HADOOP_CONF_DIR=/etc/hadoop/conf
+export PATH="${PATH}:${WDIR}:${WDIR}/log-clustering:${WDIR}/log-clustering/workflow:/usr/hdp/hadoop/bin/hadoop:/usr/hdp/spark3/bin"
+export PYTHONPATH="${PYTHONPATH}:${WDIR}"
+export PYSPARK_PYTHON=/cvmfs/sft.cern.ch/lcg/releases/Python/3.9.6-b0f98/x86_64-centos7-gcc8-opt/bin/python3
+
+hadoop-set-default-conf.sh analytix 'hadoop spark' 3.2
+source hadoop-setconf.sh analytix 3.2 spark3
+
+sed -i 's/rootLogger.level = info/rootLogger.level = warn/g' "$SPARK_CONF_DIR"/log4j2.properties
+
+# Run
+spark-submit "${conf[@]}" "$cmsspark" "${args[@]}"
